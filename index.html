@@ -1,43 +1,103 @@
-<!DOCTYPE html><html><head><link rel="stylesheet" href="css/animate.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"><style>@import url("https://fonts.googleapis.com/css?family=Raleway:400,300");
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="css/animate.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"><style>@import url("https://fonts.googleapis.com/css?family=Raleway:400,300");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 div.row {
   margin: 0;
 }
+nav.navbar {
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav li {
+  border-top: 4px transparent solid;
+  padding: 0 8px;
+}
+nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav li a {
+  display: table-cell;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  height: 64px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav li.active {
+  border-top: 4px #e91e63 solid;
+}
+nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav li.active a {
+  background-color: inherit;
+}
+@media (min-width: 768px) {
+  nav.navbar div.collapse.navbar-collapse {
+    text-align: center;
+  }
+  nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav {
+    float: none;
+    display: inline-block;
+  }
+}
+html {
+  height: 100%;
+}
 body {
   background: #000;
+  height: 100%;
   font-family: 'Open Sans', sans-serif;
 }
-body div.section {
+div#hero {
+  background-color: #333;
+  display: block;
+  height: calc(100% - 64px);
+  position: relative;
   width: 100%;
 }
-body div.section div.header {
+div#hero div#hero-content {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+div#hero div#hero-content h1 {
+  color: #fff;
+  font-size: 100px;
+}
+div#hero div#hero-content p {
+  color: #808080;
+  font-size: 24px;
+  font-style: italic;
+}
+div.section {
+  width: 100%;
+}
+div.section div.header {
   margin-bottom: 40px;
   text-align: center;
 }
-body div.section div.header h1 {
+div.section div.header h1 {
   color: #fafafa;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
   text-transform: uppercase;
 }
-body div.section div.header p {
+div.section div.header p {
   font-size: 16px;
   color: #bdbdbd;
   font-style: italic;
 }
-body div.section div.header div.separator {
+div.section div.header div.separator {
   background: #e91e63;
   border-radius: 2px;
   width: 15%;
   height: 3px;
   margin: auto;
 }
-body div.section div.technology {
+div.section div.technology {
   height: 60px;
   margin-left: 3%;
   margin-bottom: 2%;
 }
-body div.section div.technology span {
+div.section div.technology span {
   color: #fff;
   font-size: 32px;
   font-family: 'Raleway', sans-serif;
@@ -45,10 +105,10 @@ body div.section div.technology span {
   line-height: 60px;
   margin-left: 10px;
 }
-body div.section div.technology img {
+div.section div.technology img {
   height: 60px;
 }
-body div.section div.work {
+div.section div.work {
   color: #fff;
   height: 400px;
   overflow: hidden;
@@ -56,7 +116,7 @@ body div.section div.work {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
-body div.section div.work div.bg {
+div.section div.work div.bg {
   -webkit-animation: ease 1s;
           animation: ease 1s;
   background-size: cover;
@@ -71,19 +131,19 @@ body div.section div.work div.bg {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
-body div.section div.work#quanto-spreco div.bg {
+div.section div.work#quanto-spreco div.bg {
   background-image: url("img/quanto-spreco-bg.jpg");
 }
-body div.section div.work#bring-the-food div.bg {
+div.section div.work#bring-the-food div.bg {
   background-image: url("img/btf-bg.jpg");
 }
-body div.section div.work#come-butta div.bg {
+div.section div.work#come-butta div.bg {
   background-image: url("img/come-butta-bg.jpg");
 }
-body div.section div.work#android-toggle-switch div.bg {
+div.section div.work#android-toggle-switch div.bg {
   background-image: url("img/android-toggle-switch-bg.jpg");
 }
-body div.section div.work div.description {
+div.section div.work div.description {
   left: 50%;
   opacity: 0;
   position: absolute;
@@ -94,22 +154,22 @@ body div.section div.work div.description {
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
 }
-body div.section div.work div.description h2 {
+div.section div.work div.description h2 {
   font-size: 32px;
   margin: 0;
 }
-body div.section div.work div.description p {
+div.section div.work div.description p {
   font-style: italic;
   font-size: 16px;
   margin-top: 5px;
 }
-body div.section div.work:hover div.bg {
+div.section div.work:hover div.bg {
   opacity: 0.2;
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
 }
-body div.section div.work:hover div.description {
+div.section div.work:hover div.description {
   opacity: 0.8;
   top: 50%;
 }
-</style><body><div class="row section"><div class="header"><h1>My Works</h1><p>Below My last works</p><div class="separator wow zoomIn"></div></div><div class="technology"> <img src="img/android_logo_droid.png"><span>Android</span></div><div class="row"><div id="quanto-spreco" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Quanto Spreco?</h2><p>The app to optimize the food consumption of your pantry</p></div></div><div id="bring-the-food" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Bring The Food</h2><p>The app to share your surplus of food in order to reduce food waste</p></div></div><div id="come-butta" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Come Butta</h2><p>The application to know the correct bid</p></div></div></div><div class="row"><div id="android-toggle-switch" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Android Toggle Switch</h2><p>A customizable extension of Android Switches that supports also more than 2 items</p></div></div></div><div class="technology"> <img src="img/android_logo_droid.png"><span>Ruby on Rails</span></div><div class="row"><div id="android-toggle-switch" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Android Toggle Switch</h2><p>A customizable extension of Android Switches that supports also more than 2 items</p></div></div></div></div><div class="row section"><div class="header"><h1>My Skills</h1><p>Here there are my main skills</p><div class="separator wow zoomIn"></div></div></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script src="js/wow.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><script> new WOW().init();</script></body></head></html>
+</style><body><div id="hero"><div id="hero-content"><h1>Hi, I'm Lorenzo</h1><p>Nice to meet you!</p></div></div><nav id="navbar" class="navbar navbar-default"><div class="container-fluid"><div class="navbar-header"><button type="button" data-toggle="collapse" aria-expanded="false" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse"><ul class="nav navbar-nav"><li class="active"> <a href="#">HOME</a></li><li> <a href="#">ABOUT</a></li><li> <a href="#">PORTFOLIO</a></li><li> <a href="#">REFERENCES</a></li><li> <a href="#">SKILLS</a></li><li> <a href="#">CONTACTS</a></li></ul></div></div></nav><div id="about" class="row section"><div class="header"><h1>My Story </h1><p>This is my story</p><div class="separator wow zoomIn"></div></div><p><Bla>bla bla </Bla></p></div><div class="row section"><div class="header"><h1>My Works</h1><p>Below My last works</p><div class="separator wow zoomIn"></div></div><div class="technology"> <img src="img/android_logo_droid.png"><span>Android	</span></div><div class="row"><div id="quanto-spreco" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Quanto Spreco?</h2><p>The app to optimize the food consumption of your pantry</p></div></div><div id="bring-the-food" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Bring The Food</h2><p>The app to share your surplus of food in order to reduce food waste</p></div></div><div id="come-butta" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Come Butta</h2><p>The application to know the correct bid</p></div></div></div><div class="row"><div id="android-toggle-switch" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Android Toggle Switch</h2><p>A customizable extension of Android Switches that supports also more than 2 items</p></div></div></div><div class="technology"> <img src="img/android_logo_droid.png"><span>Ruby on Rails</span></div><div class="row"><div id="android-toggle-switch" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Android Toggle Switch</h2><p>A customizable extension of Android Switches that supports also more than 2 items</p></div></div></div></div><div class="row section"><div class="header"><h1>My Skills</h1><p>Here there are my main skills</p><div class="separator wow zoomIn"></div></div></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script src="js/wow.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><script src="js/navbar.js"></script><script> new WOW().init();</script></body></head></html>

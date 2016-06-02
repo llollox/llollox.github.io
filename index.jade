@@ -4,6 +4,22 @@ html
 		include jade/head.jade
 
 		body
+
+			div#hero
+				div#hero-content
+					h1 Hi, I'm Lorenzo
+					p Nice to meet you!
+
+			include jade/navbar.jade
+
+			div.row.section#about
+				div.header
+					h1 My Story 
+					p This is my story
+					div.separator.wow.zoomIn
+
+				p
+					Bla bla bla 
 			div.row.section
 				div.header
 					h1 My Works
@@ -12,8 +28,7 @@ html
 
 				div.technology 
 					img(src='img/android_logo_droid.png')
-					span Android
-					
+					span Android	
 
 				div.row
 					div.work.col-sm-4#quanto-spreco
@@ -35,7 +50,7 @@ html
 							p The application to know the correct bid
 
 				div.row
-					
+
 					div.work.col-sm-4#android-toggle-switch
 						div.bg
 						div.description

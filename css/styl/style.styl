@@ -1,105 +1,131 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,300')
-@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+@import "fonts.styl"
+@import "variables.styl"
 @import "bootstrap_overrides.styl"
+
+html
+	height 100%
+
 body
 	background black
+	height 100%
 	font-family 'Open Sans', sans-serif
 
-	div.section
-		width 100%
+div#hero
+	background-color #333333
+	display block
+	height "calc(100% - %s)" % $navbar_height
+	position relative
+	width 100%
+	
+	div#hero-content
+		left 50%
+		position absolute
+		top 50%
+		transform translateX(-50%) translateY(-50%)
 		
-		div.header
-			margin-bottom 40px
-			text-align center
-			
-			h1
-				color #FAFAFA
-				font-family 'Raleway', sans-serif
-				font-weight 500
-				text-transform uppercase
-			p
-				font-size 16px
-				color #BDBDBD
-				font-style italic
-				
-			div.separator
-				background #E91E63
-				border-radius 2px
-				width 15%
-				height 3px
-				margin auto
-		
-		div.technology
-			height 60px
-			margin-left 3%
-			margin-bottom 2%
-			
-			span
-				color white
-				font-size 32px
-				font-family 'Raleway', sans-serif
-				font-weight 500
-				line-height 60px
-				margin-left 10px
-			img
-				height 60px
-		
-		div.work
+		h1 
 			color white
-			height 400px
-			overflow hidden
-			position relative
-			transition all 1s ease
+			font-size 100px
+		
+		p 
+			color gray
+			font-size 24px
+			font-style italic
+
+div.section
+	width 100%
+	
+	div.header
+		margin-bottom 40px
+		text-align center
+		
+		h1
+			color #FAFAFA
+			font-family 'Raleway', sans-serif
+			font-weight 500
+			text-transform uppercase
+		p
+			font-size 16px
+			color #BDBDBD
+			font-style italic
 			
-			div.bg
-				animation ease 1s
-				background-size cover
-				background-repeat no-repeat
-				background-position center center
-				height 100%
-				width 100%
-				opacity .7
-				position absolute
-				left 0
-				top 0
-				transition all .7s ease
+		div.separator
+			background $primary_color
+			border-radius 2px
+			width 15%
+			height 3px
+			margin auto
+	
+	div.technology
+		height 60px
+		margin-left 3%
+		margin-bottom 2%
+		
+		span
+			color white
+			font-size 32px
+			font-family 'Raleway', sans-serif
+			font-weight 500
+			line-height 60px
+			margin-left 10px
+		img
+			height 60px
+	
+	div.work
+		color white
+		height 400px
+		overflow hidden
+		position relative
+		transition all 1s ease
+		
+		div.bg
+			animation ease 1s
+			background-size cover
+			background-repeat no-repeat
+			background-position center center
+			height 100%
+			width 100%
+			opacity .7
+			position absolute
+			left 0
+			top 0
+			transition all .7s ease
+		
+		&#quanto-spreco div.bg
+			background-image url('img/quanto-spreco-bg.jpg')
+		
+		&#bring-the-food div.bg
+			background-image url('img/btf-bg.jpg')
 			
-			&#quanto-spreco div.bg
-				background-image url('img/quanto-spreco-bg.jpg')
-			
-			&#bring-the-food div.bg
-				background-image url('img/btf-bg.jpg')
+		&#come-butta div.bg
+			background-image url('img/come-butta-bg.jpg')
+		
+		&#android-toggle-switch div.bg
+			background-image url('img/android-toggle-switch-bg.jpg')
+		
+		div.description
+			left 50%
+			opacity 0
+			position absolute
+			text-align center
+			top 25%
+			transition all .8s ease
+			transform translateX(-50%) translateY(-50%)
 				
-			&#come-butta div.bg
-				background-image url('img/come-butta-bg.jpg')
-			
-			&#android-toggle-switch div.bg
-				background-image url('img/android-toggle-switch-bg.jpg')
+			h2 
+				font-size 32px
+				margin 0
+				
+			p
+				font-style italic
+				font-size 16px
+				margin-top 5px
+		
+		&:hover
+			div.bg
+				opacity .2
+				transform scale(1.07)
 			
 			div.description
-				left 50%
-				opacity 0
-				position absolute
-				text-align center
-				top 25%
-				transition all .8s ease
-				transform translateX(-50%) translateY(-50%)
-					
-				h2 
-					font-size 32px
-					margin 0
-					
-				p
-					font-style italic
-					font-size 16px
-					margin-top 5px
-			
-			&:hover
-				div.bg
-					opacity .2
-					transform scale(1.07)
-				
-				div.description
-					opacity .8
-					top 50%
-					
+				opacity .8
+				top 50%

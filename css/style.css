@@ -3,41 +3,101 @@
 div.row {
   margin: 0;
 }
+nav.navbar {
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav li {
+  border-top: 4px transparent solid;
+  padding: 0 8px;
+}
+nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav li a {
+  display: table-cell;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  height: 64px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav li.active {
+  border-top: 4px #e91e63 solid;
+}
+nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav li.active a {
+  background-color: inherit;
+}
+@media (min-width: 768px) {
+  nav.navbar div.collapse.navbar-collapse {
+    text-align: center;
+  }
+  nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav {
+    float: none;
+    display: inline-block;
+  }
+}
+html {
+  height: 100%;
+}
 body {
   background: #000;
+  height: 100%;
   font-family: 'Open Sans', sans-serif;
 }
-body div.section {
+div#hero {
+  background-color: #333;
+  display: block;
+  height: calc(100% - 64px);
+  position: relative;
   width: 100%;
 }
-body div.section div.header {
+div#hero div#hero-content {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+div#hero div#hero-content h1 {
+  color: #fff;
+  font-size: 100px;
+}
+div#hero div#hero-content p {
+  color: #808080;
+  font-size: 24px;
+  font-style: italic;
+}
+div.section {
+  width: 100%;
+}
+div.section div.header {
   margin-bottom: 40px;
   text-align: center;
 }
-body div.section div.header h1 {
+div.section div.header h1 {
   color: #fafafa;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
   text-transform: uppercase;
 }
-body div.section div.header p {
+div.section div.header p {
   font-size: 16px;
   color: #bdbdbd;
   font-style: italic;
 }
-body div.section div.header div.separator {
+div.section div.header div.separator {
   background: #e91e63;
   border-radius: 2px;
   width: 15%;
   height: 3px;
   margin: auto;
 }
-body div.section div.technology {
+div.section div.technology {
   height: 60px;
   margin-left: 3%;
   margin-bottom: 2%;
 }
-body div.section div.technology span {
+div.section div.technology span {
   color: #fff;
   font-size: 32px;
   font-family: 'Raleway', sans-serif;
@@ -45,10 +105,10 @@ body div.section div.technology span {
   line-height: 60px;
   margin-left: 10px;
 }
-body div.section div.technology img {
+div.section div.technology img {
   height: 60px;
 }
-body div.section div.work {
+div.section div.work {
   color: #fff;
   height: 400px;
   overflow: hidden;
@@ -56,7 +116,7 @@ body div.section div.work {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
-body div.section div.work div.bg {
+div.section div.work div.bg {
   -webkit-animation: ease 1s;
           animation: ease 1s;
   background-size: cover;
@@ -71,19 +131,19 @@ body div.section div.work div.bg {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
-body div.section div.work#quanto-spreco div.bg {
+div.section div.work#quanto-spreco div.bg {
   background-image: url("img/quanto-spreco-bg.jpg");
 }
-body div.section div.work#bring-the-food div.bg {
+div.section div.work#bring-the-food div.bg {
   background-image: url("img/btf-bg.jpg");
 }
-body div.section div.work#come-butta div.bg {
+div.section div.work#come-butta div.bg {
   background-image: url("img/come-butta-bg.jpg");
 }
-body div.section div.work#android-toggle-switch div.bg {
+div.section div.work#android-toggle-switch div.bg {
   background-image: url("img/android-toggle-switch-bg.jpg");
 }
-body div.section div.work div.description {
+div.section div.work div.description {
   left: 50%;
   opacity: 0;
   position: absolute;
@@ -94,21 +154,21 @@ body div.section div.work div.description {
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
 }
-body div.section div.work div.description h2 {
+div.section div.work div.description h2 {
   font-size: 32px;
   margin: 0;
 }
-body div.section div.work div.description p {
+div.section div.work div.description p {
   font-style: italic;
   font-size: 16px;
   margin-top: 5px;
 }
-body div.section div.work:hover div.bg {
+div.section div.work:hover div.bg {
   opacity: 0.2;
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
 }
-body div.section div.work:hover div.description {
+div.section div.work:hover div.description {
   opacity: 0.8;
   top: 50%;
 }
