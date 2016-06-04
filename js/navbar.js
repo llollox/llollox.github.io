@@ -20,16 +20,25 @@ $(document).ready(function(){
 	  }
 	});
 */
+
+/*	$('#navbar').affix({
+      offset: {
+        top: $('#hero').height()
+      }
+});*/	
+
 	if($(window).width() > 768) {
-		var navbarThreshold = $(window).height() - 64;
+		var heroHeight	= $("div#hero").height();
+		var navbarHeight = $("div#navbar").height();
+		/*var navbarThreshold = $(window).height() - 64;*/
 
 		$(window).scroll(function (event) {
 		    var scroll = $(window).scrollTop();
 		    console.log(scroll);
 		    console.log();
-		    if(scroll >= navbarThreshold) {
+		    if(scroll >= heroHeight) {
 		    	$("#navbar").addClass("navbar-fixed-top");
-				$("#about").css("padding-top", "64px");
+				$("#about").css("padding-top", navbarHeight + "px");
 			}
 		    else {
 		    	$("#navbar").removeClass("navbar-fixed-top");

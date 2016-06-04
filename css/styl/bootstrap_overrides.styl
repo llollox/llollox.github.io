@@ -1,37 +1,42 @@
 div.row
 	margin 0
-
-nav.navbar
-	border none
-	border-radius 0
-	margin-bottom 0
-
-	div.collapse.navbar-collapse
-		ul.nav.navbar-nav 
-			li
-				border-top 4px transparent solid
-				padding 0 8px
-				
-				a
-					display table-cell
-					font-family 'Raleway', sans-serif
-					font-weight 700
-					font-size 14px
-					height $navbar_height
-					text-transform uppercase
-					vertical-align middle
-			
-				&.active
-					border-top 4px $primary_color solid
-					 
-					a
-						background-color inherit
 						
 @media (min-width 768px)
-	nav.navbar 
+	div#navbar.affix
+		position fixed
+		top 0
+		width 100%
+		z-index 10
+		
+	nav.navbar
+		border none
+		border-radius 0
+		margin-bottom 0
+		background-color rgba(255, 255, 255, 0.95)
+		background rgba(255, 255, 255, 0.95)
+		
 		div.collapse.navbar-collapse
 			text-align center
 		
 			ul.nav.navbar-nav
 				float none
 				display inline-block
+				
+				li
+					border-top 4px transparent solid
+					padding 0 8px
+					
+					a
+						display table-cell
+						font-family 'Raleway', sans-serif
+						font-weight 700
+						font-size 14px
+						height $navbar_height
+						text-transform uppercase
+						vertical-align middle
+				
+					&.active
+						border-top 4px $primary_color solid
+						 
+						a
+							background-color inherit

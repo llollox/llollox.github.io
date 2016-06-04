@@ -3,37 +3,45 @@
 div.row {
   margin: 0;
 }
-nav.navbar {
-  border: none;
-  border-radius: 0;
-  margin-bottom: 0;
-}
-nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav li {
-  border-top: 4px transparent solid;
-  padding: 0 8px;
-}
-nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav li a {
-  display: table-cell;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  height: 64px;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav li.active {
-  border-top: 4px #e91e63 solid;
-}
-nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav li.active a {
-  background-color: inherit;
-}
 @media (min-width: 768px) {
+  div#navbar.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  nav.navbar {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    background-color: rgba(255,255,255,0.95);
+    background: rgba(255,255,255,0.95);
+  }
   nav.navbar div.collapse.navbar-collapse {
     text-align: center;
   }
   nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav {
     float: none;
     display: inline-block;
+  }
+  nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav li {
+    border-top: 4px transparent solid;
+    padding: 0 8px;
+  }
+  nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav li a {
+    display: table-cell;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    height: 64px;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav li.active {
+    border-top: 4px #e91e63 solid;
+  }
+  nav.navbar div.collapse.navbar-collapse ul.nav.navbar-nav li.active a {
+    background-color: inherit;
   }
 }
 html {
