@@ -1,6 +1,7 @@
 @import "fonts.styl"
 @import "variables.styl"
 @import "bootstrap_overrides.styl"
+@import "resume.styl"
 
 html
 	height 100%
@@ -28,15 +29,28 @@ div#hero
 			font-size 100px
 		
 		p 
-			color gray
+			color $gray
 			font-size 24px
 			font-style italic
 
+div.separator
+	background $primary_color
+	border-radius 2px
+	width 15%
+	height 3px
+	margin auto
+
+div.left-separator
+	@extend div.separator
+	margin inherit
+
 div.section
+	min-height 1000px
 	width 100%
 	
 	div.header
-		margin-bottom 40px
+		padding-top 90px
+		margin-bottom 80px
 		text-align center
 		
 		h1
@@ -48,13 +62,6 @@ div.section
 			font-size 16px
 			color #BDBDBD
 			font-style italic
-			
-		div.separator
-			background $primary_color
-			border-radius 2px
-			width 15%
-			height 3px
-			margin auto
 	
 	div.technology
 		height 60px
@@ -85,17 +92,17 @@ div.section
 			background-position center center
 			height 100%
 			width 100%
-			opacity .7
 			position absolute
 			left 0
 			top 0
+			opacity .9
 			transition all .7s ease
 		
 		&#quanto-spreco div.bg
 			background-image url('img/quanto-spreco-bg.jpg')
 		
 		&#bring-the-food div.bg
-			background-image url('img/btf-bg.jpg')
+			background-image url('img/btf-bg.png')
 			
 		&#come-butta div.bg
 			background-image url('img/come-butta-bg.jpg')
@@ -103,6 +110,12 @@ div.section
 		&#android-toggle-switch div.bg
 			background-image url('img/android-toggle-switch-bg.jpg')
 		
+		&#studio4 div.bg
+			background-image url('img/studio4.jpg')
+		
+		&#west-road-bike div.bg
+			background-image url('img/west-road-bike.png')
+
 		div.description
 			left 50%
 			opacity 0
@@ -123,9 +136,21 @@ div.section
 		
 		&:hover
 			div.bg
-				opacity .2
+				opacity .25
 				transform scale(1.07)
 			
 			div.description
-				opacity .8
+				opacity .9
 				top 50%
+				
+div#about.section
+	h2
+		color white
+	h4
+		color white
+		margin 32px 0
+		font-family 'Lato', sans-serif
+	
+	p
+		color $gray
+		

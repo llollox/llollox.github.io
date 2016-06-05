@@ -18,62 +18,42 @@ html
 					p This is my story
 					div.separator.wow.zoomIn
 
-				p
-					Bla bla bla 
-			div.row.section
+				include jade/about.jade
+
+			div.row.section#portfolio
 				div.header
 					h1 My Works
 					p Below My last works
 					div.separator.wow.zoomIn
 
-				div.technology 
-					img(src='img/android_logo_droid.png')
-					span Android	
+				include jade/portfolio.jade
 
-				div.row
-					div.work.col-sm-4#quanto-spreco
-						div.bg
-						div.description
-							h2 Quanto Spreco?
-							p The app to optimize the food consumption of your pantry
-					
-					div.work.col-sm-4#bring-the-food
-						div.bg
-						div.description
-							h2 Bring The Food
-							p The app to share your surplus of food in order to reduce food waste
+			div.row.section#resume
+				div.header
+					h1 Resume
+					p If you call failures experiments, you can put them in your resume and claim them as achievements.
+					div.separator.wow.zoomIn
 
-					div.work.col-sm-4#come-butta
-						div.bg
-						div.description
-							h2 Come Butta
-							p The application to know the correct bid
+				include jade/resume.jade
 
-				div.row
+			div.row.section#references
+				div.header
+					h1 References
+					p They speaks about me
+					div.separator.wow.zoomIn
 
-					div.work.col-sm-4#android-toggle-switch
-						div.bg
-						div.description
-							h2 Android Toggle Switch
-							p A customizable extension of Android Switches that supports also more than 2 items
+				include jade/references.jade
 
-				div.technology 
-					img(src='img/android_logo_droid.png')
-					span Ruby on Rails
-
-				div.row
-					
-					div.work.col-sm-4#android-toggle-switch
-						div.bg
-						div.description
-							h2 Android Toggle Switch
-							p A customizable extension of Android Switches that supports also more than 2 items
-
-
-			div.row.section
+			div.row.section#skills
 				div.header
 					h1 My Skills
 					p Here there are my main skills
+					div.separator.wow.zoomIn
+
+			div.row.section#contacts
+				div.header
+					h1 Contacts
+					p Get in touch with me
 					div.separator.wow.zoomIn
 
 
