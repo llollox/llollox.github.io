@@ -193,6 +193,9 @@ div.section div.work div.bg {
 div.section div.work#quanto-spreco div.bg {
   background-image: url("img/quanto-spreco-bg.jpg");
 }
+div.section div.work#quanto-spreco-web div.bg {
+  background-image: url("img/quanto-spreco-web.png");
+}
 div.section div.work#bring-the-food div.bg {
   background-image: url("img/btf-bg.png");
 }

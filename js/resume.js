@@ -8,5 +8,8 @@ $(document).ready(function(){
 		  }, 500, function() {
 		    // Animation complete.
 		  });
+
+		$(this).removeClass("glyphicon-menu-down");
+		$(this).addClass("glyphicon-menu-up");
 	});
 });
