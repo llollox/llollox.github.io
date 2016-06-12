@@ -52,9 +52,27 @@ div.row {
     background-color: inherit;
   }
 }
+.full-center {
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
 div#resume div.content {
   max-width: 800px;
   margin: auto;
+  position: relative;
+}
+div#resume div.content:after {
+  content: "";
+  display: block;
+  border: 1px dashed #444;
+  position: absolute;
+  top: 0;
+  left: 8.3%;
+  height: 100%;
+  z-index: -3;
 }
 div#resume div.content div.edu-item {
   color: #fff;
@@ -69,25 +87,42 @@ div#resume div.content div.edu-item div.time {
   padding: 4px;
   text-align: center;
 }
-div#resume div.content div.edu-item div.institute {
+div#resume div.content div.edu-item div.place {
   border: 1px solid #777;
   border-radius: 3px;
   padding: 12px;
-  position: relative;
 }
-div#resume div.content div.edu-item div.institute h4 {
+div#resume div.content div.edu-item div.place img.icon-place {
+  margin-right: 3%;
+  vertical-align: inherit;
+  width: 10%;
+}
+div#resume div.content div.edu-item div.place div.header-place {
+  display: inline-block;
   font-family: 'Raleway', sans-serif;
+  position: relative;
+  width: 87%;
+}
+div#resume div.content div.edu-item div.place div.header-place h4 {
   color: #fff;
 }
-div#resume div.content div.edu-item div.institute p {
-  font-family: 'Lato', sans-serif;
-  height: 0;
-  opacity: 0;
+div#resume div.content div.edu-item div.place div.header-place h6 {
+  color: #bdbdbd;
+  font-weight: 700;
 }
-div#resume div.content div.edu-item div.institute span.glyphicon {
+div#resume div.content div.edu-item div.place div.header-place span.glyphicon {
   position: absolute;
   top: 22px;
   right: 16px;
+}
+div#resume div.content div.edu-item div.place p {
+  font-family: 'Lato', sans-serif;
+  height: 0;
+  margin-bottom: 0;
+  opacity: 0;
+}
+div#resume div.content div.edu-item div.place:hover {
+  cursor: pointer;
 }
 html {
   height: 100%;

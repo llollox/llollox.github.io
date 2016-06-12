@@ -52,9 +52,27 @@ div.row {
     background-color: inherit;
   }
 }
+.full-center {
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
 div#resume div.content {
   max-width: 800px;
   margin: auto;
+  position: relative;
+}
+div#resume div.content:after {
+  content: "";
+  display: block;
+  border: 1px dashed #444;
+  position: absolute;
+  top: 0;
+  left: 8.3%;
+  height: 100%;
+  z-index: -3;
 }
 div#resume div.content div.edu-item {
   color: #fff;
@@ -69,25 +87,42 @@ div#resume div.content div.edu-item div.time {
   padding: 4px;
   text-align: center;
 }
-div#resume div.content div.edu-item div.institute {
+div#resume div.content div.edu-item div.place {
   border: 1px solid #777;
   border-radius: 3px;
   padding: 12px;
-  position: relative;
 }
-div#resume div.content div.edu-item div.institute h4 {
+div#resume div.content div.edu-item div.place img.icon-place {
+  margin-right: 3%;
+  vertical-align: inherit;
+  width: 10%;
+}
+div#resume div.content div.edu-item div.place div.header-place {
+  display: inline-block;
   font-family: 'Raleway', sans-serif;
+  position: relative;
+  width: 87%;
+}
+div#resume div.content div.edu-item div.place div.header-place h4 {
   color: #fff;
 }
-div#resume div.content div.edu-item div.institute p {
-  font-family: 'Lato', sans-serif;
-  height: 0;
-  opacity: 0;
+div#resume div.content div.edu-item div.place div.header-place h6 {
+  color: #bdbdbd;
+  font-weight: 700;
 }
-div#resume div.content div.edu-item div.institute span.glyphicon {
+div#resume div.content div.edu-item div.place div.header-place span.glyphicon {
   position: absolute;
   top: 22px;
   right: 16px;
+}
+div#resume div.content div.edu-item div.place p {
+  font-family: 'Lato', sans-serif;
+  height: 0;
+  margin-bottom: 0;
+  opacity: 0;
+}
+div#resume div.content div.edu-item div.place:hover {
+  cursor: pointer;
 }
 html {
   height: 100%;
@@ -251,4 +286,4 @@ div#about.section h4 {
 div#about.section p {
   color: #bdbdbd;
 }
-</style><body><div id="hero"><div id="hero-content"><h1>Hi, I'm Lorenzo</h1><p>Nice to meet you!</p></div></div><div id="navbar"><nav class="navbar navbar-default navbar-static"><div class="container-fluid"><div class="navbar-header"><button type="button" data-toggle="collapse" aria-expanded="false" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#hero" class="navbar-brand">Lorenzo Rigato</a></div><div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse"><ul class="nav navbar-nav"><li class="active"> <a href="#hero">HOME</a></li><li><a href="#about">ABOUT</a></li><li><a href="#portfolio">PORTFOLIO</a></li><li><a href="#resume">RESUME</a></li><li> <a href="#references">REFERENCES</a></li><li><a href="#skills">SKILLS</a></li><li> <a href="#contacts">CONTACTS</a></li></ul></div></div></nav></div><div id="about" class="row section"><div class="header"><h1>My Story </h1><p>This is my story</p><div class="separator wow zoomIn"></div></div><div class="row"><div class="col-sm-6"><h2>HELLO, MY NAME IS LORENZO.</h2><h4>Lorenzo Rigato, 25 years young, born and grew up in Treviso, Italy. Highly motivated full-stack and mobile developer.</h4><div class="left-separator"></div><br><p>I currently work at Galley-La Company, where I spend most of my time crafting and working on awesome projects.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p></div><div class="col-sm-6"><h2>FOTO</h2></div></div></div><div id="portfolio" class="row section"><div class="header"><h1>My Works</h1><p>Below My last works</p><div class="separator wow zoomIn"></div></div><div class="technology"> <img src="img/android_logo_droid.png"><span>Android</span></div><div class="row"><div id="quanto-spreco" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Quanto Spreco?</h2><p>The app to optimize the food consumption of your pantry</p></div></div><div id="bring-the-food" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Bring The Food</h2><p>The app to share your surplus of food in order to reduce food waste</p></div></div><div id="come-butta" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Come Butta</h2><p>The application to know the correct bid</p></div></div></div><div class="row"><div id="android-toggle-switch" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Android Toggle Switch</h2><p>A customizable extension of Android Switches that supports also more than 2 items</p></div></div></div><div class="technology"> <img src="img/android_logo_droid.png"><span>Ruby on Rails</span></div><div class="row"><div id="west-road-bike" class="work col-lg-4"><div class="bg"></div><div class="description"><h2>West Road Bike</h2><p>A customizable extension of Android Switches that supports also more than 2 items</p></div></div><div id="studio4" class="work col-lg-4"><div class="bg"></div><div class="description"><h2>Studio 4 Audioservizi</h2><p>A customizable extension of Android Switches that supports also more than 2 items</p></div></div><div id="quanto-spreco-web" class="work col-lg-4"><div class="bg"></div><div class="description"><h2>Quanto Spreco? (website)</h2><p>The website for the Quanto Spreco? application.</p></div></div></div></div><div id="resume" class="row section"><div class="header"><h1>Resume</h1><p>If you call failures experiments, you can put them in your resume and claim them as achievements.</p><div class="separator wow zoomIn"></div></div><div class="content"><div class="edu-item row"><div class="col-sm-2"> <div class="time">2013 - 2015</div></div><div class="col-sm-10 institute"><h4>COMPUTER SCIENCE MASTERS DEGREE - UNIVERSITY OF TRENTO</h4><p>Bla bla bla</p><span class="glyphicon glyphicon-menu-down"></span></div></div><div class="edu-item row"><div class="col-sm-2"><div class="time">2010 - 2013</div></div><div class="col-sm-10 institute"><h4>COMPUTER SCIENCE BACHELORS DEGREE - UNIVERSITY OF TRENTO</h4><p>bla bla bla</p><span class="glyphicon glyphicon-menu-down"></span></div></div><div class="edu-item row"><div class="col-sm-2"><div class="time">2006 - 2010</div></div><div class="col-sm-10 institute"><h4>ECONOMY HIGH SCHOOL DIPLOMA - ITC RICCATI OF TREVISO</h4><p>bla bla bla</p><span class="glyphicon glyphicon-menu-down"></span></div></div></div></div><div id="references" class="row section"><div class="header"><h1>References</h1><p>They speaks about me</p><div class="separator wow zoomIn"></div></div></div><div id="skills" class="row section"><div class="header"><h1>My Skills</h1><p>Here there are my main skills</p><div class="separator wow zoomIn"></div></div></div><div id="contacts" class="row section"><div class="header"><h1>Contacts</h1><p>Get in touch with me</p><div class="separator wow zoomIn"></div></div></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script src="js/wow.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><script src="js/jquery.easing.min.js"></script><script src="js/navbar.js"></script><script src="js/resume.js"></script><script> new WOW().init();</script></body></head></html>
+</style><body><div id="hero"><div id="hero-content"><h1>Hi, I'm Lorenzo</h1><p>Nice to meet you!</p></div></div><div id="navbar"><nav class="navbar navbar-default navbar-static"><div class="container-fluid"><div class="navbar-header"><button type="button" data-toggle="collapse" aria-expanded="false" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#hero" class="navbar-brand">Lorenzo Rigato</a></div><div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse"><ul class="nav navbar-nav"><li class="active"> <a href="#hero">HOME</a></li><li><a href="#about">ABOUT</a></li><li><a href="#portfolio">PORTFOLIO</a></li><li><a href="#resume">RESUME</a></li><li> <a href="#references">REFERENCES</a></li><li><a href="#skills">SKILLS</a></li><li> <a href="#contacts">CONTACTS</a></li></ul></div></div></nav></div><div id="about" class="row section"><div class="header"><h1>My Story </h1><p>This is my story</p><div class="separator wow zoomIn"></div></div><div class="row"><div class="col-sm-6"><h2>HELLO, MY NAME IS LORENZO.</h2><h4>Lorenzo Rigato, 25 years young, born and grew up in Treviso, Italy. Highly motivated full-stack and mobile developer.</h4><div class="left-separator"></div><br><p>I currently work at Galley-La Company, where I spend most of my time crafting and working on awesome projects.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p></div><div class="col-sm-6"><h2>FOTO</h2></div></div></div><div id="portfolio" class="row section"><div class="header"><h1>My Works</h1><p>Below My last works</p><div class="separator wow zoomIn"></div></div><div class="technology"> <img src="img/android_logo_droid.png"><span>Android</span></div><div class="row"><div id="quanto-spreco" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Quanto Spreco?</h2><p>The app to optimize the food consumption of your pantry</p></div></div><div id="bring-the-food" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Bring The Food</h2><p>The app to share your surplus of food in order to reduce food waste</p></div></div><div id="come-butta" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Come Butta</h2><p>The application to know the correct bid</p></div></div></div><div class="row"><div id="android-toggle-switch" class="work col-sm-4"><div class="bg"></div><div class="description"><h2>Android Toggle Switch</h2><p>A customizable extension of Android Switches that supports also more than 2 items</p></div></div></div><div class="technology"> <img src="img/android_logo_droid.png"><span>Ruby on Rails</span></div><div class="row"><div id="west-road-bike" class="work col-lg-4"><div class="bg"></div><div class="description"><h2>West Road Bike</h2><p>A customizable extension of Android Switches that supports also more than 2 items</p></div></div><div id="studio4" class="work col-lg-4"><div class="bg"></div><div class="description"><h2>Studio 4 Audioservizi</h2><p>A customizable extension of Android Switches that supports also more than 2 items</p></div></div><div id="quanto-spreco-web" class="work col-lg-4"><div class="bg"></div><div class="description"><h2>Quanto Spreco? (website)</h2><p>The website for the Quanto Spreco? application.</p></div></div></div></div><div id="resume" class="row section"><div class="header"><h1>Resume</h1><p>If you call failures experiments, you can put them in your resume and claim them as achievements.</p><div class="separator wow zoomIn"></div></div><div class="content"><div class="edu-item row"><div class="col-xs-3"><div class="time">2013 - 2015</div></div><div class="col-xs-9 place"><img src="img/unitn-logo.png" class="icon-place"><div class="header-place"><h4>COMPUTER SCIENCE MASTERS DEGREE</h4><h6>UNIVERSITY OF TRENTO</h6><h5>110/110 with honour</h5><span class="glyphicon glyphicon-menu-down"></span></div><p>Bla bla bla</p></div></div><div class="edu-item row"><div class="col-xs-3"><div class="time">2010 - 2013</div></div><div class="col-xs-9 place"><img src="img/unitn-logo.png" class="icon-place"><div class="header-place"><h4>COMPUTER SCIENCE BACHELORS DEGREE</h4><h6>UNIVERSITY OF TRENTO</h6><h5>103/110</h5><span class="glyphicon glyphicon-menu-down"></span></div><p>bla bla bla</p></div></div><div class="edu-item row"><div class="col-xs-3"><div class="time">2006 - 2010</div></div><div class="col-xs-9 place"><img src="img/riccati-logo.png" class="icon-place"><div class="header-place"><h4>ECONOMY HIGH SCHOOL DIPLOMA</h4><h6>ITC RICCATI OF TREVISO</h6><h5>81/100</h5><span class="glyphicon glyphicon-menu-down"></span></div><p>bla bla bla</p></div></div></div></div><div id="references" class="row section"><div class="header"><h1>References</h1><p>They speaks about me</p><div class="separator wow zoomIn"></div></div></div><div id="skills" class="row section"><div class="header"><h1>My Skills</h1><p>Here there are my main skills</p><div class="separator wow zoomIn"></div></div></div><div id="contacts" class="row section"><div class="header"><h1>Contacts</h1><p>Get in touch with me</p><div class="separator wow zoomIn"></div></div></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script src="js/wow.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><script src="js/jquery.easing.min.js"></script><script src="js/navbar.js"></script><script src="js/resume.js"></script><script> new WOW().init();</script></body></head></html>

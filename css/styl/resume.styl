@@ -3,11 +3,22 @@ div#resume
 	div.content
 		max-width 800px
 		margin auto
+		position relative
+		
+		&:after
+			content ""
+			display block
+			border 1px dashed $very_dark_gray
+			position absolute
+			top 0
+			left 8.3%
+			height 100%
+			z-index -3
 		
 		div.edu-item
 			color white
 			margin-bottom 18px
-			
+				
 			div.time
 				background-color $primary_color
 				border-radius 3px
@@ -17,23 +28,41 @@ div#resume
 				padding 4px
 				text-align center
 			
-			div.institute
+			div.place
 				border 1px solid $dark_gray
 				border-radius 3px
 				padding 12px
-				position relative
 				
-				h4
+				img.icon-place
+					margin-right 3%
+					vertical-align inherit
+					width 10%
+				
+				div.header-place
+					display inline-block
 					font-family 'Raleway', sans-serif
-					color white
+					position relative
+					width 87%
+				
+					h4
+						color white
+					h6 
+						color $gray
+						font-weight 700
+					
+					span.glyphicon
+						position absolute
+						top 22px
+						right 16px
 					
 				p
 					font-family 'Lato', sans-serif
 					height 0
+					margin-bottom 0
 					opacity 0
 				
-				span.glyphicon
-					position absolute
-					top 22px
-					right 16px
+				
+				
+				&:hover
+					cursor pointer
 	

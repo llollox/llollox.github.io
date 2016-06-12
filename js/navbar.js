@@ -12,12 +12,17 @@ $(document).ready(function(){
         var target = this.hash,
             menu = target;
         $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top+2
-        }, 1000, 'easeInOutQuart', function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
-        }); 
+        $('html, body').stop().animate(
+        	{
+            	'scrollTop': $target.offset().top+2
+        	}, 
+        	1000, 
+        	'easeInOutQuart', 
+        	function () {
+            	window.location.hash = target;
+            	$(document).on("scroll", onScroll);
+        	}
+        ); 
     });
 
 	/*var affixElement = '#navbar';
