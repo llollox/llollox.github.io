@@ -1,0 +1,7 @@
+{
+  "name": "lorenzo-rigato-personal-site",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "latest"
+  }
+}

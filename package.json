@@ -1,0 +1,26 @@
+{
+  "name": "lorenzo-rigato-personal-site",
+  "version": "1.0.0",
+  "description": "Personal site",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-stylus": "^2.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llollox/llollox.github.io.git"
+  },
+  "author": "Lorenzo Rigato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/llollox/llollox.github.io/issues"
+  },
+  "homepage": "https://github.com/llollox/llollox.github.io#readme"
+}
