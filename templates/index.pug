@@ -3,8 +3,22 @@ html
         link(href='../public/css/css_libraries.css', rel='stylesheet')
         link(href='../public/css/application.css', rel='stylesheet')
 
-    body
-        p= 'Prova a'
-        span.glyphicon.glyphicon-search
+    body.no-trans.front-page.transparent-header.gradient-background-header
+
+        // scrollToTop
+        // ================
+        div.scrollToTop.circle
+            i.icon-up-open-big
+
+
+        // page wrapper start
+        div.page-wrapper
+            include header
+            include banner
+
+            div#page-start
+
+            // section start
+            include timeline
 
         script(src='../public/js/application.js')

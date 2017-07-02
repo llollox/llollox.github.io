@@ -1,0 +1,36 @@
+nav.navbar.navbar-default(role='navigation')
+    div.container-fluid
+
+        // Toggle get grouped for better mobile displa
+        div.navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse-1')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+
+            // header-left start
+            div.header-left.clearfix
+
+                // logo
+                div#logo.logo
+                    a(href='#')
+                        img#logo_img(src='public/images/logo_dark_cyan.png', alt='Logo')
+
+                // name-and-slogan
+                div.site-slogan.hidden-x Web and mobile Developer
+
+
+
+        div.collapse.navbar-collapse.scrollspy.smooth-scroll#navbar-collapse-1
+            ul.nav.navbar-nav.navbar-right
+                li.active
+                    a(href='#home') Home
+                li
+                    a(href='#about') About
+                li
+                    a(href='#skills') Skills
+                li
+                    a(href='#portfolio') Recent Projects
+                li
+                    a(href='#footer') Contacts

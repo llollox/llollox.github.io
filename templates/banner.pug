@@ -1,0 +1,76 @@
+// banner start
+div#banner.banner.clearfix
+
+    // slideshow start
+    div.slideshow
+
+        // slider revolution start
+        div.slider-revolution-5-container
+
+            div#slider-banner-fullscreen-hero.slider-banner-fullscreen-hero.rev_slider.height-100-perI(data-version="5.0")
+                ul.slides
+
+                    // slide 1 start
+                    li(data-transition="random", data-slotamount="default", data-masterspeed="default", data-title="Slide Title")
+
+                        // main image
+                        img.rev-slidebg(src="public/images/resume-slide-1.jpg", alt="slidegb1",
+                            data-bgposition="center top",
+                            data-ease="Linear.easeNone",
+                            data-duration="30000",
+                            data-kenburns="on",
+                            data-scalestart="100",
+                            data-scaleend="120",
+                            data-rotatestart="0",
+                            data-rotateend="0",
+                            data-offsetstart="0 0",
+                            data-offsetend="0 0",
+                            data-bgparallax="10",
+                            data-no-retina)
+
+                        // transparent background
+                        div.tp-caption.light-translucent-bg(
+                            style="background-color: rgba(255,255,255,0.1)",
+                            data-x="center",
+                            data-y="center",
+                            data-start="0",
+                            data-transform_in="opacity:0;s:600;e:Power2.easeInOut",
+                            data-transform_out="opacity:0;s:600;s:300",
+                            data-width="5000",
+                            data-height="5000")
+
+                        // layer 1
+                        div.tp-caption.large_white.dark-translucent-bg.caption-box(
+                            data-x="left",
+                            data-y="200",
+                            data-start="500",
+                            data-transform_idle="o:1;",
+                            data-transform_in="y:[100%];opacity:0;s:2000;e:Power4.easeInOut;",
+                            data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                        ) Hi I'm Lorenzo Rigato!
+
+                        // layer 3
+                        div.tp-caption.medium_white.dark-translucent-bg.caption-box(
+                            data-x="left",
+                            data-y="292",
+                            data-start="750",
+                            data-transform_idle="o:1;",
+                            data-transform_in="y:[100%];opacity:0;s:2000;e:Power4.easeInOut;",
+                            data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;",
+                            data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;",
+                            data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                        ) Web, Android & iOS Developer
+
+                        // layer 4
+                        div.tp-caption(
+                            data-x="left",
+                            data-y="390",
+                            data-start="1000",
+                            data-transform_idle="o:1;",
+                            data-transform_in="y:[100%];opacity:0;s:2000;e:Power4.easeInOut;",
+                            data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;",
+                            data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;",
+                            data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                        )
+                            a.btn.btn-default.btn-lg.margin-clear.radius-50.smooth-scroll(href="#page-start") More Details
+

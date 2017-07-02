@@ -36,8 +36,24 @@ gulp.task('scripts', function () {
             paths.bower  + '/jquery/dist/jquery.js',
             paths.bower  + '/bootstrap/dist/js/bootstrap.js',
             paths.bower  + '/modernizr/modernizr.js',
+            paths.assets + '/js/jquery.themepunch.tools.min.js',
+            paths.assets + '/js/jquery.themepunch.revolution.min.js',
+            paths.assets + '/js/revolution.extension.slideanims.min.js',
+            paths.assets + '/js/revolution.extension.layeranimation.min.js',
+            paths.assets + '/js/revolution.extension.kenburn.min.js',
+            paths.assets + '/js/isotope.pkgd.js',
+            paths.assets + '/js/jquery.magnific-popup.js',
             paths.bower  + '/waypoints/lib/jquery.waypoints.js',
-            paths.assets + '/js/**.js'
+            paths.assets + '/js/jquery.countTo.js',
+            paths.assets + '/js/jquery.parallax-1.1.3.js',
+            paths.assets + '/js/jquery.validate.js',
+            paths.assets + '/js/morphext.js',
+            paths.assets + '/js/jquery.vide.js',
+            paths.assets + '/js/owl.carousel.js',
+            paths.assets + '/js/jquery.browser.js',
+            paths.assets + '/js/SmoothScroll.js',
+            paths.assets + '/js/template.js',
+            paths.assets + '/js/template.overrides.js'
         ])
         .pipe(concat('application.js'))
         .pipe(gulp.dest('./public/js'));
@@ -81,9 +97,9 @@ gulp.task('styles', function () {
 });
 
 gulp.task('html', function(){
-    return gulp.src('templates/*.pug')
+    return gulp.src('templates/index.pug')
         .pipe(pug())
         .pipe(gulp.dest('./'))
 });
 
-gulp.task('default', [ 'serve' ]);
+gulp.task('default', [ 'html', 'css_libraries', 'styles', 'scripts', 'images', 'assets', 'fonts', 'serve' ]);
