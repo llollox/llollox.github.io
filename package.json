@@ -4,8 +4,13 @@
   "description": "Personal site",
   "main": "gulpfile.js",
   "dependencies": {
+    "bootstrap-styl": "^5.0.8",
+    "bootstrap-stylus": "^0.2.2",
     "browser-sync": "^2.18.12",
+    "event-stream": "^3.3.4",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-filter": "^5.0.0",
     "gulp-pug": "^3.3.0",
     "gulp-stylus": "^2.6.0"
   },
