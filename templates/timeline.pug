@@ -1,3 +1,100 @@
+-
+    var timeline = [
+        {
+            name: "Android & iOS Developer",
+            company: {
+                name: "Previnet",
+                icon: "previnet.jpg",
+                website: "http://www.previnet.it/"
+            },
+            period: "Nov 2016 - Present",
+            description:
+                "<ul class='text-align-left'>" +
+                    "<li><strong>Refactoring</strong> of two old internal Android applications " +
+                    "following the Material design style guidelines.</li>" +
+                    "<li>Development of an application for a bank, in both <strong>Android and iOS</strong> versions, " +
+                    "to manage health services provided by a network of structures.</li>" +
+                "</ul>"
+        },
+        {
+            name: "Web Developer",
+            company: {
+                name: "Reply",
+                icon: "reply.jpg",
+                website: "http://www.reply.com/it/"
+            },
+            period: "Apr - Oct 2016",
+            description:
+                "<ul class='text-align-left'>" +
+                    "<li>Development of a <strong>responsive web application</strong> for an insurance company using Liferay</li>" +
+                    "<li>Development of <strong>UI test suite</strong> using SAHI</li>" +
+                "</ul>"
+        },
+        {
+            name: "Android Developer",
+            company: {
+                name: "Belka",
+                icon: "belka.jpg",
+                website: "http://belka.us/en/"
+            },
+            period: "Jan - Mar 2016",
+            description:
+                "<ul class='text-align-left'>" +
+                    "<li>Development of <strong>two Android applications</strong>. First on sharing events between friends and last on configuring electronic chips via NFC</li>" +
+                    "<li>Improved skill on understanding customer's <strong>requirements</strong></li>" +
+                "</ul>"
+        },
+        {
+            name: "Ruby on Rails & Android Developer",
+            company: {
+                name: "Fondazione Bruno Kessler",
+                icon: "fbk.jpg",
+                website: "https://www.fbk.eu/it/"
+            },
+            period: "2011 - 2015",
+            description:
+                "<ul class='text-align-left'>" +
+                    "<li><strong>Design</strong> and <strong>development</strong> of Ruby on Rails and Android applications against the food waste</li>" +
+                    "<li>Performed <strong>data engineering</strong> to create API of aggregated information</li>" +
+                    "<li>Worked closely with <strong>senior developers</strong> and learned advanced programming and <strong>project management</strong> skills</li>" +
+                "</ul>"
+        },
+        {
+            name: "Master's Degree in Computer Science",
+            company: {
+                name: "University of Trento",
+                icon: "unitn.jpg",
+                subtitle: "110 cum laude",
+                website: "http://www.unitn.it/"
+            },
+            period: "2013 - 2015",
+            description: "Thesis: '<strong>Quanto Spreco?</strong>'. An application to monitor and reduce the domestic food waste"
+        },
+        {
+            name: "Bachelor's Degree in Computer Science",
+            company: {
+                name: "University of Trento",
+                icon: "unitn.jpg",
+                subtitle: "103/110",
+                website: "http://www.unitn.it/"
+            },
+            period: "2010 - 2013",
+            description: "Discovered a strong interest on networking. <br/>" +
+                "Thesis: '<strong>Bring the *'</strong>. An extension to the Bring the Food application to support any kind of donation."
+        },
+        {
+            name: "High School Diploma on Economy",
+            company: {
+                name: "ITC Riccati of Treviso",
+                icon: "riccati.jpg",
+                subtitle: "81/100",
+                website: "http://www.riccati-luzzatti.gov.it/it"
+        },
+            period: "2006 - 2010",
+            description: "Thesis: a simple <strong>web CMS</strong> to manage films projections on a cinema, written in PHP."
+        }
+    ]
+
 section#about.light-gray-bg.pv-20
     div.container
         div.row
@@ -12,83 +109,22 @@ section#about.light-gray-bg.pv-20
 
                 // timeline grid start
                 div.timeline.margin-clear.clearfix
+                    each item, index in timeline
+                        div.timeline-item(class=index % 2 == 0 ? "" : "pull-right")
 
-                    div.timeline-item
-                        div.white-bg.shadow.p-20.text-center.object-non-visible(
-                            data-animation-effect="fadeInUpSmall",
-                            data-effect-delay="100")
+                            div.white-bg.shadow.p-20.text-center.object-non-visible(
+                                data-animation-effect="fadeInUpSmall",
+                                data-effect-delay="100")
 
-                            div.timeline-date-label.margin-clear.clearfix 2011 - 2016
-                            h3 Android & iOS Developer at Previnet
-                            div.separator
-                            p Mauris dolor sapien, malesuada at interdum ut, hendrerit eget lorem. Nunc interdum mi neque, et  sollicitudin purus fermentum ut. Suspendisse faucibus nibh odio, a vehicula eros pharetra in. Maecenas  ullamcorper commodo rutrum.
+                                div.timeline-date-label.margin-clear.clearfix= item.period
+                                h3.margin-bottom-20.margin-top-28= item.name
 
+                                img.display-inline-block.height-50(src="public/images/logo/" + item.company.icon)
+                                
+                                a.display-block.margin-top-8(href=item.company.website, target='_blank')
+                                    span.font-size-16= item.company.name
+                                div=item.company.subtitle
 
-                    div.timeline-item.pull-right
-                        div.white-bg.shadow.p-20.text-center.object-non-visible(
-                        data-animation-effect="fadeInUpSmall",
-                        data-effect-delay="100")
+                                div.separator
 
-                            div.timeline-date-label.margin-clear.clearfix 2011 - 2016
-                            h3 Web Developer at Reply
-                            div.separator
-                            p Mauris dolor sapien, malesuada at interdum ut, hendrerit eget lorem. Nunc interdum mi neque, et  sollicitudin purus fermentum ut. Suspendisse faucibus nibh odio, a vehicula eros pharetra in. Maecenas  ullamcorper commodo rutrum.
-
-
-
-                    div.timeline-item
-                        div.white-bg.shadow.p-20.text-center.object-non-visible(
-                        data-animation-effect="fadeInUpSmall",
-                        data-effect-delay="100")
-
-                            div.timeline-date-label.margin-clear.clearfix 2011 - 2016
-                            h3 Android Developer at Belka
-                            div.separator
-                            p Mauris dolor sapien, malesuada at interdum ut, hendrerit eget lorem. Nunc interdum mi neque, et  sollicitudin purus fermentum ut. Suspendisse faucibus nibh odio, a vehicula eros pharetra in. Maecenas  ullamcorper commodo rutrum.
-
-
-
-                    div.timeline-item.pull-right
-                        div.white-bg.shadow.p-20.text-center.object-non-visible(
-                        data-animation-effect="fadeInUpSmall",
-                        data-effect-delay="100")
-
-                            div.timeline-date-label.margin-clear.clearfix(style="width:220px") Dec 2011 - Dec 2015 <span>4 years</span>
-                            h3 Ruby on Rails & Android Developer at Fondazione Bruno Kessler
-                            div.separator
-                            p Mauris dolor sapien, malesuada at interdum ut, hendrerit eget lorem. Nunc interdum mi neque, et  sollicitudin purus fermentum ut. Suspendisse faucibus nibh odio, a vehicula eros pharetra in. Maecenas  ullamcorper commodo rutrum.
-
-
-
-                    div.timeline-item
-                        div.white-bg.shadow.p-20.text-center.object-non-visible(
-                        data-animation-effect="fadeInUpSmall",
-                        data-effect-delay="100")
-
-                            div.timeline-date-label.margin-clear.clearfix(style="width:220px") 2013 - 2015
-                            h3 Master's Degree in Computer Science - 110 with honour
-                            div.separator
-                            p Mauris dolor sapien, malesuada at interdum ut, hendrerit eget lorem. Nunc interdum mi neque, et  sollicitudin purus fermentum ut. Suspendisse faucibus nibh odio, a vehicula eros pharetra in. Maecenas  ullamcorper commodo rutrum.
-
-
-                    div.timeline-item.pull-right
-                        div.white-bg.shadow.p-20.text-center.object-non-visible(
-                        data-animation-effect="fadeInUpSmall",
-                        data-effect-delay="100")
-
-                            div.timeline-date-label.margin-clear.clearfix(style="width:220px") 2010 - 2013
-                            h3 Bachelor's Degree in Computer Science - 103/110
-                            div.separator
-                            p Mauris dolor sapien, malesuada at interdum ut, hendrerit eget lorem. Nunc interdum mi neque, et  sollicitudin purus fermentum ut. Suspendisse faucibus nibh odio, a vehicula eros pharetra in. Maecenas  ullamcorper commodo rutrum.
-
-
-
-                    div.timeline-item
-                        div.white-bg.shadow.p-20.text-center.object-non-visible(
-                        data-animation-effect="fadeInUpSmall",
-                        data-effect-delay="100")
-
-                            div.timeline-date-label.margin-clear.clearfix(style="width:220px") 2006 - 2010
-                            h3 High School Diploma on Economy
-                            div.separator
-                            p Mauris dolor sapien, malesuada at interdum ut, hendrerit eget lorem. Nunc interdum mi neque, et  sollicitudin purus fermentum ut. Suspendisse faucibus nibh odio, a vehicula eros pharetra in. Maecenas  ullamcorper commodo rutrum.
+                                p.text-align-left!= item.description

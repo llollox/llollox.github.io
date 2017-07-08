@@ -28133,3 +28133,9 @@ if (jQuery(".btn-print").length>0) {
 	}); // End document ready
 
 })(this.jQuery);
+
+var timeline = [
+    {
+        name: "Fondazione Bruno Kessler"
+    }
+]
