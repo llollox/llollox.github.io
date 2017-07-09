@@ -1,3 +1,25 @@
+-
+    var contacts = {
+        address: "Strada Sant'Angelo, 28/A, 31100, Treviso",
+        cellphone: "+39 333 8600532",
+        email: "lore91tanz@gmail.com"
+    }
+
+    var socials = [
+        {
+            name: "facebook",
+            url: "https://www.facebook.com/lorenzoatrix"
+        },
+        {
+            name: "linkedin",
+            url: "https://www.linkedin.com/in/lorenzo-rigato-0370894b"
+        },
+        {
+            name: "github",
+            url: "https://github.com/llollox"
+        }
+    ]
+
 footer#footer.clearfix
 
     div.footer
@@ -12,23 +34,27 @@ footer#footer.clearfix
                             h2.title Find Me
                             ul.list-icons
                                 li
-                                    i.fa.fa-map-marker.pr-10.text-default One infinity loop, 54100
+                                    i.fa.fa-map-marker.pr-10.text-default
+                                    .
+                                        #{contacts.address}
                                 li
-                                    i.fa.fa-phone.pr-10.text-default +00 112345678
+                                    i.fa.fa-phone.pr-10.text-default
+                                    .
+                                        #{contacts.cellphone}
                                 li
-                                    a(href="mailto:lore91tanz@gmail.com")
+                                    a(href="mailto:" + contacts.email)
                                         i.fa.fa-envelope-o.pr-10
                                         .
-                                            lore91tanz@gmail.com
+                                            #{contacts.email}
 
-                            a.collapsed.map-show.btn-lg-link.padding-hor-clear(
-                                data-toggle="collapse",
-                                href="#collapseContact",
-                                aria-expanded="false",
-                                aria-controls="collapseContact")
-                                i.fa.fa-envelope.pr-20
-                                .
-                                    Contact Me
+                            //a.collapsed.map-show.btn-lg-link.padding-hor-clear(
+                            //    data-toggle="collapse",
+                            //    href="#collapseContact",
+                            //    aria-expanded="false",
+                            //    aria-controls="collapseContact")
+                            //    i.fa.fa-envelope.pr-20
+                            //    .
+                            //        Contact Me
 
 
                     div.col-sm-6.col-md-3.col-lg-4.col-lg-offset-1
@@ -40,21 +66,12 @@ footer#footer.clearfix
                             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro fugiat accusantium similique modi alias consectetur nesciunt.
 
                             ul.social-links.large.circle.animated-effect-1
-                                li.facebook
-                                    a(target="_blank", href="https://www.facebook.com/lorenzoatrix")
-                                        i.fa.fa-facebook
 
-                                li.twitter
-                                    a(target="_blank", href="https://twitter.com/llollox")
-                                        i.fa.fa-twitter
+                                each social in socials
 
-                                li.googleplus
-                                    a(target="_blank", href="https://plus.google.com/+LorenzoRigato?hl=it")
-                                        i.fa.fa-google-plus
-
-                                li.linkedin
-                                    a(target="_blank", href="https://www.linkedin.com/in/lorenzo-rigato-0370894b")
-                                        i.fa.fa-linkedin
+                                    li(class=social.name)
+                                        a(target="_blank", href=social.url)
+                                            i.fa(class="fa-" + social.name)
 
     div.subfooter
         div.container
