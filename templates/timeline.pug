@@ -116,11 +116,11 @@ section#about.light-gray-bg.pv-20
                                 data-animation-effect="fadeInUpSmall",
                                 data-effect-delay="100")
 
-                                div.timeline-date-label.margin-clear.clearfix= item.period
+                                div.timeline-date-label.margin-clear.clearfix.width-150= item.period
                                 h3.margin-bottom-20.margin-top-28= item.name
 
                                 img.display-inline-block.height-50(src="public/images/logo/" + item.company.icon)
-                                
+
                                 a.display-block.margin-top-8(href=item.company.website, target='_blank')
                                     span.font-size-16= item.company.name
                                 div=item.company.subtitle

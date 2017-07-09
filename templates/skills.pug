@@ -1,3 +1,57 @@
+-
+    var skills = {
+        technical: [
+            {
+                name: "Android",
+                percentage: "90%"
+            },
+            {
+                name: "Ruby on Rails",
+                percentage: "60%"
+            },
+            {
+                name: "Web (Angular 2, Node, CSS)",
+                percentage: "80%"
+            },
+            {
+                name: "Data Engineering",
+                percentage: "50%"
+            },
+            {
+                name: "iOS",
+                percentage: "40%"
+            },
+            {
+                name: "User Interaction & UX",
+                percentage: "75%"
+            },
+            {
+                name: "Photoshop, Illustrator, Premiere",
+                percentage: "60%"
+            }
+        ],
+        personal: [
+            {
+                name: "Quick Learning",
+                percentage: "70%"
+            },
+            {
+                name: "Problem Solving",
+                percentage: "60%"
+            },
+            {
+                name: "Team Work",
+                percentage: "55%"
+            },
+            {
+                name: "Motivation",
+                percentage: "90%"
+            }
+        ]
+    }
+
+
+
 section#skills.main-container
     div.container
 
@@ -8,41 +62,34 @@ section#skills.main-container
                 h1.page-title My Skills
                 div.separator-2.mb-20
 
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex. Suspendisse aliquet imperdiet commodo. Aenean vel lacinia elit. Class aptent taciti sociosqu ad litora torquent per.
+                p Below are listed my technical and personal skills.
 
-                div.progress.style-1.dark
-                    span.text
-                    div.progress-bar.progress-bar-white(role="progressbar", data-animate-width="95%")
-                        span.label.object-non-visible(data-animation-effect="fadeInLeftSmall", data-effect-delay="1000") Android
+                h3 Technical
 
+                each skill in skills.technical
 
-                div.progress.style-1.dark
-                    span.text
-                    div.progress-bar.progress-bar-white(role="progressbar", data-animate-width="85%")
-                        span.label.object-non-visible(data-animation-effect="fadeInLeftSmall", data-effect-delay="1000") Ruby on Rails
+                    div.progress.style-1.dark
+                        span.text
+                        div.progress-bar.progress-bar-white(role="progressbar", data-animate-width=skill.percentage)
+                            span.label.object-non-visible(data-animation-effect="fadeInLeftSmall", data-effect-delay="1000")= skill.name
 
+                h3 Personal
 
-                div.progress.style-1.dark
-                    span.text
-                    div.progress-bar.progress-bar-white(role="progressbar", data-animate-width="80%")
-                        span.label.object-non-visible(data-animation-effect="fadeInLeftSmall", data-effect-delay="1000") CSS
+                each skill in skills.personal
 
+                    div.progress.style-1.dark
+                        span.text
+                        div.progress-bar.progress-bar-white(role="progressbar", data-animate-width=skill.percentage)
+                            span.label.object-non-visible(data-animation-effect="fadeInLeftSmall", data-effect-delay="1000")= skill.name
 
-                div.progress.style-1.dark
-                    span.text
-                    div.progress-bar.progress-bar-white(role="progressbar", data-animate-width="40%")
-                        span.label.object-non-visible(data-animation-effect="fadeInLeftSmall", data-effect-delay="1000") iOS
-
-                p Sed eget pulvinar quam, vel feugiat enim. Aliquam erat volutpat. Phasellus eu porta ipsum. Suspendisse aliquet imperdiet commodo. Aenean vel lacinia elit. Class aptent taciti sociosqu ad litora torquent per. Vestibulum velmo.
-
-                ul.list-icons
-                    li.object-non-visible.animated.object-non-visible.fadeInUpSmall(data-animation-effect="fadeInUpSmall")
-                        i.icon-check
-                        .
-                            Data Engineer
-
-                    li.object-non-visible.animated.object-non-visible.fadeInUpSmall(data-animation-effect="fadeInUpSmall")
-                        i.icon-check
-                        .
-                            Clean code lover
+                //ul.list-icons
+                //    li.object-non-visible.animated.object-non-visible.fadeInUpSmall(data-animation-effect="fadeInUpSmall")
+                //        i.icon-check
+                //        .
+                //            Data Engineer
+                //
+                //    li.object-non-visible.animated.object-non-visible.fadeInUpSmall(data-animation-effect="fadeInUpSmall")
+                //        i.icon-check
+                //        .
+                //            Clean code lover
 

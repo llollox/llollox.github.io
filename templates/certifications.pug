@@ -1,0 +1,68 @@
+-
+    var certifications = [
+        {
+            name: "Java 8 SE Programmer",
+            date: "September 2016",
+            company_icon: "oracle.jpg",
+            url: "https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-808"
+        },
+        {
+            name: "Microsoft Office Specialist (MOS)",
+            date: "June 2008",
+            company_icon: "microsoft.jpg",
+            url: "https://www.microsoft.com/it-it/learning/mos-certification.aspx"
+        }
+    ]
+
+section.section.dark-translucent-bg.parallax(
+    style="background-position: 50% -54px; background-image: url('public/images/macbook_pencil.jpg')")
+
+    div.container
+
+        div.row
+            div.col-md-8.col-md-offset-2.text-center
+                h2.title
+                    span.text-white Certifications
+                    //span.text-default Certifications
+
+                div.separator
+
+                //p.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit Illo quaerat <br> commodi excepturi dignissimos!
+                br
+
+
+        each certification in certifications
+
+            div.col-md-6.col-md-offset-3
+
+                div.image-box.style-3-b
+                    div.row
+
+                        div.col-xs-3
+                            img.width-80.pull-right(src="public/images/logo/" + certification.company_icon)
+                        div.col-xs-9
+                            div.body.padding-top-12I
+                                h3.title
+                                    a(href=certification.url, target="_blank")= certification.name
+                            p.small.mb-10
+                                i.icon-calendar= certification.date
+                                //.
+                                //    = certification.date
+                            //div.separator-2
+                            //p.mb-10 Lorem ipsum dolor sit amet, adipisicing elit. Aliquam atque ipsam nihialal. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam laudantium, provident culpa saepe.
+
+
+        //div.clients-container
+        //    div.clients
+        //
+        //        div.client-image.object-non-visible(data-animation-effect="fadeIn", data-effect-delay="100")
+        //            a(href="#")
+        //                img(src="public/images/client-1.png")
+        //
+        //        div.client-image.object-non-visible(data-animation-effect="fadeIn", data-effect-delay="200")
+        //            a(href="#")
+        //                img(src="public/images/client-1.png")
+        //
+        //        div.client-image.object-non-visible(data-animation-effect="fadeIn", data-effect-delay="300")
+        //            a(href="#")
+        //                img(src="public/images/client-1.png")
