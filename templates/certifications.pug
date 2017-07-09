@@ -15,14 +15,16 @@
     ]
 
 section.section.dark-translucent-bg.parallax(
-    style="background-position: 50% -54px; background-image: url('public/images/macbook_pencil.jpg')")
+    style="background-position: 50% -54px; background-image: url('public/images/road.jpg')")
 
-    div.container
+    div.container.mt-20.mb-20
 
         div.row
             div.col-md-8.col-md-offset-2.text-center
                 h2.title
+                    i.fa.fa-trophy.pr-20
                     span.text-white Certifications
+                    i.fa.fa-trophy.pl-20
                     //span.text-default Certifications
 
                 div.separator
@@ -33,7 +35,7 @@ section.section.dark-translucent-bg.parallax(
 
         each certification in certifications
 
-            div.col-md-6.col-md-offset-3
+            div.col-md-6.col-md-offset-3.object-non-visible(data-animation-effect="fadeInUpSmall", data-effect-delay="100")
 
                 div.image-box.style-3-b
                     div.row
