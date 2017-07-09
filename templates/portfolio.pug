@@ -20,6 +20,13 @@
             tags: "Ruby on Rails, Web",
             image_url: "public/images/projects/westroadbike350.gif",
             url: "http://www.trevisoaziende.com/"
+        },
+        {
+            name: "Quanto Spreco?",
+            date: "December 2015",
+            tags: "Android, Ruby on Rails",
+            image_url: "public/images/projects/quantospreco350.gif",
+            url: "http://ict4g.org/smartpantry"
         }
     ]
 
@@ -41,13 +48,13 @@ section#portfolio.section.pv-40.light-gray-bg
 
             each project, index in projects
 
-                div.image-box.style-3-b.margin-top-40.object-non-visible(data-animation-effect="fadeInUpSmall", data-effect-delay="200")
+                div.image-box.style-3-b.margin-bottom-80I.object-non-visible(data-animation-effect="fadeInUpSmall", data-effect-delay="200")
                     div.row.text-align-center
 
                         if index % 2 == 0
                             div.col-sm-6
                                 a(href=project.url, target="_blank")
-                                    img.width-100per(src=project.image_url)
+                                    img.width-100per.img-rounded(src=project.image_url)
 
                             div.col-sm-6
                                 div.body
@@ -79,7 +86,7 @@ section#portfolio.section.pv-40.light-gray-bg
 
                             div.col-sm-6
                                 a(href=project.url, target="_blank")
-                                    img.width-100per(src=project.image_url)
+                                    img.width-100per.img-rounded(src=project.image_url)
 
             //div.image-box.style-3-b
             //    div.row
