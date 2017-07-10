@@ -4,8 +4,12 @@
             name: "Treviso Aziende",
             date: "January 2017",
             tags: "Ruby on Rails, Web",
-            image_url: "public/images/projects/trevisoaziende350.gif",
-            url: "http://www.trevisoaziende.com/"
+            url: "http://www.trevisoaziende.com/",
+            carousel: [
+                "public/images/projects/tva/home.jpg",
+                "public/images/projects/tva/list.jpg",
+                "public/images/projects/tva/details.jpg"
+            ]
         },
         {
             name: "Studio 4 Audioservizi",
@@ -30,7 +34,7 @@
         }
     ]
 
-section#portfolio.section.pv-40.light-gray-bg
+section.section.pv-30
     div.container
 
         div.row
@@ -38,98 +42,69 @@ section#portfolio.section.pv-40.light-gray-bg
                 h2.title
                     span.text-muted Recent
                     span.text-default Projects
-
                 div.separator
 
-                p.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit Illo quaerat <br> commodi excepturi dignissimos!
-                br
 
-        div.col-md-10.col-md-offset-1
+        div.filters.text-center
+            ul.nav.nav-pills.style-2
+                li.active
+                    a(href="#", data-filter="*") All
+                li
+                    a(href="#", data-filter=".web") Web
+                li
+                    a(href="#", data-filter=".android") Android
 
-            each project, index in projects
 
-                div.image-box.style-3-b.margin-bottom-120I.object-non-visible(data-animation-effect="fadeInUpSmall", data-effect-delay="200")
-                    div.row.text-align-center
 
-                        //if index % 2 == 0
-                        div.col-sm-6
-                            a(href=project.url, target="_blank")
-                                img.width-100per.height-320.img-rounded(src=project.image_url)
+        div.isotope-container.row.grid-space-0
 
-                        div.col-sm-6
-                            div.body
-                                h3.title
-                                    a(href=project.url, target="_blank")= project.name
+            each project in projects
 
-                            p.small.mb-10
-                                i.icon-calendar= " " + project.date
-                                i.pl-10.icon-tag-1= " " + project.tags
-                            div.separator-2
-                            p.mb-10 Lorem ipsum dolor sit amet, adipisicing elit. Aliquam atque ipsam nihialal. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam laudantium, provident culpa saepe.
-                            p
-                                a(href="#") Read More
+                if project.carousel
 
-                        //else
-                        //    div.col-sm-6
-                        //        div.body
-                        //            h3.title
-                        //                a(href=project.url, target="_blank")= project.name
-                        //
-                        //        p.small.mb-10
-                        //            i.icon-calendar= " " + project.date
-                        //            i.pl-10.icon-tag-1= " " + project.tags
-                        //
-                        //        div.separator-2
-                        //        p.mb-10 Lorem ipsum dolor sit amet, adipisicing elit. Aliquam atque ipsam nihialal. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam laudantium, provident culpa saepe.
-                        //        p
-                        //            a(href="#") Read More
-                        //
-                        //    div.col-sm-6
-                        //        a(href=project.url, target="_blank")
-                        //            img.width-100per.img-rounded(src=project.image_url)
+                    div.col-sm-6.col-md-3.isotope-item.android
 
-            //div.image-box.style-3-b
-            //    div.row
-            //
-            //        div.col-sm-6.col-md-4
-            //            div.shadow.bordered
-            //                img(src="public/images/portfolio-1.jpg")
-            //        div.col-sm-6.col-md-8
-            //            div.body
-            //                h3.title
-            //                    a(href="#") Project Title
-            //            p.small.mb-10
-            //                i.icon-calendar
-            //                .
-            //                    Feb, 2016
-            //                i.pl-10.icon-tag-1
-            //                .
-            //                    Web Design
-            //            div.separator-2
-            //            p.mb-10 Lorem ipsum dolor sit amet, adipisicing elit. Aliquam atque ipsam nihialal. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam laudantium, provident culpa saepe.
-            //            p
-            //                a(href="#") Read More
-            //
-            //
-            //div.image-box.style-3-b
-            //    div.row
-            //
-            //        div.col-sm-6.col-md-4
-            //            div.shadow.bordered
-            //                img(src="public/images/portfolio-1.jpg")
-            //        div.col-sm-6.col-md-8
-            //            div.body
-            //                h3.title
-            //                    a(href="#") Project Title
-            //            p.small.mb-10
-            //                i.icon-calendar
-            //                .
-            //                    Feb, 2016
-            //                i.pl-10.icon-tag-1
-            //                .
-            //                    Web Design
-            //            div.separator-2
-            //            p.mb-10 Lorem ipsum dolor sit amet, adipisicing elit. Aliquam atque ipsam nihialal. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam laudantium, provident culpa saepe.
-            //            p
-            //                a(href="#") Read More
+                        div#carousel-portfolio.carousel.slide(data-ride="carousel")
+                            ol.carousel-indicators.bottom.margin-clear
 
+                                each item, index in project.carousel
+                                    li(data-target='#carousel-portfolio', data-slide-to=index, class=index == 0 ? "active" : "")
+
+                            div.carousel-inner(role="listbox")
+
+                                each item, index in project.carousel
+                                    div.item(class=index == 0 ? "active" : "")
+                                        div.image-box.text-center
+                                            div.overlay-container
+                                                img(src=item)
+                                                div.overlay-top
+                                                    div.text
+                                                        h3
+                                                            a(href="#")= project.name
+                                                            p.small Web Design
+                                                div.overlay-bottom
+                                                    div.links
+                                                        a(href="#").btn.btn-gray-transparent.btn-animated.btn-sm
+                                                            .
+                                                                View Details
+                                                            i.pl-10.fa.fa-arrow-right
+                else
+
+                    div.col-sm-6.col-md-3.isotope-item.android
+
+                        div.image-box.text-center
+                            div.overlay-container
+                                img(src=project.image_url)
+
+                                div.overlay-top
+                                    div.text
+                                        h3
+                                            a(href="#")= project.name
+                                        p.small Android
+
+                                div.overlay-bottom
+                                    div.links
+                                        a(href="#").btn.btn-gray-transparent.btn-animated.btn-sm
+                                            .
+                                                View Details
+                                            i.pl-10.fa.fa-arrow-right
