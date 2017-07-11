@@ -6,9 +6,9 @@
             tags: "Ruby on Rails, Web",
             url: "http://www.trevisoaziende.com/",
             carousel: [
-                "public/images/projects/tva/home.jpg",
-                "public/images/projects/tva/list.jpg",
-                "public/images/projects/tva/details.jpg"
+                "public/images/projects/w500/tva/home.jpg",
+                "public/images/projects/w500/tva/list.jpg",
+                "public/images/projects/w500/tva/details.jpg"
             ]
         },
         {
@@ -22,15 +22,43 @@
             name: "West Road Bike",
             date: "December 2017",
             tags: "Ruby on Rails, Web",
-            image_url: "public/images/projects/westroadbike350.gif",
+            image_url: "public/images/projects/w500/westroadbike.jpg",
             url: "http://www.trevisoaziende.com/"
+        },
+        {
+            name: "Android Toggle Switch",
+            date: "June 2017",
+            tags: "Android",
+            image_url: "public/images/projects/w500/androidtoggleswitch.gif",
+            url: "https://github.com/llollox/Android-Toggle-Switch/tree/kotlin"
         },
         {
             name: "Quanto Spreco?",
             date: "December 2015",
             tags: "Android, Ruby on Rails",
-            image_url: "public/images/projects/quantospreco350.gif",
+            image_url: "public/images/projects/w500/quantospreco.jpg",
             url: "http://ict4g.org/smartpantry"
+        },
+        {
+            name: "Android Compound Buttons",
+            date: "March 2017",
+            tags: "Android",
+            image_url: "public/images/projects/w500/androidcompoundbuttons.gif",
+            url: "https://github.com/llollox/CompoundButtonGroup"
+        },
+        {
+            name: "WDate - Wrapper of Date",
+            date: "January 2017",
+            tags: "Android",
+            image_url: "public/images/projects/w500/wdate.jpg",
+            url: "https://github.com/llollox/WDate-Wrapper-of-Date-Android"
+        },
+        {
+            name: "Responsive Wizard",
+            date: "April 2017",
+            tags: "CSS",
+            image_url: "public/images/projects/w500/responsivewizard.gif",
+            url: "https://github.com/llollox/ResponsiveWizard"
         }
     ]
 
@@ -53,6 +81,8 @@ section.section.pv-30
                     a(href="#", data-filter=".web") Web
                 li
                     a(href="#", data-filter=".android") Android
+                li
+                    a(href="#", data-filter=".css") CSS
 
 
 
@@ -80,11 +110,11 @@ section.section.pv-30
                                                 div.overlay-top
                                                     div.text
                                                         h3
-                                                            a(href="#")= project.name
+                                                            a(href=project.url, target="_blank")= project.name
                                                             p.small Web Design
                                                 div.overlay-bottom
                                                     div.links
-                                                        a(href="#").btn.btn-gray-transparent.btn-animated.btn-sm
+                                                        a(href=project.url, target="_blank").btn.btn-gray-transparent.btn-animated.btn-sm
                                                             .
                                                                 View Details
                                                             i.pl-10.fa.fa-arrow-right
@@ -99,12 +129,12 @@ section.section.pv-30
                                 div.overlay-top
                                     div.text
                                         h3
-                                            a(href="#")= project.name
+                                            a(href=project.url, target="_blank")= project.name
                                         p.small Android
 
                                 div.overlay-bottom
                                     div.links
-                                        a(href="#").btn.btn-gray-transparent.btn-animated.btn-sm
+                                        a(href=project.url, target="_blank").btn.btn-gray-transparent.btn-animated.btn-sm
                                             .
                                                 View Details
                                             i.pl-10.fa.fa-arrow-right
