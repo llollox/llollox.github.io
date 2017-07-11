@@ -4,6 +4,7 @@
             name: "Treviso Aziende",
             date: "January 2017",
             tags: "Ruby on Rails, Web",
+            filter: "web",
             url: "http://www.trevisoaziende.com/",
             carousel: [
                 "public/images/projects/tva/home.jpg",
@@ -15,6 +16,7 @@
             name: "Studio 4 Audioservizi",
             date: "February 2016",
             tags: "Ruby on Rails, Web",
+            filter: "web",
             image_url: "public/images/projects/studio4audioservizi350.gif",
             url: "http://www.studio4audioservizi.com/"
         },
@@ -22,6 +24,7 @@
             name: "West Road Bike",
             date: "December 2017",
             tags: "Ruby on Rails, Web",
+            filter: "web",
             image_url: "public/images/projects/westroadbike350.gif",
             url: "http://www.trevisoaziende.com/"
         },
@@ -29,6 +32,7 @@
             name: "Quanto Spreco?",
             date: "December 2015",
             tags: "Android, Ruby on Rails",
+            filter: "web android"
             image_url: "public/images/projects/quantospreco350.gif",
             url: "http://ict4g.org/smartpantry"
         }
@@ -62,7 +66,7 @@ section.section.pv-30
 
                 if project.carousel
 
-                    div.col-sm-6.col-md-3.isotope-item.android
+                    div.col-sm-6.col-md-3.isotope-item(class=project.filter)
 
                         div#carousel-portfolio.carousel.slide(data-ride="carousel")
                             ol.carousel-indicators.bottom.margin-clear
@@ -90,7 +94,7 @@ section.section.pv-30
                                                             i.pl-10.fa.fa-arrow-right
                 else
 
-                    div.col-sm-6.col-md-3.isotope-item.android
+                    div.col-sm-6.col-md-3.isotope-item(class=project.filter)
 
                         div.image-box.text-center
                             div.overlay-container
