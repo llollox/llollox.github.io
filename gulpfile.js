@@ -72,6 +72,12 @@ gulp.task('css_libraries', function () {
     .pipe(gulp.dest('./public/css'));
 });
 
+gulp.task('files', function () {
+    return gulp.src([
+        paths.assets  + '/files/**.*'
+    ]).pipe(gulp.dest('./public/files'));
+});
+
 gulp.task('assets', function () {
     return gulp.src([
         paths.bower  + '/rs-plugin/assets/**.png'
@@ -103,4 +109,4 @@ gulp.task('html', function(){
         .pipe(gulp.dest('./'))
 });
 
-gulp.task('default', [ 'html', 'css_libraries', 'styles', 'scripts', 'images', 'assets', 'fonts', 'serve' ]);
+gulp.task('default', [ 'html', 'css_libraries', 'styles', 'scripts', 'images', 'assets', 'files', 'fonts', 'serve' ]);
