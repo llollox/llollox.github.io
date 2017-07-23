@@ -12,6 +12,35 @@ div.scrollToTop i.icon-up-open-big {
     padding: 10px !important;
   }
 }
+@media (min-width: 768px) {
+  header.transparent-header-on {
+    background: none !important;
+  }
+  header.transparent-header-on nav.navbar ul.nav li a {
+    color: #fff !important;
+  }
+  header.transparent-header-on nav.navbar ul.nav li.active a {
+    border-bottom: 1px solid #fff !important;
+  }
+  header.transparent-header-on nav.navbar ul.nav li a:hover {
+    border-bottom: 1px solid rgba(255,255,255,0.7) !important;
+  }
+  header.transparent-header-on div#logo {
+    display: none;
+  }
+  header.transparent-header-on.object-visible {
+    background-color: rgba(255,255,255,0.92) !important;
+  }
+  header.transparent-header-on.object-visible div#logo {
+    display: block;
+  }
+  header.transparent-header-on.object-visible nav.navbar ul.nav li a {
+    color: inherit !important;
+  }
+  header.transparent-header-on.object-visible nav.navbar ul.nav li.active a {
+    border-bottom: 1px solid #454545 !important;
+  }
+}
 @import url("https://fonts.googleapis.com/css?family=PT+Serif|Pacifico|Raleway:700,400,300|Roboto:400,300,300italic,400italic,500,500italic,700,700italic");
 .display-block {
   display: block;
@@ -22,6 +51,9 @@ div.scrollToTop i.icon-up-open-big {
 .display-inline-block {
   display: inline-block;
 }
+.display-none {
+  display: none;
+}
 .font-size-16 {
   font-size: 16px;
 }
@@ -30,6 +62,9 @@ div.scrollToTop i.icon-up-open-big {
 }
 .height-50 {
   height: 50px;
+}
+.height-52 {
+  height: 52px;
 }
 .height-100-perI {
   height: 100% !important;

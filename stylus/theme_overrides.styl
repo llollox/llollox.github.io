@@ -10,3 +10,32 @@ div.scrollToTop i.icon-up-open-big
     div.tp-caption.medium_white
       font-size 12px !important
       padding 10px !important
+
+@media(min-width: 768px)
+
+  header.transparent-header-on
+    background none !important
+
+    nav.navbar ul.nav li a
+      color white !important
+
+    nav.navbar ul.nav li.active a
+        border-bottom 1px solid white !important
+
+    nav.navbar ul.nav li a:hover
+      border-bottom 1px solid rgba(255,255,255, 0.7) !important
+
+    div#logo
+      display none
+
+    &.object-visible
+      background-color rgba(255, 255, 255, 0.92) !important
+
+      div#logo
+        display block
+
+      nav.navbar ul.nav li a
+        color inherit !important
+
+      nav.navbar ul.nav li.active a
+        border-bottom 1px solid #454545 !important
