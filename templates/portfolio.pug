@@ -3,7 +3,7 @@
         {
             name: "Treviso Aziende",
             date: "January 2017",
-            tags: "Ruby on Rails, Web",
+            tags: "web",
             url: "http://www.trevisoaziende.com/",
             carousel: [
                 "public/images/projects/w500/tva/home.jpg",
@@ -14,49 +14,49 @@
         {
             name: "Studio 4 Audioservizi",
             date: "February 2016",
-            tags: "Ruby on Rails, Web",
+            tags: "web",
             image_url: "public/images/projects/studio4audioservizi350.gif",
             url: "http://www.studio4audioservizi.com/"
         },
         {
             name: "West Road Bike",
             date: "December 2017",
-            tags: "Ruby on Rails, Web",
+            tags: "web",
             image_url: "public/images/projects/w500/westroadbike.jpg",
             url: "http://www.trevisoaziende.com/"
         },
         {
             name: "Android Toggle Switch",
             date: "June 2017",
-            tags: "Android",
+            tags: "android",
             image_url: "public/images/projects/w500/androidtoggleswitch.gif",
             url: "https://github.com/llollox/Android-Toggle-Switch/tree/kotlin"
         },
         {
             name: "Quanto Spreco?",
             date: "December 2015",
-            tags: "Android, Ruby on Rails",
+            tags: "android  web",
             image_url: "public/images/projects/w500/quantospreco.jpg",
             url: "http://ict4g.org/smartpantry"
         },
         {
             name: "Android Compound Buttons",
             date: "March 2017",
-            tags: "Android",
+            tags: "android",
             image_url: "public/images/projects/w500/androidcompoundbuttons.gif",
             url: "https://github.com/llollox/CompoundButtonGroup"
         },
         {
             name: "WDate - Wrapper of Date",
             date: "January 2017",
-            tags: "Android",
+            tags: "android",
             image_url: "public/images/projects/w500/wdate.jpg",
             url: "https://github.com/llollox/WDate-Wrapper-of-Date-Android"
         },
         {
             name: "Responsive Wizard",
             date: "April 2017",
-            tags: "CSS",
+            tags: "css",
             image_url: "public/images/projects/w500/responsivewizard.gif",
             url: "https://github.com/llollox/ResponsiveWizard"
         }
@@ -92,7 +92,7 @@ section.section.pv-30
 
                 if project.carousel
 
-                    div.col-sm-6.col-md-3.isotope-item.android
+                    div.col-sm-6.col-md-3.isotope-item(class=project.tags)
 
                         div#carousel-portfolio.carousel.slide(data-ride="carousel")
                             ol.carousel-indicators.bottom.margin-clear
@@ -120,7 +120,7 @@ section.section.pv-30
                                                             i.pl-10.fa.fa-arrow-right
                 else
 
-                    div.col-sm-6.col-md-3.isotope-item.android
+                    div.col-sm-6.col-md-3.isotope-item(class=project.tags)
 
                         div.image-box.text-center
                             div.overlay-container
