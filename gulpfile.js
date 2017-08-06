@@ -54,7 +54,8 @@ gulp.task('scripts', function () {
             paths.assets + '/js/SmoothScroll.js',
             paths.assets + '/js/template.js',
             paths.assets + '/js/template.overrides.js',
-            paths.assets + '/js/content.js'
+            paths.assets + '/js/content.js',
+            paths.assets + '/js/map.js'
         ])
         .pipe(concat('application.js'))
         .pipe(gulp.dest('./public/js'));
