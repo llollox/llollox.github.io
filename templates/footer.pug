@@ -1,7 +1,7 @@
 -
     var contacts = {
         address: "Viale Brigata Marche, 31100, Treviso",
-        cellphone: "+39 333 8600532",
+        cellphone: "+393338600532",
         email: "lore91tanz@gmail.com"
     }
 
@@ -17,6 +17,18 @@
         {
             name: "github",
             url: "https://github.com/llollox"
+        },
+        {
+            name: "youtube",
+            url: "https://www.youtube.com/channel/UC7kHsHfZoo-R7ZR-XBj-W9w"
+        },
+        {
+            name: "instagram",
+            url: "https://www.instagram.com/llollox/"
+        },
+        {
+            name: "skype",
+            url: "skype:llollox?call"
         }
     ]
 
@@ -38,14 +50,21 @@ footer#footer.clearfix
                                     .
                                         #{contacts.address}
                                 li
-                                    i.fa.fa-phone.pr-10.text-default
-                                    .
-                                        #{contacts.cellphone}
+                                    a(href="tel:" + contacts.cellphone)
+                                        i.fa.fa-phone.pr-10.text-default
+                                        .
+                                            #{contacts.cellphone}
                                 li
                                     a(href="mailto:" + contacts.email)
                                         i.fa.fa-envelope-o.pr-10
                                         .
                                             #{contacts.email}
+
+                                li
+                                    a(href="https://t.me/lorenzorigato")
+                                        i.fa.fa-telegram.pr-10
+                                        .
+                                            Send me a message
 
                             //a.collapsed.map-show.btn-lg-link.padding-hor-clear(
                             //    data-toggle="collapse",
