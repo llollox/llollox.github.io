@@ -17,6 +17,7 @@ gulp.task('serve', [], function() {
         }
     });
 
+    gulp.watch("assets/js/*.js", ['scripts']);
     gulp.watch("stylus/*.styl", ['styles']);
     gulp.watch("templates/*.pug", ['html']);
     gulp.watch("*.html").on('change', browserSync.reload);
@@ -58,7 +59,8 @@ gulp.task('scripts', function () {
             paths.assets + '/js/map.js'
         ])
         .pipe(concat('application.js'))
-        .pipe(gulp.dest('./public/js'));
+        .pipe(gulp.dest('./public/js'))
+        .pipe(browserSync.stream());
 });
 
 
