@@ -1,3 +1,19 @@
+-
+    var references = [
+        {
+            title: "Just Perfect!",
+            description: "Lorenzo is an able and independent developer. " +
+            "In my experience he did his work autonomously, " +
+            "providing also some improvements outside his study. Like designing the user interface.",
+            author: {
+                fullname: "Giulio Michelon",
+                position: "CEO Belka",
+                image: ""
+            }
+        }
+    ]
+
+
 section.stats.padding-bottom-clear.dark-translucent-bg.parallax.hovered(
     style="background-image:url('public/images/macbook_pencil.jpg'); background-position: 50% 50%;")
 
@@ -14,27 +30,16 @@ section.stats.padding-bottom-clear.dark-translucent-bg.parallax.hovered(
         div.col-md-9.col-sm-3.col-xs-12
             div.owl-carousel.space-top.content-slider
 
-                div.row
-                    div.col-md-8.col-md-offset-2
-                        div.testimonial.text-center
+                each reference in references
 
-                            h3 Just Perfect!
-                            div.separator
-                            div.testimonial-body
-                                blockquote
-                                    p Sed ut perspiciatis unde omnis iste natu error sit voluptatem accusan tium dolore laud antium, totam rem dolor sit amet tristique pulvinar, turpis arcu rutrum nunc, ac laoreet turpis augue a justo.
-                                div.testimonial-info-1 -Jane Doe
-                                div.testimonial-info-2 Company spa
+                    div.row
+                        div.col-md-8.col-md-offset-2
+                            div.testimonial.text-center
 
-
-                div.row
-                    div.col-md-8.col-md-offset-2
-                        div.testimonial.text-center
-
-                            h3 Just Perfect!
-                            div.separator
-                            div.testimonial-body
-                                blockquote
-                                    p Sed ut perspiciatis unde omnis iste natu error sit voluptatem accusan tium dolore laud antium, totam rem dolor sit amet tristique pulvinar, turpis arcu rutrum nunc, ac laoreet turpis augue a justo.
-                                div.testimonial-info-1 -Jane Doe
-                                div.testimonial-info-2 Company spa
+                                h3=reference.title
+                                div.separator
+                                div.testimonial-body
+                                    blockquote
+                                        p=reference.description
+                                    div.testimonial-info-1=reference.author.fullname
+                                    div.testimonial-info-2=reference.author.position
