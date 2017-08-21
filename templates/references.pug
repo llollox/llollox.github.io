@@ -8,7 +8,7 @@
             author: {
                 fullname: "Giulio Michelon",
                 position: "CEO Belka",
-                image: ""
+                image: "people/giulio-michelon.jpg"
             }
         }
     ]
@@ -43,3 +43,4 @@ section.stats.padding-bottom-clear.dark-translucent-bg.parallax.hovered(
                                         p=reference.description
                                     div.testimonial-info-1=reference.author.fullname
                                     div.testimonial-info-2=reference.author.position
+                                    img.img-circle(src="public/images/" + reference.author.image)
