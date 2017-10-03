@@ -25,7 +25,9 @@ var dict = {
 
   "I've Lived" : {it: "Dove ho vissuto"},
 
-  "Send me a message": {it: "Inviami un messaggio" }
+  "Send me a message":      {it: "Inviami un messaggio" },
+  "Get in touch with me!":  {it: "Mettiti in contatto con me!"},
+  "Below my accounts":      {it: "Di seguito i miei account"}
 }
 
 
