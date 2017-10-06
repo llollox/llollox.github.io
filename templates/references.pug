@@ -14,13 +14,13 @@
     ]
 
 
-section.stats.padding-bottom-clear.dark-translucent-bg.parallax.hovered(
+section#references.stats.padding-bottom-clear.dark-translucent-bg.parallax.hovered.height-320(
     style="background-image:url('public/images/macbook_pencil.jpg'); background-position: 50% 50%;")
 
     div.clearfix
 
-        div.col-md-3.pv-40.default-translucent-bg.col-xs-12.col-sm-3.text-center
-            div.feature-box.pv-20.object-non-visible(
+        div.col-md-3.pv-40.default-translucent-bg.col-xs-12.col-sm-3.text-center.height-320
+            div.feature-box.pv-40.object-non-visible(
                 data-animation-effect="fadeIn", data-effect-delay="300")
 
                 h2
@@ -32,15 +32,15 @@ section.stats.padding-bottom-clear.dark-translucent-bg.parallax.hovered(
 
                 each reference in references
 
-                    div.row
+                    div.row.reference
                         div.col-md-8.col-md-offset-2
                             div.testimonial.text-center
 
                                 h3=reference.title
                                 div.separator
-                                div.testimonial-body
+                                div.testimonial-body.padding-bo
                                     blockquote
                                         p=reference.description
+                                    img.img-circle.margin-auto.margin-top-16.height-78(src="public/images/" + reference.author.image)
                                     div.testimonial-info-1=reference.author.fullname
                                     div.testimonial-info-2=reference.author.position
-                                    img.img-circle(src="public/images/" + reference.author.image)
