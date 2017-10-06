@@ -34,6 +34,7 @@ gulp.task('fonts', function() {
 
 gulp.task('scripts', function () {
     return gulp.src([
+            paths.assets + '/js/google_analytics.js',
             paths.bower  + '/jquery/dist/jquery.js',
             paths.bower  + '/bootstrap/dist/js/bootstrap.js',
             paths.bower  + '/modernizr/modernizr.js',
