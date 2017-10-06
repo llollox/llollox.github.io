@@ -14,20 +14,20 @@
     ]
 
 
-section#references.stats.padding-bottom-clear.dark-translucent-bg.parallax.hovered.height-320(
+section#references.stats.padding-bottom-clear.dark-translucent-bg.parallax.hovered.references(
     style="background-image:url('public/images/macbook_pencil.jpg'); background-position: 50% 50%;")
 
     div.clearfix
 
-        div.col-md-3.pv-40.default-translucent-bg.col-xs-12.col-sm-3.text-center.height-320
-            div.feature-box.pv-40.object-non-visible(
+        div.default-translucent-bg.text-center
+            div.pv-40.object-non-visible(
                 data-animation-effect="fadeIn", data-effect-delay="300")
 
                 h2
                     strong Why Me?
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                //p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
-        div.col-md-9.col-sm-3.col-xs-12
+        div.pv-40
             div.owl-carousel.space-top.content-slider
 
                 each reference in references
@@ -36,11 +36,11 @@ section#references.stats.padding-bottom-clear.dark-translucent-bg.parallax.hover
                         div.col-md-8.col-md-offset-2
                             div.testimonial.text-center
 
-                                h3=reference.title
+                                h3.references__title=reference.title
                                 div.separator
                                 div.testimonial-body.padding-bo
                                     blockquote
-                                        p=reference.description
-                                    img.img-circle.margin-auto.margin-top-16.height-78(src="public/images/" + reference.author.image)
-                                    div.testimonial-info-1=reference.author.fullname
-                                    div.testimonial-info-2=reference.author.position
+                                        p.references__content=reference.description
+                                    img.img-circle.references__author-icon(src="public/images/" + reference.author.image)
+                                    div.references__author-fullname=reference.author.fullname
+                                    div.references__author-position=reference.author.position

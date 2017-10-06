@@ -172,3 +172,26 @@ div.scrollToTop i.icon-up-open-big {
 .width-150 {
   width: 150px;
 }
+.references {
+  font-family: "Helvetica";
+}
+.references .references__title {
+  font-size: 24px;
+}
+.references .references__content {
+  font-size: 20px;
+}
+.references .references__author-icon {
+  height: 120px;
+  margin: auto;
+  margin-top: 16px;
+}
+.references .references__author-fullname {
+  font-size: 16px;
+  text-align: center;
+}
+.references .references__author-position {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
