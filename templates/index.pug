@@ -7,8 +7,37 @@ html
         meta(name="author"  content="Lorenzo Rigato")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
-        link(href='../public/css/css_libraries.css', rel='stylesheet')
-        link(href='../public/css/application.css', rel='stylesheet')
+        // Bootstrap core CSS
+        link(href='../bootstrap/css/bootstrap.css', rel='stylesheet')
+
+        // Font Awesome CSS
+        link(href='../fonts/font-awesome/css/font-awesome.css', rel='stylesheet')
+
+        // Font Awesome CSS
+        link(href='../fonts/fontello/css/fontello.css', rel='stylesheet')
+
+        // Plugins
+        link(href="../plugins/magnific-popup/magnific-popup.css" rel="stylesheet")
+        link(href="../plugins/rs-plugin/css/settings.css" rel="stylesheet")
+        link(href="../css/animations.css" rel="stylesheet")
+        link(href="../plugins/owl-carousel/owl.carousel.css" rel="stylesheet")
+        link(href="../plugins/owl-carousel/owl.transitions.css" rel="stylesheet")
+        link(href="../plugins/hover/hover-min.css" rel="stylesheet")
+
+        //link(href='../public/css/css_libraries.css', rel='stylesheet')
+        //link(href='../public/css/application.css', rel='stylesheet')
+
+        // The Project's core CSS file
+        link(href="../css/style.css" rel="stylesheet")
+
+        // The Project's Typography CSS file
+        link(href="css/typography-default.css" rel="stylesheet")
+
+        // Color Scheme
+        link(href="../css/skins/light_blue.css" rel="stylesheet")
+
+        // Customizations
+        link(href="../public/css/application.css" rel="stylesheet")
 
     body.no-trans.front-page.transparent-header.gradient-background-header
 
@@ -35,4 +64,47 @@ html
             include map
             include footer
 
-        script(src='../public/js/application.js')
+        // Jquery and Bootstap core js files
+        script(src="../plugins/jquery.min.js")
+        script(src="../bootstrap/js/bootstrap.min.js")
+
+        // Modernizr javascript
+        script(src="../plugins/modernizr.js")
+
+        // jQuery Revolution Slider
+        script(src="../plugins/rs-plugin/js/jquery.themepunch.tools.min.js")
+        script(src="../plugins/rs-plugin/js/jquery.themepunch.revolution.min.js")
+
+        // Isotope javascript
+        script(src="../plugins/isotope/isotope.pkgd.min.js")
+
+        // Magnific Popup javascript
+        script(src="../plugins/magnific-popup/jquery.magnific-popup.min.js")
+
+        // Appear javascript
+        script(src="../plugins/waypoints/jquery.waypoints.min.js")
+
+        // Count To javascript
+        script(src="../plugins/jquery.countTo.js")
+
+        // Parallax javascript
+        script(src="../plugins/jquery.parallax-1.1.3.js")
+
+        // Contact form
+        script(src="../plugins/jquery.validate.js")
+
+        // Background Video
+        script(src="../plugins/vide/jquery.vide.js")
+
+        // Owl carousel javascript
+        script(src="../plugins/owl-carousel/owl.carousel.js")
+
+        // SmoothScroll javascript
+        script(src="../plugins/jquery.browser.js")
+        script(src="../plugins/SmoothScroll.js")
+
+        // Initialization of Plugins
+        script(src="js/template.js")
+
+        // Custom Scripts
+        script(src="js/custom.js")
