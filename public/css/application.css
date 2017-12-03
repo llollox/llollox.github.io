@@ -55,6 +55,11 @@ div.scrollToTop i.icon-up-open-big {
 div.slideshow span.icon.large.circle i.circle:before {
   line-height: 97px;
 }
+@media (max-width: 768px) {
+  div.slideshow span.icon.large.circle i.circle:before {
+    line-height: 35px;
+  }
+}
 .color-gray {
   color: #777;
 }
