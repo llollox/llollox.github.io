@@ -14,7 +14,9 @@
     "gulp-pug": "^3.3.0",
     "gulp-stylus": "^2.6.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "storybook-addon-props": "^3.0.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -28124,6 +28124,8 @@ var timeline = [
 ]
 $(document).ready(function () {
 
+    console.log("ciao");
+
     var styles = [
         {
             "stylers": [
