@@ -2,6 +2,9 @@ div.scrollToTop i.icon-up-open-big
   display block
   margin-top 12px
 
+
+
+
 @media(max-width: 768px)
   li#hero-img
     div.tp-caption.large_white
@@ -10,6 +13,16 @@ div.scrollToTop i.icon-up-open-big
     div.tp-caption.medium_white
       font-size 12px !important
       padding 10px !important
+
+  nav.navbar
+    background-color transparent !important
+    border-color transparent !important
+
+    div#logo a
+      color #CCCCCC
+
+    .navbar-collapse
+      background #FAFAFA
 
 @media(min-width: 768px)
 
@@ -39,3 +52,10 @@ div.scrollToTop i.icon-up-open-big
 
       nav.navbar ul.nav li.active a
         border-bottom 1px solid #454545 !important
+
+div.slideshow span.icon.large.circle i.circle:before
+  line-height 97px
+
+@media(max-width: 768px)
+  div.slideshow span.icon.large.circle i.circle:before
+    line-height 35px

@@ -3,8 +3,8 @@
         {
             title: "Just Perfect!",
             description: "Lorenzo is an able and independent developer. " +
-            "In my experience he did his work autonomously, " +
-            "providing also some improvements outside his study. Like designing the user interface.",
+            "In my experience he accomplished his job autonomously " +
+            "providing also some improvements on the user interface.",
             author: {
                 fullname: "Giulio Michelon",
                 position: "CEO Belka",
@@ -14,33 +14,33 @@
     ]
 
 
-section.stats.padding-bottom-clear.dark-translucent-bg.parallax.hovered(
+section#references.stats.padding-bottom-clear.dark-translucent-bg.parallax.hovered.references(
     style="background-image:url('public/images/macbook_pencil.jpg'); background-position: 50% 50%;")
 
     div.clearfix
 
-        div.col-md-3.pv-40.default-translucent-bg.col-xs-12.col-sm-3.text-center
-            div.feature-box.pv-20.object-non-visible(
+        div.default-translucent-bg.text-center
+            div.pv-40.object-non-visible(
                 data-animation-effect="fadeIn", data-effect-delay="300")
 
                 h2
                     strong Why Me?
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                //p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
-        div.col-md-9.col-sm-3.col-xs-12
+        div.pv-40
             div.owl-carousel.space-top.content-slider
 
                 each reference in references
 
-                    div.row
+                    div.row.reference
                         div.col-md-8.col-md-offset-2
                             div.testimonial.text-center
 
-                                h3=reference.title
+                                h3.references__title=reference.title
                                 div.separator
-                                div.testimonial-body
+                                div.testimonial-body.padding-bo
                                     blockquote
-                                        p=reference.description
-                                    div.testimonial-info-1=reference.author.fullname
-                                    div.testimonial-info-2=reference.author.position
-                                    img.img-circle(src="public/images/" + reference.author.image)
+                                        p.references__content=reference.description
+                                    img.img-circle.references__author-icon(src="public/images/" + reference.author.image)
+                                    div.references__author-fullname=reference.author.fullname
+                                    div.references__author-position=reference.author.position

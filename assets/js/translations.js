@@ -70,8 +70,10 @@ var dict = {
   "timeline.previnet.description" : {
     en: 
       "<ul class='text-align-left'>" +
-        "<li><strong>Refactoring</strong> of two old internal Android applications following the Material design style guidelines.</li>" +
-        "<li>Development of an application for a bank, in both <strong>Android and iOS</strong> versions, to manage health services provided by a network of structures.</li>" +
+        "<li><strong>Refactoring</strong> of two old internal Android applications " +
+        "following the Material design style guidelines.</li>" +
+        "<li>Development of an application for a bank, in both <strong>Android and iOS</strong> versions, " +
+        "to manage health services.</li>" +
       "</ul>",
     it: 
       "<ul class='text-align-left'>" +

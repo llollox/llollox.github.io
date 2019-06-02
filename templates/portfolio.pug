@@ -63,78 +63,76 @@
     ]
 
 section#portfolio.section.pv-30
-    div.container
 
-        div.row
-            div.col-md-8.col-md-offset-2.text-center
-                h2.title
-                    span.text-muted Recent
-                    span.text-default.margin-left-8 Projects
-                div.separator
+    div.text-center
+        h2.title
+            span.text-muted Recent
+            span.text-default.margin-left-8 Projects
+        div.separator
 
 
-        div.filters.text-center
-            ul.nav.nav-pills.style-2
-                li.active
-                    a(href="#", data-filter="*") All
-                li
-                    a(href="#", data-filter=".web") Web
-                li
-                    a(href="#", data-filter=".android") Android
-                li
-                    a(href="#", data-filter=".css") CSS
+    div.filters.text-center
+        ul.nav.nav-pills.style-2
+            li.active
+                a(href="#", data-filter="*") All
+            li
+                a(href="#", data-filter=".web") Web
+            li
+                a(href="#", data-filter=".android") Android
+            li
+                a(href="#", data-filter=".css") CSS
 
 
 
-        div.isotope-container.row.grid-space-0
+    div.isotope-container.row.grid-space-0.margin-top-16.margin-bottom-24
 
-            each project in projects
+        each project in projects
 
-                if project.carousel
+            if project.carousel
 
-                    div.col-sm-6.col-md-3.isotope-item(class=project.tags)
+                div.col-sm-6.col-md-3.isotope-item(class=project.tags).width-100per-mobile
 
-                        div#carousel-portfolio.carousel.slide(data-ride="carousel")
-                            ol.carousel-indicators.bottom.margin-clear
+                    div#carousel-portfolio.carousel.slide(data-ride="carousel")
+                        ol.carousel-indicators.bottom.margin-clear
 
-                                each item, index in project.carousel
-                                    li(data-target='#carousel-portfolio', data-slide-to=index, class=index == 0 ? "active" : "")
+                            each item, index in project.carousel
+                                li(data-target='#carousel-portfolio', data-slide-to=index, class=index == 0 ? "active" : "")
 
-                            div.carousel-inner(role="listbox")
+                        div.carousel-inner(role="listbox")
 
-                                each item, index in project.carousel
-                                    div.item(class=index == 0 ? "active" : "")
-                                        div.image-box.text-center
-                                            div.overlay-container
-                                                img(src=item)
-                                                div.overlay-top
-                                                    div.text
-                                                        h3
-                                                            a(href=project.url, target="_blank")= project.name
-                                                            //p.small Web Design
-                                                div.overlay-bottom
-                                                    div.links
-                                                        a(href=project.url, target="_blank").btn.btn-gray-transparent.btn-animated.btn-sm
-                                                            .
-                                                                View Details
-                                                            i.pl-10.fa.fa-arrow-right
-                else
+                            each item, index in project.carousel
+                                div.item(class=index == 0 ? "active" : "")
+                                    div.image-box.text-center.width-100per
+                                        div.overlay-container
+                                            img(src=item).width-100per-mobile
+                                            div.overlay-top
+                                                div.text
+                                                    h3
+                                                        a(href=project.url, target="_blank")= project.name
+                                                        //p.small Web Design
+                                            div.overlay-bottom
+                                                div.links
+                                                    a(href=project.url, target="_blank").btn.btn-gray-transparent.btn-animated.btn-sm
+                                                        .
+                                                            View Details
+                                                        i.pl-10.fa.fa-arrow-right
+            else
 
-                    div.col-sm-6.col-md-3.isotope-item(class=project.tags)
+                div.col-sm-6.col-md-3.isotope-item(class=project.tags).width-100per-mobile
 
-                        div.image-box.text-center
-                            div.overlay-container
-                                img(src=project.image_url)
+                    div.image-box.text-center
+                        div.overlay-container
+                            img(src=project.image_url).width-100per
 
-                                div.overlay-top
-                                    div.text
-                                        h3
-                                            a(href=project.url, target="_blank")= project.name
-                                        //p.small Android
+                            div.overlay-top
+                                div.text
+                                    h3
+                                        a(href=project.url, target="_blank")= project.name
+                                    //p.small Android
 
-                                div.overlay-bottom
-                                    div.links
-                                        a(href=project.url, target="_blank").btn.btn-gray-transparent.btn-animated.btn-sm
-                                            .
-                                                View Details
-                                            i.pl-10.fa.fa-arrow-right
+                            div.overlay-bottom
+                                div.links
+                                    a(href=project.url, target="_blank").btn.btn-gray-transparent.btn-animated.btn-sm
+                                        .
+                                            View Details
+                                        i.pl-10.fa.fa-arrow-right

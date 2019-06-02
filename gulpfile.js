@@ -39,9 +39,9 @@ gulp.task('scripts', function () {
             paths.bower  + '/modernizr/modernizr.js',
             paths.assets + '/js/jquery.themepunch.tools.min.js',
             paths.assets + '/js/jquery.themepunch.revolution.min.js',
-            paths.assets + '/js/revolution.extension.slideanims.min.js',
-            paths.assets + '/js/revolution.extension.layeranimation.min.js',
-            paths.assets + '/js/revolution.extension.kenburn.min.js',
+            // paths.assets + '/js/revolution.extension.slideanims.min.js',
+            // paths.assets + '/js/revolution.extension.layeranimation.min.js',
+            // paths.assets + '/js/revolution.extension.kenburn.min.js',
             paths.assets + '/js/isotope.pkgd.js',
             paths.assets + '/js/jquery.magnific-popup.js',
             paths.bower  + '/waypoints/lib/jquery.waypoints.js',
@@ -115,4 +115,4 @@ gulp.task('html', function(){
         .pipe(gulp.dest('./'))
 });
 
-gulp.task('default', [ 'html', 'css_libraries', 'styles', 'scripts', 'images', 'assets', 'files', 'fonts', 'serve' ]);
+gulp.task('default', [ 'html', 'styles', 'images', 'files', 'fonts', 'serve' ]);
