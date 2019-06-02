@@ -3,6 +3,13 @@ div.scrollToTop i.icon-up-open-big {
   display: block;
   margin-top: 12px;
 }
+.progress.style-1 {
+  background-color: #ebebeb;
+}
+.progress-bar-gray {
+  background-color: #aaa;
+  color: #fff;
+}
 @media (max-width: 768px) {
   li#hero-img div.tp-caption.large_white {
     font-size: 18px !important;

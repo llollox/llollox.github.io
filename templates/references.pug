@@ -1,14 +1,27 @@
 -
     var references = [
         {
-            title: "Just Perfect!",
-            description: "Lorenzo is an able and independent developer. " +
-            "In my experience he accomplished his job autonomously " +
-            "providing also some improvements on the user interface.",
+            description: "references.belka",
             author: {
                 fullname: "Giulio Michelon",
                 position: "CEO Belka",
                 image: "people/giulio-michelon.jpg"
+            }
+        },
+        {
+            description: "references.wrb",
+            author: {
+                fullname: "Paolo Milan",
+                position: "Owner West Road Bike",
+                image: "people/wrb.jpg"
+            }
+        },
+        {
+            description: "references.foodracers",
+            author: {
+                fullname: "Luca Ferrari",
+                position: "CTO & Co-Founder Foodracers",
+                image: "people/luca-ferrari.jpg"
             }
         }
     ]
@@ -24,7 +37,7 @@ section#references.stats.padding-bottom-clear.dark-translucent-bg.parallax.hover
                 data-animation-effect="fadeIn", data-effect-delay="300")
 
                 h2
-                    strong Why Me?
+                    strong.trn references.title
                 //p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
         div.pv-40
@@ -36,11 +49,11 @@ section#references.stats.padding-bottom-clear.dark-translucent-bg.parallax.hover
                         div.col-md-8.col-md-offset-2
                             div.testimonial.text-center
 
-                                h3.references__title=reference.title
-                                div.separator
+                                //- h3.references__title=reference.title
+                                //- div.separator
                                 div.testimonial-body.padding-bo
                                     blockquote
-                                        p.references__content=reference.description
+                                        p.references__content.trn=reference.description
                                     img.img-circle.references__author-icon(src="public/images/" + reference.author.image)
                                     div.references__author-fullname=reference.author.fullname
                                     div.references__author-position=reference.author.position

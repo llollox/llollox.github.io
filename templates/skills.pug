@@ -60,25 +60,25 @@ section#skills.main-container
 
             div.main.col-md-10.col-md-offset-1
 
-                h1.page-title My Skills
+                h1.page-title.trn skills.title
                 div.separator-2.mb-20
 
-                p Below are listed my technical and personal skills.
+                //- p Below are listed my technical and personal skills.
 
-                h3 Technical
+                h3.trn skills.technical
 
                 each skill in skills.technical
 
                     div.progress.style-1.dark
                         span.text
-                        div.progress-bar.progress-bar-white(role="progressbar", data-animate-width=skill.percentage)
+                        div.progress-bar.progress-bar-gray(role="progressbar", data-animate-width=skill.percentage)
                             span.label.object-non-visible(data-animation-effect="fadeInLeftSmall", data-effect-delay="1000")= skill.name
 
-                h3 Personal
+                h3.trn skills.personal
 
                 each skill in skills.personal
 
                     div.progress.style-1.dark
                         span.text
-                        div.progress-bar.progress-bar-white(role="progressbar", data-animate-width=skill.percentage)
+                        div.progress-bar.progress-bar-gray(role="progressbar", data-animate-width=skill.percentage)
                             span.label.object-non-visible(data-animation-effect="fadeInLeftSmall", data-effect-delay="1000")= skill.name
