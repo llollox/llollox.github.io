@@ -24,14 +24,28 @@ nav.navbar.navbar-default(role='navigation')
         div.collapse.navbar-collapse.scrollspy.smooth-scroll#navbar-collapse-1
             ul.nav.navbar-nav.navbar-right
                 li
-                    a(href='#home') Home
+                    a.trn(href='#home') navbar.home
                 li
-                    a(href='#about') About
+                    a.trn(href='#about') navbar.about
                 li
-                    a(href='#skills') Skills
+                    a.trn(href='#skills') navbar.skills
                 li
-                    a(href='#portfolio') Recent Projects
+                    a.trn(href='#portfolio') navbar.recent-projects
                 li
-                    a(href='#places') Places
+                    a.trn(href='#places') navbar.places
                 li
-                    a(href='#footer') Contacts
+                    a.trn(href='#footer') navbar.contacts
+                
+                li.dropdown
+                    a.dropdown-toggle.trn(
+                        href="#menu",
+                        data-toggle="dropdown",
+                        role="button",
+                        aria-haspopup="true",
+                        aria-expanded="false") navbar.language
+
+                    ul.dropdown-menu
+                        li
+                            a.trn(href="#english" onClick="javascript:changeLanguage('en')") navbar.english
+                        li
+                            a.trn(href="#italian" onClick="javascript:changeLanguage('it')") navbar.italian
