@@ -28399,7 +28399,7 @@ var dict = {
   },
   "banner.subtitle": {
     en: "Web, Android & iOS Developer",
-    it: "Sviluppatore Web, Android e iOS"
+    it: "Sviluppatore Web, Android & iOS"
   },
 
 
@@ -28416,6 +28416,10 @@ var dict = {
   "navbar.skills": {
     en: "Skills",
     it: "Competenze"
+  },
+  "navbar.references": {
+    en: "References",
+    it: "Referenze"
   },
   "navbar.recent-projects": {
     en: "Recent Projects",
@@ -28446,8 +28450,19 @@ var dict = {
 
   // Timeline ******************************************************************
   "timeline.description": {
-    en: "Hello! I'm Lorenzo, a passionate 28 years old <strong>mobile and web developer</strong> with 5 years of experience.<br/> Strong knowledge on <strong>Android</strong> framework.<br/><strong>Clean code</strong> lover and passionate on <strong>software architectures</strong>.<br/>Able to complete projects satisfying customer’s <strong>requirements</strong>.<br/>Beautiful <strong>UI</strong> fascinated.",
-    it: "Ciao, mi chiamo Lorenzo! Ho 28 anni e sono un appassionato sviluppatore mobile e web con 5 anni di esperienza.<br/> Forte conoscienza del framework <strong>Android</strong>.<br/>Amante del <strong>codice pulito</strong> ed appassionato di <strong>architetture software</strong>. <br/>Capace di completare progetti soddisfando i requisiti del cliente.<br/>Affascinato da <strong>interfacce utente</strong> semplici ed efficaci"
+    en: 
+      "Hello! I'm Lorenzo, nice to meet you!" + 
+      "I'm a 28 years old <strong>mobile and web developer</strong> with 5 years of experience.<br/>" + 
+      "Strong knowledge on <strong>Android</strong> framework.<br/>" +
+      "Clean code and <strong>software architectures</strong> lover.<br/>" + 
+      "Simple and clear <strong>UI</strong> amazed.",
+    
+    it: 
+      "Ciao! Mi chiamo Lorenzo, piacere di conoscerti!" + 
+      "Ho 28 anni e sono uno <strong>sviluppatore mobile e web</strong> con 5 anni di esperienza.<br/>" + 
+      "Grande conoscienza del framework <strong>Android</strong>.<br/>" + 
+      "Amante del <strong>codice pulito</strong> e delle <strong>architetture software</strong>.<br/>" + 
+      "Eternamente affascinato da <strong>interfacce utente</strong> semplici e chiare."
   },
 
   // Previnet
@@ -28462,15 +28477,47 @@ var dict = {
   "timeline.previnet.description" : {
     en: 
       "<ul class='text-align-left'>" +
-        "<li><strong>Refactoring</strong> of two old internal Android applications " +
-        "following the Material design style guidelines.</li>" +
-        "<li>Development of an application for a bank, in both <strong>Android and iOS</strong> versions, " +
-        "to manage health services.</li>" +
+        "<li>Development of <strong>XME Salute</strong> application for Intesa Sanpaolo Bank on Android and iOS.</li>" +
+        "<li>Built <strong>app architecture</strong>, separating each component using interfaces." + 
+        "<li>Usage of <strong>Dagger 2</strong> as dependency injection framework and <strong>MVP / MVVM</strong> patterns.</li>" +
+        "<li>Written <strong>Unit and Integration tests</strong> using Espresso and Mockito.</li>" +
+        "<li>Implementation of <strong>Accessibility</strong> using the iOS Voiceover and Android Talkback.</li>" +
+        "<li>Usage of <strong>Scrum</strong> methodology to organize the tasks within the team.</li>" +
+      "</ul>",
+    it:
+      "<ul class='text-align-left'>" +
+        "<li>Sviluppo dell'applicazione <strong>XME Salute</strong> per Banca Intesa Sanpaolo in Android e iOS.</li>" +
+        "<li>Costruzione dell'<strong>architettura</strong> dell'applicazione, separando ogni componente utilizzando interfacce." + 
+        "<li>Utilizzo di <strong>Dagger 2</strong> come framework per dependency injection e dei pattern <strong>MVP / MVVM</strong>.</li>" +
+        "<li>Implementazione di <strong>Unit e Integration test</strong> utilizzando Espresso e Mockito.</li>" +
+        "<li>Implementazione dell'<strong>Accessibilità</strong> utilizzando gli strumenti: Voiceover di iOS e Talkback di Android.</li>" +
+        "<li>Utilizzo della metodologia <strong>Scrum</strong> per l'organizzazione del lavoro nel team.</li>" +
+      "</ul>"
+  },
+
+  // Foodracers
+  "timeline.foodracers.title" : {
+    en: "React JS Developer",
+    it: "Sviluppatore React JS"
+  },
+  "timeline.foodracers.period" : {
+    en: "Ago 2017 - Sep 2018",
+    it: "Ago 2017 - Set 2018"
+  },
+  "timeline.foodracers.description" : {
+    en: 
+      "<ul class='text-align-left'>" +
+        "<li>Development of a <strong>Design System</strong> of React JS components using <strong>Storybook</strong> and following <strong>BEM</strong> methodology to organize CSS code.</li>" +
+        "<li>Code structured following the <strong>Redux</strong> pattern.</li>" +
+        "<li>Usage of <strong>Redux Saga</strong> to manage asynchronous calls and UI events.</li>" +
+        "<li>Usage of <strong>Turbolinks Android & iOS</strong> to embed the react components into an application.</li>" +
       "</ul>",
     it: 
       "<ul class='text-align-left'>" +
-        "<li><strong>Refactoring</strong> of two old internal Android applications following the Material design style guidelines.</li>" +
-        "<li>Development of an application for a bank, in both <strong>Android and iOS</strong> versions, to manage health services provided by a network of structures.</li>" +
+        "<li>Sviluppo di un <strong>Design System</strong> di componenti in React JS utilizzando lo <strong>Storybook</strong> di React seguendo la metodologia <strong>BEM</strong> per organizzare il codice CSS.</li>" +
+        "<li>Codice strutturato seguendo il pattern <strong>Redux</strong>.</li>" +
+        "<li>Utilizzo di <strong>Redux Saga</strong> per gestire chiamate asincrone ed eventi dalla UI.</li>" +
+        "<li>Utilizzo di <strong>Turbolinks Android & iOS</strong> per incorporare i componenti react in un'app.</li>" +
       "</ul>"
   },
 
