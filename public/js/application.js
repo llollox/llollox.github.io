@@ -28675,14 +28675,14 @@ var dict = {
 
   "references.belka" : {
     en: 
-      "Lorenzo is an able and independent developer. " +
-      "In my experience he accomplished his job autonomously " +
+      "Lorenzo is a capable and independent developer." +
+      "In my experience he accomplished his job autonomously," +
       "providing also some improvements on the user interface.",
 
     it: 
       "Lorenzo è uno sviluppatore abile ed indipendente." +
       "Nella mia esperienza è riuscito a compiere i lavori assegnati in autonomia," +
-      "fornendo alcuni miglioramenti anche all'interfaccia utente."
+      "fornendo anche alcuni miglioramenti anche all'interfaccia utente."
   },
 
   "references.wrb" : {
@@ -28696,26 +28696,25 @@ var dict = {
       "We wish you a good future for you and your career. You deserve it!",
 
     it: 
-      "Lorenzo lo conosciamo da quando sedicenne veniva a chiedere suggerimenti e consigli per elaborare la sua moto, trucchi e modifiche che aveva scovato su internet, e che avrebbe voluto mettere in pratica sulla sua moto." +
-      "Seguito negli anni abbiamo saputo che aveva intrapreso gli studi in Ingegneria informatica." +
-      "Chi chiedere se non a lui che ha 2 grandi passioni, i motori e l’informatica, quando abbiamo avuto bisogno del nostro nuovo sito aziendale!" +
-      "Da subito, si è coinvolto nel nuovo progetto proponendo argomenti, soluzioni ed idee per la messa in rete del nuovo sito che a noi non erano nemmeno venute in mente, pur se più di lui esperti del nostro settore." +
-      "Lo abbiamo visto dedicarsi anima e corpo nella progettazione e nello sviluppo del nostro sito, usando qui poche spazi di tempo tolti allo studio, anche lavorando fino ad orari improponibili. " +
-      "Che dire, poche volte abbiamo visto persone molto giovani che hanno tanta passione per quello che fanno e che vogliono realizzare." +
-      "Grazie Lorenzo, per quello che hai realizzato e per come sei anche come persona." +
+      "Lorenzo lo conosciamo da quando sedicenne veniva a chiedere consigli per elaborare la sua moto.<br/>" +
+      "Quando abbiamo avuto bisogno del nostro nuovo sito aziendale, ci siamo rivolti a lui che ha 2 grandi passioni, i motori e l’informatica.<br/>" +
+      "Da subito, si è coinvolto nel nuovo progetto proponendo idee che a noi non erano nemmeno venute in mente.<br/>" +
+      "Lo abbiamo visto dedicarsi anima e corpo nella progettazione e nello sviluppo del nostro sito lavorando fino ad orari improponibili.<br/>" +
+      "Poche volte abbiamo visto persone molto giovani che hanno tanta passione per quello che fanno.<br/>" +
+      "Grazie Lorenzo, per quello che hai realizzato e per come sei anche come persona.<br/>" +
       "Ti auguriamo un proseguimento della tua attività lavorativa nel migliore dei modi e per te con maggior soddisfazione possibile, lo meriti!"
   },
 
   "references.foodracers" : {
     en: 
-      "Lorenzo è una persona capace e indipendente. " +
-      "Riesce ad imparare velocemente nuove tecnologie e sviluppare in totale autonomia un progetto completo e complesso. " +
-      "È stato un piacere lavorare con lui per questo è assolutamente raccomandato.",
+      "Lorenzo is a capable developer.<br/>" +
+      "He is able to learn quickly new technologies and to develop autonomously a complex and complete project.<br/>" +
+      "It was a pleasure to work with him and for this reason he is absolutely recommended.<br/>",
 
     it: 
-      "Lorenzo è una persona capace e indipendente. " +
-      "Riesce ad imparare velocemente nuove tecnologie e sviluppare in totale autonomia un progetto completo e complesso. " +
-      "È stato un piacere lavorare con lui per questo è assolutamente raccomandato."
+      "Lorenzo è una persona capace e indipendente.<br/>" +
+      "Riesce ad imparare velocemente nuove tecnologie e sviluppare in totale autonomia un progetto completo e complesso.<br/>" +
+      "È stato un piacere lavorare con lui per questo è assolutamente raccomandato.<br/>"
   },
 
   // Certifications ************************************************************
@@ -28763,6 +28762,14 @@ var dict = {
   "footer.get-in-touch": {
     en: "Get in touch with me!",
     it: "Mettiti in contatto con me!"
+  },
+  "footer.find-me": {
+    en: "Find me",
+    it: "Dove trovarmi"
+  },
+  "footer.follow-me": {
+    en: "Follow me",
+    it: "Seguimi"
   },
   "footer.accounts-title": {
       en: "Below my accounts",
