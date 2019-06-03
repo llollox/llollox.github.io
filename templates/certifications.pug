@@ -1,17 +1,23 @@
 -
     var certifications = [
         {
-            name: "Java 8 SE Programmer",
-            date: "September 2016",
-            company_icon: "oracle.jpg",
-            url: "https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-808"
+            name: "Bulats English",
+            date: "certifications.bulats.date",
+            company_icon: "bulats.jpg",
+            file_name: "https://www.microsoft.com/it-it/learning/mos-certification.aspx"
         },
         {
-            name: "Microsoft Office Specialist (MOS)",
-            date: "June 2008",
-            company_icon: "microsoft.jpg",
-            url: "https://www.microsoft.com/it-it/learning/mos-certification.aspx"
-        }
+            name: "Java 8 SE Programmer",
+            date: "certifications.java8.date",
+            company_icon: "oracle.jpg",
+            file_name: "JAVA8_SE_Programmer.pdf"
+        },
+        //- {
+        //-     name: "Microsoft Office Specialist (MOS)",
+        //-     date: "June 2008",
+        //-     company_icon: "microsoft.jpg",
+        //-     url: "https://www.microsoft.com/it-it/learning/mos-certification.aspx"
+        //- }
     ]
 
 section.section.dark-translucent-bg.parallax.pv-40(
@@ -23,7 +29,7 @@ section.section.dark-translucent-bg.parallax.pv-40(
             div.col-md-8.col-md-offset-2.text-center
                 h2.title
                     i.fa.fa-trophy.pr-20
-                    span.text-white Certifications
+                    span.text-white.trn certifications.title
                     i.fa.fa-trophy.pl-20
                     //span.text-default Certifications
 
@@ -41,30 +47,19 @@ section.section.dark-translucent-bg.parallax.pv-40(
                     div.row
 
                         div.col-xs-3
-                            img.width-80.pull-right(src="public/images/logo/" + certification.company_icon)
+                            img.width-100.pull-right(src="public/images/logo/" + certification.company_icon)
                         div.col-xs-9
-                            div.body.padding-top-12I
-                                h3.title
-                                    a(href=certification.url, target="_blank")= certification.name
-                            p.small.mb-10
-                                i.icon-calendar= certification.date
+                            div.body
+
+                                h3.title.mb-10= certification.name
+                                    
+                            p.small.mb-5
+                                i.icon-calendar.trn= certification.date
+
+                            form(method="get", action="public/files/" + certification.file_name).mt-10.mb-10    
+                                button.btn.btn-sm.btn-default.btn-animated.margin-clear.trn(type="submit") Download
+                                        i.fa.fa-download
                                 //.
                                 //    = certification.date
                             //div.separator-2
                             //p.mb-10 Lorem ipsum dolor sit amet, adipisicing elit. Aliquam atque ipsam nihialal. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam laudantium, provident culpa saepe.
-
-
-        //div.clients-container
-        //    div.clients
-        //
-        //        div.client-image.object-non-visible(data-animation-effect="fadeIn", data-effect-delay="100")
-        //            a(href="#")
-        //                img(src="public/images/client-1.png")
-        //
-        //        div.client-image.object-non-visible(data-animation-effect="fadeIn", data-effect-delay="200")
-        //            a(href="#")
-        //                img(src="public/images/client-1.png")
-        //
-        //        div.client-image.object-non-visible(data-animation-effect="fadeIn", data-effect-delay="300")
-        //            a(href="#")
-        //                img(src="public/images/client-1.png")

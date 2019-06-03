@@ -1,9 +1,3 @@
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments)};
-gtag('js', new Date());
-
-gtag('config', 'UA-88641355-2');
-
 /*!
  * jQuery JavaScript Library v1.12.2
  * http://jquery.com/
@@ -28124,8 +28118,6 @@ var timeline = [
 ]
 $(document).ready(function () {
 
-    console.log("ciao");
-
     var styles = [
         {
             "stylers": [
@@ -28243,33 +28235,64 @@ $(document).ready(function () {
     ];
 
     var places = [
-        ['Treviso', 45.6669937,12.2411323, 4, "" +
-            "<h3 class='text-align-center'>" +
-                "<img src='public/images/places/treviso.jpg'/>" +
-                "<div class='margin-top-8'>Treviso</div>" +
-            "</h3>" +
-            "<p>Treviso is my city. Here I was <strong>born</strong> and brought up. <br/>" +
-            "I love <strong>motorbikes</strong> Since I was a child. At 14 years old " +
-            "I couldn't wait to buy a scooter and go everywhere with friends.<br/>" +
-            "Now, I'm back in Treviso to stay with my family for a while.</p>"],
-        ['Trento', 46.0744897,11.1191953, 5, "" +
-            "<h3 class='text-align-center'>" +
-                "<img src='public/images/places/trento.jpg'/>" +
-                "<div class='margin-top-8'>Trento</div>" +
-                "</h3>" +
-            "<p>In Trento I studied computer science at the <strong>university</strong> since 2010 to 2015. " +
-                "Here I get in touch with a lot of people from every part of the <strong>world</strong>. I've also " +
-                "discovered the passion for <strong>road bikes</strong> having fun with many trips on the mountains." +
-            "</p>"],
-        ['Milan', 45.4648837,9.1844683, 3, "" +
-            "<h3 class='text-align-center'>" +
-                "<img src='public/images/places/milano.jpg'/>" +
-                "<div class='margin-top-8'>Milan</div>" +
-            "</h3>" +
-            "<p>In April 2016 I moved to Milan. I was so curious about Milan and live in a <strong>metropoly</strong>" +
-            "and work for a very <strong>big corporation</strong>. Here I've also learnt many food <strong>recipes</strong> " +
-            "from my room mates from Naples." +
-            "</p>"]
+        {
+            name: 'Treviso',
+            description: {
+                en: 
+                    "Treviso is my city. Here I was <strong>born</strong> in 1991.<br/>" +
+                    "I love <strong>motorbikes</strong> since I was a child.<br/>"+
+                    "At 14 years old I couldn't wait to buy a scooter and go everywhere with friends.<br/>" +
+                    "Now, I'm back in Treviso to stay with my family for a while, before to move on.",
+
+                it: 
+                    "Treviso è la mia città. Quí <strong>nacqui</strong> nel 1991.<br/>" +
+                    "Amo le <strong>moto</strong> da quando ero bambino.<br/>" +
+                    "A 14 anni non vedevo l'ora di avere uno scooter per poter andare in giro con gli amici!.<br/>" +
+                    "Ora, sono tornato per un periodo a Treviso per poter stare un pochino con la mia famiglia prima della prossima tappa.</br>"
+            },
+            photo_file: 'treviso.jpg',
+            position: {
+              latitude: 45.6669937,
+              longitude: 12.2411323
+            }
+          },
+          {
+            name: 'Trento',
+            description: {
+                en: 
+                    "In Trento I studied computer science at the <strong>university</strong> since 2010 to 2015. " +
+                    "Here I get in touch with a lot of people from every part of the <strong>world</strong>. I've also " +
+                    "discovered the passion for <strong>road bikes</strong> having fun with many trips on the mountains.",
+
+                it: 
+                    "A Trento studiai informatica all'università dal 2010 al 2015.<br/>" +
+                    "Quí ho avuto la fortuna ed il piacere di conoscere persone da tutto il mondo<br/>" +
+                    "Ho inoltre scoperto di avere la passione per la <strong>bicicletta</strong> essendo circondato dalle montagne più belle d'Italia.<br/>" 
+            },
+            photo_file: 'trento.jpg',
+            position: {
+              latitude: 46.0744897,
+              longitude: 11.1191953
+            }
+          },
+          {
+            name: 'Milano',
+            description: {
+                en: 
+                    "In April 2016 I moved to Milan. I was so curious about Milan and live in a <strong>metropoly</strong>" +
+                    "and work for a very <strong>big corporation</strong>. Here I've also learnt many food <strong>recipes</strong> " +
+                    "from my room mates from Naples.",
+
+                it: 
+                    "Nell'aprile 2016 mi sono spostato a Milano. Essendo abituato alle piccole città ero davvero curioso di cosa volesse dire vivere in una grande metropoli, e lavorare per una <strong>grande azienda</strong>.<br/>" +
+                    "Quí ho avuto il piacere di imparare a cucinare molte ricette particolari dai miei coinquilini napoletani."
+            },
+            photo_file: 'milano.jpg',
+            position: {
+              latitude: 45.4648837,
+              longitude: 9.1844683
+            }
+          }      
     ];
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -28283,8 +28306,8 @@ $(document).ready(function () {
     var bounds = new google.maps.LatLngBounds();
 
     for (var index = 0; index < places.length; index++) {
-        var beach = places[index];
-        var position = new google.maps.LatLng(beach[1], beach[2]);
+        var place = places[index];
+        var position = new google.maps.LatLng(place.position.latitude, place.position.longitude);
 
         var marker = new google.maps.Marker({
             position: position,
@@ -28294,14 +28317,16 @@ $(document).ready(function () {
         });
 
         infoWindows[index] = new google.maps.InfoWindow({
-            content: "<div style='width: 200px'>" + beach[4] + "</div>"
+            content: ""
         });
         marker.addListener('click', function() {
             this.setAnimation(null);
             for (index in infoWindows) {
                 infoWindows[index].close()
             }
-            infoWindows[this.title].open(map, this);
+            let infoWindow = infoWindows[this.title];
+            infoWindow.setContent(buildInfoWindowContent(places[this.title]));
+            infoWindow.open(map, this);
         });
 
         markers[index] = marker;
@@ -28311,3 +28336,518 @@ $(document).ready(function () {
 
     map.fitBounds(bounds);
 });
+
+function buildInfoWindowContent(place) {
+    let lang = translator.lang();
+
+    return "<div style='width: 200px'> " +
+    "<h3 class='text-align-center'>" +
+      "<img src='public/images/places/" + place.photo_file + "'/>" +
+      "<div class='margin-top-8'>" + place.name + "</div>" +
+    "</h3>" + 
+    "<p>" + 
+      place.description[lang] +
+    "</p>" +
+  "</div>";
+}
+/**
+ * @file jquery.translate.js
+ * @brief jQuery plugin to translate text in the client side.
+ * @author Manuel Fernandes
+ * @site
+ * @version 0.9
+ * @license MIT license <http://www.opensource.org/licenses/MIT>
+ *
+ * translate.js is a jQuery plugin to translate text in the client side.
+ *
+ */
+
+(function($){
+  $.fn.translate = function(options) {
+
+    var that = this; //a reference to ourselves
+	
+    var settings = {
+      css: "trn",
+      lang: "en"/*,
+      t: {
+        "translate": {
+          pt: "tradução",
+          br: "tradução"
+        }
+      }*/
+    };
+    settings = $.extend(settings, options || {});
+    if (settings.css.lastIndexOf(".", 0) !== 0)   //doesn't start with '.'
+      settings.css = "." + settings.css;
+       
+    var t = settings.t;
+ 
+    //public methods
+    this.lang = function(l) {
+      if (l) {
+        settings.lang = l;
+        this.translate(settings);  //translate everything
+      }
+        
+      return settings.lang;
+    };
+
+
+    this.get = function(index) {
+      var res = index;
+
+      try {
+        res = t[index][settings.lang];
+      }
+      catch (err) {
+        //not found, return index
+        return index;
+      }
+      
+      if (res)
+        return res;
+      else
+        return index;
+    };
+
+    this.g = this.get;
+
+
+    
+    //main
+    this.find(settings.css).each(function(i) {
+      var $this = $(this);
+
+      var trn_key = $this.attr("data-trn-key");
+      if (!trn_key) {
+        trn_key = $this.html();
+        $this.attr("data-trn-key", trn_key);   //store key for next time
+      }
+
+      $this.html(that.get(trn_key));
+    });
+    
+    
+		return this;
+		
+		
+
+  };
+})(jQuery);
+var dict = {
+
+  // Banner ********************************************************************
+  "banner.title" : {
+    en: "Hi, I'm Lorenzo Rigato!",
+    it: "Lorenzo Rigato"
+  },
+  "banner.subtitle": {
+    en: "Web, Android & iOS Developer",
+    it: "Sviluppatore Web, Android & iOS"
+  },
+
+
+
+  // Navbar ********************************************************************
+  "navbar.home": {
+    en: "Home",
+    it: "Home"
+  },
+  "navbar.about": {
+    en: "About me",
+    it: "Chi sono"
+  },
+  "navbar.skills": {
+    en: "Skills",
+    it: "Competenze"
+  },
+  "navbar.references": {
+    en: "References",
+    it: "Referenze"
+  },
+  "navbar.projects": {
+    en: "Projects",
+    it: "Progetti"
+  },
+  "navbar.places": {
+    en: "Places",
+    it: "Luoghi"
+  },
+  "navbar.contacts": {
+    en: "Contacts",
+    it: "Contatti"
+  },
+  "navbar.language": {
+    en: "Language",
+    it: "Lingua"
+  },
+  "navbar.english": {
+    en: "English",
+    it: "Inglese"
+  },
+  "navbar.italian": {
+    en: "Italian",
+    it: "Italiano"
+  },
+
+
+
+  // Timeline ******************************************************************
+  "timeline.description": {
+    en: 
+      "Hello! I'm Lorenzo, nice to meet you!<br/>" + 
+      "I'm a 28 years old <strong>mobile and web developer</strong> with 5 years of experience.<br/>" + 
+      "Strong knowledge on <strong>Android</strong> framework.<br/>" +
+      "Clean code and <strong>software architectures</strong> lover.<br/>" + 
+      "Simple and clear <strong>UI</strong> amazed.",
+    
+    it: 
+      "Ciao! Mi chiamo Lorenzo, piacere di conoscerti!<br/>" + 
+      "Ho 28 anni e sono uno <strong>sviluppatore mobile e web</strong> con 5 anni di esperienza.<br/>" + 
+      "Grande conoscienza del framework <strong>Android</strong>.<br/>" + 
+      "Amante del <strong>codice pulito</strong> e delle <strong>architetture software</strong>.<br/>" + 
+      "Eternamente affascinato da <strong>interfacce utente</strong> semplici e chiare."
+  },
+
+  // Previnet
+  "timeline.previnet.title" : {
+    en: "Android & iOS Developer",
+    it: "Sviluppatore Android & iOS"
+  },
+  "timeline.previnet.period" : {
+    en: "Nov 2016 - Present",
+    it: "Nov 2016 - Presente"
+  },
+  "timeline.previnet.description" : {
+    en: 
+      "<ul class='text-align-left'>" +
+        "<li>Development of <strong>XME Salute</strong> application for Intesa Sanpaolo Bank on Android and iOS.</li>" +
+        "<li>Structure <strong>app architecture</strong>, separating each component using interfaces." + 
+        "<li>Usage of <strong>Dagger 2</strong> as dependency injection framework and <strong>MVP / MVVM</strong> patterns.</li>" +
+        "<li>Written <strong>Unit and Integration tests</strong> using Espresso and Mockito.</li>" +
+        "<li>Implementation of <strong>Accessibility</strong> using the iOS Voiceover and Android Talkback.</li>" +
+        "<li>Usage of <strong>Scrum</strong> methodology to organize the tasks within the team.</li>" +
+      "</ul>",
+    it:
+      "<ul class='text-align-left'>" +
+        "<li>Sviluppo dell'applicazione <strong>XME Salute</strong> per Banca Intesa Sanpaolo in Android e iOS.</li>" +
+        "<li>Costruzione dell'<strong>architettura</strong> dell'applicazione, separando ogni componente utilizzando interfacce." + 
+        "<li>Utilizzo di <strong>Dagger 2</strong> come framework per dependency injection e dei pattern <strong>MVP / MVVM</strong>.</li>" +
+        "<li>Implementazione di <strong>Unit e Integration test</strong> utilizzando Espresso e Mockito.</li>" +
+        "<li>Implementazione dell'<strong>Accessibilità</strong> utilizzando gli strumenti: Voiceover di iOS e Talkback di Android.</li>" +
+        "<li>Utilizzo della metodologia <strong>Scrum</strong> per l'organizzazione del lavoro nel team.</li>" +
+      "</ul>"
+  },
+
+  // Foodracers
+  "timeline.foodracers.title" : {
+    en: "React JS Developer",
+    it: "Sviluppatore React JS"
+  },
+  "timeline.foodracers.period" : {
+    en: "Ago 2017 - Sep 2018",
+    it: "Ago 2017 - Set 2018"
+  },
+  "timeline.foodracers.description" : {
+    en: 
+      "<ul class='text-align-left'>" +
+        "<li>Development of a <strong>Design System</strong> of React JS components using <strong>Storybook</strong> and following <strong>BEM</strong> methodology to organize CSS code.</li>" +
+        "<li>Code structured following the <strong>Redux</strong> pattern.</li>" +
+        "<li>Usage of <strong>Redux Saga</strong> to manage asynchronous calls and UI events.</li>" +
+        "<li>Usage of <strong>Turbolinks Android & iOS</strong> to embed the react components into an application.</li>" +
+      "</ul>",
+    it: 
+      "<ul class='text-align-left'>" +
+        "<li>Sviluppo di un <strong>Design System</strong> di componenti in React JS utilizzando lo <strong>Storybook</strong> di React seguendo la metodologia <strong>BEM</strong> per organizzare il codice CSS.</li>" +
+        "<li>Codice strutturato seguendo il pattern <strong>Redux</strong>.</li>" +
+        "<li>Utilizzo di <strong>Redux Saga</strong> per gestire chiamate asincrone ed eventi dalla UI.</li>" +
+        "<li>Utilizzo di <strong>Turbolinks Android & iOS</strong> per incorporare i componenti react in un'app.</li>" +
+      "</ul>"
+  },
+
+  // Reply
+  "timeline.reply.title" : {
+    en: "Web Developer",
+    it: "Sviluppatore Web"
+  },
+  "timeline.reply.period" : {
+    en: "Apr - Oct 2016",
+    it: "Apr - Ott 2016"
+  },
+  "timeline.reply.description" : {
+    en: 
+      "<ul class='text-align-left'>" +
+        "<li>Development of the Direct Line's responsive web portal using <strong>Bootstrap, jQuery</strong> and <strong>Liferay</strong>.</li>" +
+      "</ul>",
+    it: 
+      "<ul class='text-align-left'>" +
+        "<li>Sviluppo del portale web responsive per Direct Line's utilizzando <strong>Bootstrap, jQuery</strong> e <strong>Liferay</strong>.</li>" +
+      "</ul>",
+  },
+
+  // Belka
+  "timeline.belka.title" : {
+    en: "Android Developer",
+    it: "Sviluppatore Android",
+  },
+  "timeline.belka.period" : {
+    en: "Sep 2015 - Mar 2016",
+    it: "Set 2015 - Mar 2016"
+  },
+  "timeline.belka.description" : {
+    en: 
+      "<ul class='text-align-left'>" +
+        "<li>Implementation of Android interface following <strong>Material Design</strong> rules." +
+        "<li>Android integration with electronic chips using NFC.</li>" +
+        "<li>Implementation of UI tests using <strong>Roboelectric</strong>.</li>" +
+        "<li>Implementation of <strong>Toggle Switch Button</strong> library.</li>" +
+        "<li>Usage of <strong>Jira</strong> and <strong>Kanban board</strong> to organize tasks within the team.</li>" +
+      "</ul>",
+    it: 
+      "<ul class='text-align-left'>" +
+        "<li>Implementazione di un'interfaccia Android seguendo <strong>Material Design</strong>" +
+        "<li>Integrazione di Android con dei chip elettronici usando NFC.</li>" +
+        "<li>Implementazione di test della UI utilizzando <strong>Roboelectric</strong>.</li>" +
+        "<li>Implementazione della libreria <strong>Toggle Switch Button</strong>.</li>" +
+        "<li>Utilizzo di <strong>Jira</strong> e della <strong>Kanban board</strong> per organizzare il lavoro nel team.</li>" +
+      "</ul>"
+  },
+
+  // FBK
+  "timeline.fbk.title" : {
+    en: "Internship and assistant Ruby on Rails & Android Developer",
+    it: "Tirocinante ed assistente Sviluppatore Ruby on Rails & Android"
+  },
+  "timeline.fbk.period" : {
+    en: "Dec 2011 - Sep 2015",
+    it: "Dic 2011 - Set 2015"
+  },
+  "timeline.fbk.description" : {
+    en: 
+      "<ul class='text-align-left'>" +
+        "<li>Development of <strong>Android applications</strong> with backward compatibility with Android 2.</li>" +
+        "<li>Development of the frontend web using <strong>Bootstrap</strong></li>" +
+        "<li>Implementation of versioned <strong>REST API</strong> on Ruby on Rails</li>" +
+        "<li>Implementation of <strong>Unit and UI tests</strong> using Rspec, Capybara, Selenium and Cucumber.</li>" +
+        "<li>Written code <strong>documentation</strong> for API and project structure.</li>" +
+        "<li>Usage of <strong>git</strong> as version control." +
+      "</ul>",
+    it: 
+      "<ul class='text-align-left'>" +
+        "<li>Sviluppo di <strong>applicazioni Android</strong> retrocompatibili con Android 2.</li>" +
+        "<li>Sviluppo di frontend web utilizzando <strong>Bootstrap</strong></li>" +
+        "<li>Implementazione di <strong>REST API</strong> versionate in Ruby on Rails</li>" +
+        "<li>Implementazione di <strong>Unit e UI test</strong> utilizzando Rspec, Capybara, Selenium and Cucumber.</li>" +
+        "<li>Stesura della <strong>documentation</strong> del codice per API e struttura dei progetti.</li>" +
+        "<li>Utilizzo di <strong>git</strong> come strumento per il versionamento del codice." +
+      "</ul>",
+  },
+
+  // Msc UniTn
+  "timeline.unitn.msc.title" : {
+    en: "Master's Degree in Computer Science",
+    it: "Laurea Magistrale in Informatica"
+  },
+  "timeline.unitn.msc.period" : {
+    en: "Sep 2013 - Dec 2015",
+    it: "Set 2013 - Dic 2015"
+  },
+  "timeline.unitn.msc.mark" : {
+    en: "110 cum laude",
+    it: "110 e Lode"
+  },
+  "timeline.unitn.msc.description" : {
+    en: 
+      "<ul class='text-align-left'>" +
+        "<li>Thesis: '<strong>Quanto Spreco?</strong>'. An application to monitor and reduce the domestic food waste</li>" +
+        "<li>Development of an update for the OpenFWWF firmware in <strong>Assembly</strong> to allow the access point and its clients to change channel together. " +
+        "Also, development of a <strong>Python</strong> controller to gather metrics information and decide which is the best channel.</li>" +
+      "</ul>",
+    it: 
+      "<ul class='text-align-left'>" +
+        "<li>Thesis: '<strong>Quanto Spreco?</strong>'. Un'applicazione per monitorare e ridurre lo spreco alimentare domestico.</li>" +
+        "<li>Sviluppo di un aggiornamento del firmware OpenFWWF in <strong>Assembly</strong> per permettere all'access point, ed ai client collegati, di cambiare canale. " +
+        "Inoltre, sviluppo di un controller in <strong>Python</strong> per ottenere le informazioni dell'andamento della rete e calcolare il miglior canale in cui spostarsi.</li>" +
+      "</ul>",
+  },
+
+  // Bsc UniTn
+  "timeline.unitn.bsc.title" : {
+    en: "Bachelor's Degree in Computer Science",
+    it: "Laurea Triennale in Informatica"
+  },
+  "timeline.unitn.bsc.period" : {
+    en: "Sep 2010 - Sep 2013",
+    it: "Set 2010 - Set 2013"
+  },
+  "timeline.unitn.bsc.description" : {
+    en:
+      "<ul class='text-align-left'>" +
+        "<li>Thesis: '<strong>Bring the *'</strong>. An extension to the Bring the Food application to support any kind of donation.</li>" +
+        "<li>Discovered interest on <strong>networking</strong>.</li>" +
+      "</ul>",
+    it: 
+      "<ul class='text-align-left'>" +
+        "<li>Thesis: '<strong>Bring the *'</strong>. An extension to the Bring the Food application to support any kind of donation.</li>" +
+        "<li>Scoperto un interesse nel funzionamento delle <strong>reti di computer</strong>.</li>" +
+      "</ul>"
+  },
+
+  "timeline.unitn": {
+    en: "University of Trento",
+    it: "Università di Trento"
+  },
+
+  "timeline.master-degree": {
+    en: "Master's Degree in Computer Science",
+    it: "Laurea Magistrale in Informatica"
+  },
+  "timeline.bachelor-degree": {
+    en: "Bachelor's Degree in Computer Science",
+    it: "Laurea Triennale in Informatica"
+  },
+  "timeline.high-school-diploma" : {
+    en: "High School Diploma on Economy",
+    it: "Diploma di Ragioneria"
+  },
+
+  // References ****************************************************************
+  "references.title": {
+    en: "References",
+    it: "Referenze"
+  },
+
+  "references.belka" : {
+    en: 
+      "Lorenzo is a capable and independent developer." +
+      "In my experience he accomplished his job autonomously," +
+      "providing also some improvements on the user interface.",
+
+    it: 
+      "Lorenzo è uno sviluppatore abile ed indipendente." +
+      "Nella mia esperienza è riuscito a compiere i lavori assegnati in autonomia," +
+      "fornendo anche alcuni miglioramenti anche all'interfaccia utente."
+  },
+
+  "references.wrb" : {
+    en: 
+      "We have known Lorenzo since he was sixteen years old, when he came to ask suggestions in order to increase speed of his motorbike." +
+      "In 2012, he was studing computer science, we asked to Lorenzo to develop the new website of our company." +
+      "He started immediately with this new project and then he also proposed new features that we have never thought." +
+      "We saw him work very hard, even late at night, in order to build our web application" +
+      "Very few times, we saw people that able to work with passion like Lorenzo." +
+      "Thank you very much Lorenzo, for everything you did for us." +
+      "We wish you a good future for you and your career. You deserve it!",
+
+    it: 
+      "Lorenzo lo conosciamo da quando sedicenne veniva a chiedere consigli per elaborare la sua moto.<br/>" +
+      "Quando abbiamo avuto bisogno del nostro nuovo sito aziendale, ci siamo rivolti a lui che ha 2 grandi passioni, i motori e l’informatica.<br/>" +
+      "Da subito, si è coinvolto nel nuovo progetto proponendo idee che a noi non erano nemmeno venute in mente.<br/>" +
+      "Lo abbiamo visto dedicarsi anima e corpo nella progettazione e nello sviluppo del nostro sito lavorando fino ad orari improponibili.<br/>" +
+      "Poche volte abbiamo visto persone molto giovani che hanno tanta passione per quello che fanno.<br/>" +
+      "Grazie Lorenzo, per quello che hai realizzato e per come sei anche come persona.<br/>" +
+      "Ti auguriamo un proseguimento della tua attività lavorativa nel migliore dei modi e per te con maggior soddisfazione possibile, lo meriti!"
+  },
+
+  "references.foodracers" : {
+    en: 
+      "Lorenzo is a capable developer.<br/>" +
+      "He is able to learn quickly new technologies and to develop autonomously a complex and complete project.<br/>" +
+      "It was a pleasure to work with him and for this reason he is absolutely recommended.<br/>",
+
+    it: 
+      "Lorenzo è una persona capace e indipendente.<br/>" +
+      "Riesce ad imparare velocemente nuove tecnologie e sviluppare in totale autonomia un progetto completo e complesso.<br/>" +
+      "È stato un piacere lavorare con lui per questo è assolutamente raccomandato.<br/>"
+  },
+
+  // Certifications ************************************************************
+  "certifications.title": {
+    en: "Certifications",
+    it: "Certificazioni"
+  },
+
+  "certifications.java8.date": {
+    en: "September 2016",
+    it: "Settembre 2016"
+  },
+
+  "certifications.bulats.date": {
+    en: "May 2019",
+    it: "Maggio 2019"
+  },
+
+  // Skills ********************************************************************
+  "skills.title": {
+    en: "My Skills",
+    it: "Le mie abilità"
+  },
+  "skills.technical": {
+    en: "Technical",
+    it: "Tecniche"
+  },
+  "skills.personal": {
+    en: "Personal",
+    it: "Personali"
+  },
+
+  // Portfolio *****************************************************************
+  "portfolio.all": {
+    en: "All",
+    it: "Tutti"
+  },
+  "portfolio.projects": {
+    en: "Projects",
+    it: "Progetti"
+  },
+
+  // Places ********************************************************************
+  "places.places": {
+    en: "Places",
+    it: "Posti"
+  },
+  "places.lived": {
+    en: "I Lived",
+    it: "Dove ho vissuto"
+  },
+  "places.treviso.description": {
+    en: "Description in english",
+    it: "Descrizione in italiano"
+  },
+
+
+  // Footer ********************************************************************
+  "footer.send-me-message": {
+    en: "Send me a message",
+    it: "Inviami un messaggio"
+  },
+  "footer.get-in-touch": {
+    en: "Get in touch with me!",
+    it: "Mettiti in contatto con me!"
+  },
+  "footer.find-me": {
+    en: "Find me",
+    it: "Dove trovarmi"
+  },
+  "footer.follow-me": {
+    en: "Follow me",
+    it: "Seguimi"
+  },
+  "footer.accounts-title": {
+      en: "Below my accounts",
+      it: "Di seguito i miei account"
+  },
+  "footer.job": {
+    en: "Web, Android & iOS Developer",
+    it: "Sviluppatore Web, Android & iOS"
+  }
+}
+
+
+
+var translator = $('body').translate({lang: "en", t: dict});
+
+function changeLanguage(language) {
+  translator.lang(language);
+}

@@ -3,6 +3,13 @@ div.scrollToTop i.icon-up-open-big {
   display: block;
   margin-top: 12px;
 }
+.progress.style-1 {
+  background-color: #ebebeb;
+}
+.progress-bar-gray {
+  background-color: #aaa;
+  color: #fff;
+}
 @media (max-width: 768px) {
   li#hero-img div.tp-caption.large_white {
     font-size: 18px !important;
@@ -35,6 +42,12 @@ div.scrollToTop i.icon-up-open-big {
   }
   header.transparent-header-on nav.navbar ul.nav li a:hover {
     border-bottom: 1px solid rgba(255,255,255,0.7) !important;
+  }
+  header.transparent-header-on li.dropdown a.dropdown-toggle {
+    background-color: transparent !important;
+  }
+  header.transparent-header-on nav.navbar ul.nav ul.dropdown-menu li a {
+    color: #777 !important;
   }
   header.transparent-header-on div#logo {
     display: none;

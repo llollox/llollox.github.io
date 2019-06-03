@@ -34,7 +34,6 @@ gulp.task('fonts', function() {
 
 gulp.task('scripts', function () {
     return gulp.src([
-            paths.assets + '/js/google_analytics.js',
             paths.bower  + '/jquery/dist/jquery.js',
             paths.bower  + '/bootstrap/dist/js/bootstrap.js',
             paths.bower  + '/modernizr/modernizr.js',
@@ -57,7 +56,10 @@ gulp.task('scripts', function () {
             paths.assets + '/js/template.js',
             paths.assets + '/js/template.overrides.js',
             paths.assets + '/js/content.js',
-            paths.assets + '/js/map.js'
+            paths.assets + '/js/map.js',
+            paths.assets + '/js/google_analytics.js',
+            paths.assets + '/js/jquery.translate.js',
+            paths.assets + '/js/translations.js'
         ])
         .pipe(concat('application.js'))
         .pipe(gulp.dest('./public/js'))

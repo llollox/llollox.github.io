@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-    console.log("ciao");
-
     var styles = [
         {
             "stylers": [
@@ -119,33 +117,64 @@ $(document).ready(function () {
     ];
 
     var places = [
-        ['Treviso', 45.6669937,12.2411323, 4, "" +
-            "<h3 class='text-align-center'>" +
-                "<img src='public/images/places/treviso.jpg'/>" +
-                "<div class='margin-top-8'>Treviso</div>" +
-            "</h3>" +
-            "<p>Treviso is my city. Here I was <strong>born</strong> and brought up. <br/>" +
-            "I love <strong>motorbikes</strong> Since I was a child. At 14 years old " +
-            "I couldn't wait to buy a scooter and go everywhere with friends.<br/>" +
-            "Now, I'm back in Treviso to stay with my family for a while.</p>"],
-        ['Trento', 46.0744897,11.1191953, 5, "" +
-            "<h3 class='text-align-center'>" +
-                "<img src='public/images/places/trento.jpg'/>" +
-                "<div class='margin-top-8'>Trento</div>" +
-                "</h3>" +
-            "<p>In Trento I studied computer science at the <strong>university</strong> since 2010 to 2015. " +
-                "Here I get in touch with a lot of people from every part of the <strong>world</strong>. I've also " +
-                "discovered the passion for <strong>road bikes</strong> having fun with many trips on the mountains." +
-            "</p>"],
-        ['Milan', 45.4648837,9.1844683, 3, "" +
-            "<h3 class='text-align-center'>" +
-                "<img src='public/images/places/milano.jpg'/>" +
-                "<div class='margin-top-8'>Milan</div>" +
-            "</h3>" +
-            "<p>In April 2016 I moved to Milan. I was so curious about Milan and live in a <strong>metropoly</strong>" +
-            "and work for a very <strong>big corporation</strong>. Here I've also learnt many food <strong>recipes</strong> " +
-            "from my room mates from Naples." +
-            "</p>"]
+        {
+            name: 'Treviso',
+            description: {
+                en: 
+                    "Treviso is my city. Here I was <strong>born</strong> in 1991.<br/>" +
+                    "I love <strong>motorbikes</strong> since I was a child.<br/>"+
+                    "At 14 years old I couldn't wait to buy a scooter and go everywhere with friends.<br/>" +
+                    "Now, I'm back in Treviso to stay with my family for a while, before to move on.",
+
+                it: 
+                    "Treviso è la mia città. Quí <strong>nacqui</strong> nel 1991.<br/>" +
+                    "Amo le <strong>moto</strong> da quando ero bambino.<br/>" +
+                    "A 14 anni non vedevo l'ora di avere uno scooter per poter andare in giro con gli amici!.<br/>" +
+                    "Ora, sono tornato per un periodo a Treviso per poter stare un pochino con la mia famiglia prima della prossima tappa.</br>"
+            },
+            photo_file: 'treviso.jpg',
+            position: {
+              latitude: 45.6669937,
+              longitude: 12.2411323
+            }
+          },
+          {
+            name: 'Trento',
+            description: {
+                en: 
+                    "In Trento I studied computer science at the <strong>university</strong> since 2010 to 2015. " +
+                    "Here I get in touch with a lot of people from every part of the <strong>world</strong>. I've also " +
+                    "discovered the passion for <strong>road bikes</strong> having fun with many trips on the mountains.",
+
+                it: 
+                    "A Trento studiai informatica all'università dal 2010 al 2015.<br/>" +
+                    "Quí ho avuto la fortuna ed il piacere di conoscere persone da tutto il mondo<br/>" +
+                    "Ho inoltre scoperto di avere la passione per la <strong>bicicletta</strong> essendo circondato dalle montagne più belle d'Italia.<br/>" 
+            },
+            photo_file: 'trento.jpg',
+            position: {
+              latitude: 46.0744897,
+              longitude: 11.1191953
+            }
+          },
+          {
+            name: 'Milano',
+            description: {
+                en: 
+                    "In April 2016 I moved to Milan. I was so curious about Milan and live in a <strong>metropoly</strong>" +
+                    "and work for a very <strong>big corporation</strong>. Here I've also learnt many food <strong>recipes</strong> " +
+                    "from my room mates from Naples.",
+
+                it: 
+                    "Nell'aprile 2016 mi sono spostato a Milano. Essendo abituato alle piccole città ero davvero curioso di cosa volesse dire vivere in una grande metropoli, e lavorare per una <strong>grande azienda</strong>.<br/>" +
+                    "Quí ho avuto il piacere di imparare a cucinare molte ricette particolari dai miei coinquilini napoletani."
+            },
+            photo_file: 'milano.jpg',
+            position: {
+              latitude: 45.4648837,
+              longitude: 9.1844683
+            }
+          }      
     ];
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -159,8 +188,8 @@ $(document).ready(function () {
     var bounds = new google.maps.LatLngBounds();
 
     for (var index = 0; index < places.length; index++) {
-        var beach = places[index];
-        var position = new google.maps.LatLng(beach[1], beach[2]);
+        var place = places[index];
+        var position = new google.maps.LatLng(place.position.latitude, place.position.longitude);
 
         var marker = new google.maps.Marker({
             position: position,
@@ -170,14 +199,16 @@ $(document).ready(function () {
         });
 
         infoWindows[index] = new google.maps.InfoWindow({
-            content: "<div style='width: 200px'>" + beach[4] + "</div>"
+            content: ""
         });
         marker.addListener('click', function() {
             this.setAnimation(null);
             for (index in infoWindows) {
                 infoWindows[index].close()
             }
-            infoWindows[this.title].open(map, this);
+            let infoWindow = infoWindows[this.title];
+            infoWindow.setContent(buildInfoWindowContent(places[this.title]));
+            infoWindow.open(map, this);
         });
 
         markers[index] = marker;
@@ -187,3 +218,17 @@ $(document).ready(function () {
 
     map.fitBounds(bounds);
 });
+
+function buildInfoWindowContent(place) {
+    let lang = translator.lang();
+
+    return "<div style='width: 200px'> " +
+    "<h3 class='text-align-center'>" +
+      "<img src='public/images/places/" + place.photo_file + "'/>" +
+      "<div class='margin-top-8'>" + place.name + "</div>" +
+    "</h3>" + 
+    "<p>" + 
+      place.description[lang] +
+    "</p>" +
+  "</div>";
+}

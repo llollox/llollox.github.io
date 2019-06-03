@@ -1,112 +1,91 @@
 -
     var timeline = [
         {
-            name: "React JS Developer",
-            company: {
-                name: "Foodracers",
-                icon: "foodracers.png",
-                website: "https://www.foodracers.com/it"
-        },
-            period: "Ago 2017 - Present",
-            description:
-                "<ul class='text-align-left'>" +
-                    "<li>Development of a UI library of React JS components using <strong>Storybook</strong></li>" +
-                    "<li>Development of a <strong>responsive</strong> React JS frontend to buy food from local restaurants.</li>" +
-                "</ul>"
-        },
-        {
-            name: "Android & iOS Developer",
+            name: "timeline.previnet.title",
             company: {
                 name: "Previnet",
                 icon: "previnet.jpg",
                 website: "http://www.previnet.it/"
             },
-            period: "Nov 2016 - Present",
-            description:
-                "<ul class='text-align-left'>" +
-                    "<li><strong>Refactoring</strong> of two old internal Android applications " +
-                    "following the Material design style guidelines.</li>" +
-                    "<li>Development of an application for a bank, in both <strong>Android and iOS</strong> versions, " +
-                    "to manage health services.</li>" +
-                "</ul>"
+            period: "timeline.previnet.period",
+            description: "timeline.previnet.description"
         },
         {
-            name: "Web Developer",
+            name: "timeline.foodracers.title",
+            company: {
+                name: "Foodracers",
+                icon: "foodracers.png",
+                website: "https://www.foodracers.com/it"
+            },
+            period: "timeline.foodracers.period",
+            description: "timeline.foodracers.description"
+        },
+        {
+            name: "timeline.reply.title",
             company: {
                 name: "Reply",
                 icon: "reply.jpg",
+                subtitle: "Technology",
                 website: "http://www.reply.com/it/"
             },
-            period: "Apr - Oct 2016",
-            description:
-                "<ul class='text-align-left'>" +
-                    "<li>Development of a <strong>responsive web application</strong> for an insurance company using Liferay</li>" +
-                "</ul>"
+            period: "timeline.reply.period",
+            description: "timeline.reply.description"
         },
         {
-            name: "Android Developer",
+            name: "timeline.belka.title",
             company: {
                 name: "Belka",
                 icon: "belka.jpg",
                 website: "http://belka.us/en/"
             },
-            period: "Jan - Mar 2016",
-            description:
-                "<ul class='text-align-left'>" +
-                    "<li>Development of <strong>two Android applications</strong>. First on sharing events between friends and last on configuring electronic chips via NFC</li>" +
-                    "<li>Improved skill on understanding customer's <strong>requirements</strong></li>" +
-                "</ul>"
+            period: "timeline.belka.period",
+            description: "timeline.belka.description"
         },
         {
-            name: "Ruby on Rails & Android Developer",
+            name: "timeline.fbk.title",
             company: {
                 name: "Fondazione Bruno Kessler",
                 icon: "fbk.jpg",
+                subtitle: "ICT4G Unit",
                 website: "https://www.fbk.eu/it/"
             },
-            period: "2011 - 2015",
-            description:
-                "<ul class='text-align-left'>" +
-                    "<li><strong>Design</strong> and <strong>development</strong> of Ruby on Rails and Android applications against the food waste</li>" +
-                    "<li><strong>Aggregation and organization</strong> from different sources of food information.</li>" +
-                    "<li>Worked closely with <strong>senior developers</strong> and learned advanced programming and <strong>project management</strong> skills</li>" +
-                "</ul>"
+            period: "timeline.fbk.period",
+            description: "timeline.fbk.description"
         },
         {
-            name: "Master's Degree in Computer Science",
+            name: "timeline.unitn.msc.title",
             company: {
-                name: "University of Trento",
+                name: "timeline.unitn",
                 icon: "unitn.jpg",
-                subtitle: "110 cum laude",
+                subtitle: "timeline.unitn.msc.mark",
                 website: "http://www.unitn.it/"
             },
-            period: "2013 - 2015",
-            description: "Thesis: '<strong>Quanto Spreco?</strong>'. An application to monitor and reduce the domestic food waste"
+            period: "timeline.unitn.msc.period",
+            description: "timeline.unitn.msc.description"
         },
         {
-            name: "Bachelor's Degree in Computer Science",
+            name: "timeline.unitn.bsc.title",
             company: {
-                name: "University of Trento",
+                name: "timeline.unitn",
                 icon: "unitn.jpg",
                 subtitle: "103/110",
                 website: "http://www.unitn.it/"
             },
-            period: "2010 - 2013",
-            description: "Discovered a strong interest on networking. <br/>" +
-                "Thesis: '<strong>Bring the *'</strong>. An extension to the Bring the Food application to support any kind of donation."
-        }]
-//        {
-//            name: "High School Diploma on Economy",
-//            company: {
-//                name: "ITC Riccati of Treviso",
-//                icon: "riccati.jpg",
-//                subtitle: "81/100",
-//                website: "http://www.riccati-luzzatti.gov.it/it"
-//        },
-//            period: "2006 - 2010",
-//            description: "Thesis: a simple <strong>web CMS</strong> to manage films projections on a cinema, written in PHP."
-//        }
-//    ]
+            period: "timeline.unitn.bsc.period",
+            description: "timeline.unitn.bsc.description"
+        },
+        //- {
+        //-     name: "High School Diploma on Economy",
+        //-     company: {
+        //-         name: "ITC Riccati of Treviso",
+        //-         icon: "riccati.jpg",
+        //-         subtitle: "81/100",
+        //-         website: "http://www.riccati-luzzatti.gov.it/it"
+        //- },
+        //-     period: "2006 - 2010",
+        //-     description: "Thesis: a simple <strong>web CMS</strong> to manage films projections on a cinema, written in PHP."
+        //- }
+    ]
 
 section#about.light-gray-bg.pv-20
     div.container
@@ -118,15 +97,7 @@ section#about.light-gray-bg.pv-20
                     span.margin-left-8 Me
 
                 div.separator
-                p.large Hello I'm Lorenzo, a dedicated 26 years old <strong>full-stack developer</strong> with 5+ years of experience in web and mobile development.
-                    br
-                    | Strong knowledge in <strong>Android</strong> technology.
-                    //br
-                    //| Passionate on <strong>data engineering</strong>.
-                    //br
-                    //| Able to complete projects efficiently and satisfying customer’s requirements.
-                    br
-                    | <strong>Clean code</strong> lover and beautiful UI fascinated.
+                p.large.trn timeline.description
 
                 // timeline grid start
                 div.timeline.margin-clear.clearfix
@@ -137,15 +108,15 @@ section#about.light-gray-bg.pv-20
                                 data-animation-effect="fadeInUpSmall",
                                 data-effect-delay="100")
 
-                                div.timeline-date-label.margin-clear.clearfix.width-150= item.period
-                                h3.margin-bottom-20.margin-top-28= item.name
+                                div.timeline-date-label.margin-clear.clearfix.width-150.trn= item.period
+                                h3.margin-bottom-20.margin-top-28.trn= item.name
 
                                 img.display-inline-block.height-50(src="public/images/logo/" + item.company.icon)
 
                                 a.display-block.margin-top-8(href=item.company.website, target='_blank')
-                                    span.font-size-16= item.company.name
-                                div=item.company.subtitle
+                                    span.font-size-16.trn= item.company.name
+                                div.trn=item.company.subtitle
 
                                 div.separator
 
-                                p.text-align-left!= item.description
+                                p.trn.text-align-left!= item.description
