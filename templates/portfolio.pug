@@ -66,15 +66,14 @@ section#portfolio.section.pv-30
 
     div.text-center
         h2.title
-            span.text-muted Recent
-            span.text-default.margin-left-8 Projects
+            span.text-default.margin-left-8.trn portfolio.projects
         div.separator
 
 
     div.filters.text-center
         ul.nav.nav-pills.style-2
             li.active
-                a(href="#", data-filter="*") All
+                a(href="#", data-filter="*").trn portfolio.all
             li
                 a(href="#", data-filter=".web") Web
             li
@@ -112,9 +111,9 @@ section#portfolio.section.pv-30
                                                         //p.small Web Design
                                             div.overlay-bottom
                                                 div.links
-                                                    a(href=project.url, target="_blank").btn.btn-gray-transparent.btn-animated.btn-sm
+                                                    a(href=project.url, target="_blank").btn.btn-gray-transparent.btn-animated.btn-sm.trn
                                                         .
-                                                            View Details
+                                                            View Detail
                                                         i.pl-10.fa.fa-arrow-right
             else
 
@@ -134,5 +133,5 @@ section#portfolio.section.pv-30
                                 div.links
                                     a(href=project.url, target="_blank").btn.btn-gray-transparent.btn-animated.btn-sm
                                         .
-                                            View Details
+                                            View Detail
                                         i.pl-10.fa.fa-arrow-right

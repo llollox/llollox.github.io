@@ -29,9 +29,9 @@ var dict = {
     en: "References",
     it: "Referenze"
   },
-  "navbar.recent-projects": {
-    en: "Recent Projects",
-    it: "Progetti Recenti"
+  "navbar.projects": {
+    en: "Projects",
+    it: "Progetti"
   },
   "navbar.places": {
     en: "Places",
@@ -86,7 +86,7 @@ var dict = {
     en: 
       "<ul class='text-align-left'>" +
         "<li>Development of <strong>XME Salute</strong> application for Intesa Sanpaolo Bank on Android and iOS.</li>" +
-        "<li>Built <strong>app architecture</strong>, separating each component using interfaces." + 
+        "<li>Structure <strong>app architecture</strong>, separating each component using interfaces." + 
         "<li>Usage of <strong>Dagger 2</strong> as dependency injection framework and <strong>MVP / MVVM</strong> patterns.</li>" +
         "<li>Written <strong>Unit and Integration tests</strong> using Espresso and Mockito.</li>" +
         "<li>Implementation of <strong>Accessibility</strong> using the iOS Voiceover and Android Talkback.</li>" +
@@ -355,6 +355,16 @@ var dict = {
     it: "Personali"
   },
 
+  // Portfolio *****************************************************************
+  "portfolio.all": {
+    en: "All",
+    it: "Tutti"
+  },
+  "portfolio.projects": {
+    en: "Projects",
+    it: "Progetti"
+  },
+
   // Places ********************************************************************
   "places.places": {
     en: "Places",
@@ -390,6 +400,10 @@ var dict = {
   "footer.accounts-title": {
       en: "Below my accounts",
       it: "Di seguito i miei account"
+  },
+  "footer.job": {
+    en: "Web, Android & iOS Developer",
+    it: "Sviluppatore Web, Android & iOS"
   }
 }
 
