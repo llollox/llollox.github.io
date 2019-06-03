@@ -356,9 +356,17 @@ var dict = {
   },
 
   // Places ********************************************************************
+  "places.places": {
+    en: "Places",
+    it: "Posti"
+  },
   "places.lived": {
-    en: "I've Lived",
+    en: "I Lived",
     it: "Dove ho vissuto"
+  },
+  "places.treviso.description": {
+    en: "Description in english",
+    it: "Descrizione in italiano"
   },
 
 
