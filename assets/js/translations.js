@@ -277,8 +277,8 @@ var dict = {
 
   // References ****************************************************************
   "references.title": {
-    en: "People I worked with",
-    it: "Hanno lavorato con me"
+    en: "References",
+    it: "Referenze"
   },
 
   "references.belka" : {
@@ -330,6 +330,16 @@ var dict = {
   "certifications.title": {
     en: "Certifications",
     it: "Certificazioni"
+  },
+
+  "certifications.java8.date": {
+    en: "September 2016",
+    it: "Settembre 2016"
+  },
+
+  "certifications.bulats.date": {
+    en: "May 2019",
+    it: "Maggio 2019"
   },
 
   // Skills ********************************************************************
