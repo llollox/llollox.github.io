@@ -28497,7 +28497,7 @@ var dict = {
   "timeline.description": {
     en: 
       "Hello! I'm Lorenzo, nice to meet you!<br/>" + 
-      "I'm a 28 years old <strong>mobile and web developer</strong> with 5 years of experience.<br/>" + 
+      "I'm a 28-years-old <strong>mobile and web developer</strong> with 5 years of experience.<br/>" + 
       "Strong knowledge on <strong>Android</strong> framework.<br/>" +
       "Clean code and <strong>software architectures</strong> lover.<br/>" + 
       "Simple and clear <strong>UI</strong> amazed.",
@@ -28732,13 +28732,13 @@ var dict = {
 
   "references.wrb" : {
     en: 
-      "We have known Lorenzo since he was sixteen years old, when he came to ask suggestions in order to increase speed of his motorbike." +
-      "In 2012, he was studing computer science, we asked to Lorenzo to develop the new website of our company." +
-      "He started immediately with this new project and then he also proposed new features that we have never thought." +
-      "We saw him work very hard, even late at night, in order to build our web application" +
+      "We have known Lorenzo since he was sixteen years old, when he came to ask suggestions in order to increase the speed of his motorbike." +
+      "In 2012 he was attending the computer science course at the university, so we asked Lorenzo to develop our new company's website." +
+      "He started immediately with this new project and then he also suggested me new features that we had never thought about." +
+      "We saw him working very hard, even late at night, in order to build our web application." +
       "Very few times, we saw people that able to work with passion like Lorenzo." +
       "Thank you very much Lorenzo, for everything you did for us." +
-      "We wish you a good future for you and your career. You deserve it!",
+      "We wish you the best. You deserve it!",
 
     it: 
       "Lorenzo lo conosciamo da quando sedicenne veniva a chiedere consigli per elaborare la sua moto.<br/>" +
