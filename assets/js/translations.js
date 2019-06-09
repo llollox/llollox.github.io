@@ -2,7 +2,7 @@ var dict = {
 
   // Banner ********************************************************************
   "banner.title" : {
-    en: "Hi, I'm Lorenzo Rigato!",
+    en: "Lorenzo Rigato",
     it: "Lorenzo Rigato"
   },
   "banner.subtitle": {
@@ -59,18 +59,28 @@ var dict = {
   // Timeline ******************************************************************
   "timeline.description": {
     en: 
-      "Hello! I'm Lorenzo, nice to meet you!<br/>" + 
+      "Hello! I'm <strong>Lorenzo</strong>, nice to meet you!<br/>" + 
       "I'm a 28-years-old <strong>mobile and web developer</strong> with 5 years of experience.<br/>" + 
       "Strong knowledge on <strong>Android</strong> framework.<br/>" +
       "Clean code and <strong>software architectures</strong> lover.<br/>" + 
-      "Simple and clear <strong>UI</strong> amazed.",
+      "Simple and clear <strong>UI</strong> amazed.<br/><br/>" +  
+      "🚵‍ I'm also a Stelvio Pass <strong>climber</strong> with my old bicycle<br/>" +
+      "🏍 Motorbike <strong>explorer</strong> of beautiful mountain landscapes<br/>" +
+      "🌅 Sunset and sky-on-fire <strong>searcher</strong><br/>" +
+      "🎸 Acoustic guitar <strong>strummer</strong>, especially in front of a bonfire<br/>" +
+      "🥂 Simle and joke with friends, tasting Prosecco and pizza <strong>lover</strong><br/>",
     
     it: 
-      "Ciao! Mi chiamo Lorenzo, piacere di conoscerti!<br/>" + 
+      "Ciao! Mi chiamo <strong>Lorenzo</strong>, piacere di conoscerti!<br/>" + 
       "Ho 28 anni e sono uno <strong>sviluppatore mobile e web</strong> con 5 anni di esperienza.<br/>" + 
       "Grande conoscienza del framework <strong>Android</strong>.<br/>" + 
       "Amante del <strong>codice pulito</strong> e delle <strong>architetture software</strong>.<br/>" + 
-      "Eternamente affascinato da <strong>interfacce utente</strong> semplici e chiare."
+      "Affascinato da <strong>interfacce utente</strong> semplici e chiare.<br/><br/>" +
+      "🚵‍ Oltre a ciò sono un <strong>corridore</strong> sul Passo dello Stelvio con la mia vecchia bicicletta<br/>" +
+      "🏍 Appassionato <strong>esploratore</strong> con la moto, in particolare di paesaggi di montagna<br/>" +
+      "🌅 <strong>Ricercatore</strong> di tramonti e del cielo in fiamme<br/>" +
+      "🎸 <strong>Strimpellatore</strong> con la chitarra acustica, specialmente davanti ad un falò<br/>" +
+      "🥂 <strong>Amante</strong> dello stare in compagnia, assaggiando un Prosecco ed una fetta di pizza<br/>"
   },
 
   // Previnet
@@ -284,7 +294,7 @@ var dict = {
   "references.belka" : {
     en: 
       "Lorenzo is a capable and independent developer." +
-      "In my experience he accomplished his job autonomously," +
+      "In my experience he accomplished his job autonomously, " +
       "providing also some improvements on the user interface.",
 
     it: 
@@ -295,13 +305,13 @@ var dict = {
 
   "references.wrb" : {
     en: 
-      "We have known Lorenzo since he was sixteen years old, when he came to ask suggestions in order to increase the speed of his motorbike." +
-      "In 2012 he was attending the computer science course at the university, so we asked Lorenzo to develop our new company's website." +
-      "He started immediately with this new project and then he also suggested me new features that we had never thought about." +
-      "We saw him working very hard, even late at night, in order to build our web application." +
-      "Very few times, we saw people that able to work with passion like Lorenzo." +
-      "Thank you very much Lorenzo, for everything you did for us." +
-      "We wish you the best. You deserve it!",
+      "We have known Lorenzo since he was sixteen years old, when he came to ask suggestions in order to increase the speed of his motorbike.<br/>" +
+      "In 2012 he was attending the computer science course at the university, so we asked Lorenzo to develop our new company's website.<br/>" +
+      "He started immediately with this new project and then he also suggested me new features that we had never thought about.<br/>" +
+      "We saw him working very hard, even late at night, in order to build our web application.<br/>" +
+      "Very few times, we saw people that able to work with passion like Lorenzo.<br/>" +
+      "Thank you very much Lorenzo, for everything you did for us.<br/>" +
+      "We wish you the best. You deserve it!<br/>",
 
     it: 
       "Lorenzo lo conosciamo da quando sedicenne veniva a chiedere consigli per elaborare la sua moto.<br/>" +
