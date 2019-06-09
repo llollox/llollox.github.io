@@ -68,7 +68,7 @@ var dict = {
       "🏍 Motorbike <strong>explorer</strong> of beautiful mountain landscapes<br/>" +
       "🌅 Sunset and sky-on-fire <strong>searcher</strong><br/>" +
       "🎸 Acoustic guitar <strong>strummer</strong>, especially in front of a bonfire<br/>" +
-      "🥂 Simle and joke with friends, tasting Prosecco and pizza <strong>lover</strong><br/>",
+      "🥂 Simle and joke with friends, tasting pizza <strong>lover</strong><br/>",
     
     it: 
       "Ciao! Mi chiamo <strong>Lorenzo</strong>, piacere di conoscerti!<br/>" + 
@@ -80,7 +80,7 @@ var dict = {
       "🏍 Appassionato <strong>esploratore</strong> con la moto, in particolare di paesaggi di montagna<br/>" +
       "🌅 <strong>Ricercatore</strong> di tramonti e del cielo in fiamme<br/>" +
       "🎸 <strong>Strimpellatore</strong> con la chitarra acustica, specialmente davanti ad un falò<br/>" +
-      "🥂 <strong>Amante</strong> dello stare in compagnia, assaggiando un Prosecco ed una fetta di pizza<br/>"
+      "🥂 <strong>Amante</strong> dello stare in compagnia, mangiando una pizza<br/>"
   },
 
   // Previnet
