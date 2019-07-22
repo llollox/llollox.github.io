@@ -83,10 +83,11 @@ var dict = {
       "🥂 <strong>Amante</strong> dello stare in compagnia, mangiando una pizza<br/>"
   },
 
+
   // Previnet
   "timeline.previnet.title" : {
-    en: "Android & iOS Developer",
-    it: "Sviluppatore Android & iOS"
+    en: "Android Engineer",
+    it: "Sviluppatore Android"
   },
   "timeline.previnet.period" : {
     en: "Nov 2016 - Present",
@@ -95,21 +96,21 @@ var dict = {
   "timeline.previnet.description" : {
     en: 
       "<ul class='text-align-left'>" +
-        "<li>Development of <strong>XME Salute</strong> application for Intesa Sanpaolo Bank on Android and iOS.</li>" +
-        "<li>Structure <strong>app architecture</strong>, separating each component using interfaces." + 
-        "<li>Usage of <strong>Dagger 2</strong> as dependency injection framework and <strong>MVP / MVVM</strong> patterns.</li>" +
-        "<li>Written <strong>Unit and Integration tests</strong> using Espresso and Mockito.</li>" +
-        "<li>Implementation of <strong>Accessibility</strong> using the iOS Voiceover and Android Talkback.</li>" +
-        "<li>Usage of <strong>Scrum</strong> methodology to organize the tasks within the team.</li>" +
+        "<li>Design Android application <strong>Architecture</strong> using interfaces and dependency injection</li>" +
+        "<li>Usage of the <strong>MVP pattern</strong> to write structured and testable code</li>" + 
+        "<li>Automated <strong>Unit, Integration and End-to-End</strong> tests implementation</li>" +
+        "<li>Internal <strong>Android Library</strong> implementation of atomic custom views to be re-used within the application</li>" +
+        "<li>Implementation of <strong>Accessibility</strong> using Talk-Back API</li>" +
+        "<li>Written code <strong>Documentation</strong> of Android Library and for custom core components of the application</li>" +
       "</ul>",
     it:
       "<ul class='text-align-left'>" +
-        "<li>Sviluppo dell'applicazione <strong>XME Salute</strong> per Banca Intesa Sanpaolo in Android e iOS.</li>" +
-        "<li>Costruzione dell'<strong>architettura</strong> dell'applicazione, separando ogni componente utilizzando interfacce." + 
-        "<li>Utilizzo di <strong>Dagger 2</strong> come framework per dependency injection e dei pattern <strong>MVP / MVVM</strong>.</li>" +
-        "<li>Implementazione di <strong>Unit e Integration test</strong> utilizzando Espresso e Mockito.</li>" +
-        "<li>Implementazione dell'<strong>Accessibilità</strong> utilizzando gli strumenti: Voiceover di iOS e Talkback di Android.</li>" +
-        "<li>Utilizzo della metodologia <strong>Scrum</strong> per l'organizzazione del lavoro nel team.</li>" +
+        "<li>Progettazione dell'<strong>Architettura</strong> di un'applicazione Android utilizzando interfacce e dependency injection</li>" +
+        "<li>Utilizzo del pattern <strong>MVP</strong> per scrivere codice strutturato e testabile</li>" + 
+        "<li>Implementazione di <strong>Unit, Integration e End-to-End</strong> test</li>" +
+        "<li>Implementazione di una <strong>Libreria Android</strong> interna di view atomiche per ri-utilizzarle all'interno dell'applicazione</li>" +
+        "<li>Implementazione dell'<strong>Accessibilità</strong> utilizzando le Talkback API</li>" +
+        "<li>Scrittura della <strong>Documentazione</strong> del codice della libreria interna e dei componenti core dell'applicazione</li>" +
       "</ul>"
   },
 
@@ -125,17 +126,19 @@ var dict = {
   "timeline.foodracers.description" : {
     en: 
       "<ul class='text-align-left'>" +
-        "<li>Development of a <strong>Design System</strong> of React JS components using <strong>Storybook</strong> and following <strong>BEM</strong> methodology to organize CSS code.</li>" +
-        "<li>Code structured following the <strong>Redux</strong> pattern.</li>" +
-        "<li>Usage of <strong>Redux Saga</strong> to manage asynchronous calls and UI events.</li>" +
-        "<li>Usage of <strong>Turbolinks Android & iOS</strong> to embed the react components into an application.</li>" +
+        "<li><strong>Design system</strong> implementation of atomic React JS components using the Storybook library</li>" +
+        "<li>JS code structured following the <strong>Redux</strong> pattern</li>" +
+        "<li>CSS code structured following the <strong>BEM</strong> methodology</li>" +
+        "<li>React JS pages implementation deployed on a Ruby on Rails front-end application</li>" +
+        "<li>Development of both <strong>Android and iOS</strong> applications to embed the front-end’s React JS pages</li>"+
       "</ul>",
     it: 
       "<ul class='text-align-left'>" +
-        "<li>Sviluppo di un <strong>Design System</strong> di componenti in React JS utilizzando lo <strong>Storybook</strong> di React seguendo la metodologia <strong>BEM</strong> per organizzare il codice CSS.</li>" +
-        "<li>Codice strutturato seguendo il pattern <strong>Redux</strong>.</li>" +
-        "<li>Utilizzo di <strong>Redux Saga</strong> per gestire chiamate asincrone ed eventi dalla UI.</li>" +
-        "<li>Utilizzo di <strong>Turbolinks Android & iOS</strong> per incorporare i componenti react in un'app.</li>" +
+        "<li>Sviluppo di un <strong>Design System</strong> di componenti in React JS utilizzando lo <strong>Storybook</strong></li>" +
+        "<li>Codice JS strutturato seguendo il pattern <strong>Redux</strong></li>" +
+        "<li>Codice CSS strutturato seguendo la metodologia <strong>BEM</strong></li>" +
+        "<li>Utilizzo di <strong>Redux Saga</strong> per gestire chiamate asincrone ed eventi dalla UI</li>" +
+        "<li>Utilizzo di <strong>Turbolinks Android & iOS</strong> per incorporare i componenti react in un'app</li>" +
       "</ul>"
   },
 
@@ -171,11 +174,11 @@ var dict = {
   "timeline.belka.description" : {
     en: 
       "<ul class='text-align-left'>" +
-        "<li>Implementation of Android interface following <strong>Material Design</strong> rules." +
-        "<li>Android integration with electronic chips using NFC.</li>" +
-        "<li>Implementation of UI tests using <strong>Roboelectric</strong>.</li>" +
-        "<li>Implementation of <strong>Toggle Switch Button</strong> library.</li>" +
-        "<li>Usage of <strong>Jira</strong> and <strong>Kanban board</strong> to organize tasks within the team.</li>" +
+        "<li>Design and development of two Android applications</li>" +
+        "<li>Embedded chips integration through <strong>NFC</strong></li>" +
+        "<li>Design <strong>Responsive UI</strong> following Material Design guidelines</li>" +
+        "<li>Open-Source <strong>Android Library</strong> implementation (Android Toggle Switch)</li>" +
+        "<li>Automated Integration and <strong>End-to-End</strong> tests implementation</li>" +
       "</ul>",
     it: 
       "<ul class='text-align-left'>" +
@@ -187,10 +190,34 @@ var dict = {
       "</ul>"
   },
 
+
+  // ROR Developer Freelnace
+  "timeline.freelance_ror.title": {
+    en: "Ruby on Rails developer",
+    it: "Sviluppatore Ruby on Rails"
+  },
+  "timeline.freelance_ror.period": {
+    en: "Apr 2013 - Mar 2015",
+    it: "Apr 2013 - Mar 2015"
+  },
+  "timeline.freelance_ror.description" : {
+    en: 
+      "<ul class='text-align-left'>" +
+        "<li>Analysis of customer’s requirements</li>" +
+        "<li>Design, development and deployment (on Heroku or VPS) of Ruby on Rails applications</li>" +
+      "</ul>",
+    it: 
+      "<ul class='text-align-left'>" +
+        "<li>Sviluppo di <strong>applicazioni Android</strong> retrocompatibili con Android 2.</li>" +
+        "<li>Sviluppo di frontend web utilizzando <strong>Bootstrap</strong></li>" +
+      "</ul>",
+  },
+
+
   // FBK
   "timeline.fbk.title" : {
-    en: "Internship and assistant Ruby on Rails & Android Developer",
-    it: "Tirocinante ed assistente Sviluppatore Ruby on Rails & Android"
+    en: "Internship Android and Ruby on Rails developer",
+    it: "Tirocinante Sviluppatore Android e Ruby on Rails"
   },
   "timeline.fbk.period" : {
     en: "Dec 2011 - Sep 2015",
@@ -199,12 +226,9 @@ var dict = {
   "timeline.fbk.description" : {
     en: 
       "<ul class='text-align-left'>" +
-        "<li>Development of <strong>Android applications</strong> with backward compatibility with Android 2.</li>" +
-        "<li>Development of the frontend web using <strong>Bootstrap</strong></li>" +
-        "<li>Implementation of versioned <strong>REST API</strong> on Ruby on Rails</li>" +
-        "<li>Implementation of <strong>Unit and UI tests</strong> using Rspec, Capybara, Selenium and Cucumber.</li>" +
-        "<li>Written code <strong>documentation</strong> for API and project structure.</li>" +
-        "<li>Usage of <strong>git</strong> as version control." +
+        "<li>Development of <strong>Android applications</strong> to reduce food wastage</li>" +
+        "<li>Versioned <strong>RESTful API</strong> implementation</li>" +
+        "<li>Development organization following the Agile methodology with <strong>Scrum</strong> framework</li>" +
       "</ul>",
     it: 
       "<ul class='text-align-left'>" +
