@@ -137,8 +137,8 @@ var dict = {
         "<li>Sviluppo di un <strong>Design System</strong> di componenti in React JS utilizzando lo <strong>Storybook</strong></li>" +
         "<li>Codice JS strutturato seguendo il pattern <strong>Redux</strong></li>" +
         "<li>Codice CSS strutturato seguendo la metodologia <strong>BEM</strong></li>" +
-        "<li>Utilizzo di <strong>Redux Saga</strong> per gestire chiamate asincrone ed eventi dalla UI</li>" +
-        "<li>Utilizzo di <strong>Turbolinks Android & iOS</strong> per incorporare i componenti react in un'app</li>" +
+        "<li>Implementazione di pagine React JS deployate su un'applicazione Ruby on Rails di front-end</li>" +
+        "<li>Sviluppo di entrambe le applicazioni <strong>Android e iOS</strong> che embeddano le pagine React JS esposte dal front-end Rails</li>" +
       "</ul>"
   },
 
@@ -154,11 +154,13 @@ var dict = {
   "timeline.reply.description" : {
     en: 
       "<ul class='text-align-left'>" +
-        "<li>Development of the Direct Line's responsive web portal using <strong>Bootstrap, jQuery</strong> and <strong>Liferay</strong>.</li>" +
+        "<li>Development of a web application composed by several Liferay's portlets</li>" +
+        "<li>Automated End-to-End tests implementation</li>" +
       "</ul>",
     it: 
       "<ul class='text-align-left'>" +
-        "<li>Sviluppo del portale web responsive per Direct Line's utilizzando <strong>Bootstrap, jQuery</strong> e <strong>Liferay</strong>.</li>" +
+        "<li>Sviluppo di un'applicazione web composta da diverse portlet in Liferay</li>" +
+        "<li>Sviluppo di test automatici End-to-End</li>" +
       "</ul>",
   },
 
@@ -182,11 +184,11 @@ var dict = {
       "</ul>",
     it: 
       "<ul class='text-align-left'>" +
-        "<li>Implementazione di un'interfaccia Android seguendo <strong>Material Design</strong>" +
-        "<li>Integrazione di Android con dei chip elettronici usando NFC.</li>" +
-        "<li>Implementazione di test della UI utilizzando <strong>Roboelectric</strong>.</li>" +
-        "<li>Implementazione della libreria <strong>Toggle Switch Button</strong>.</li>" +
-        "<li>Utilizzo di <strong>Jira</strong> e della <strong>Kanban board</strong> per organizzare il lavoro nel team.</li>" +
+        "<li>Progettazione e sviluppo di due applicazioni Android</strong>" +
+        "<li>Integrazione con chips attraverso <strong>NFC</strong></li>" +
+        "<li>Progettazione di una interfaccia grafica <strong>Responsive</strong> seguendo le linee guida del Material Design</li>" +
+        "<li>Implementazione della libreria open-source <strong>Android Toggle Switch</strong>.</li>" +
+        "<li>Implementazione di test di integrazione e End-to-End</li>" +
       "</ul>"
   },
 
@@ -208,8 +210,8 @@ var dict = {
       "</ul>",
     it: 
       "<ul class='text-align-left'>" +
-        "<li>Sviluppo di <strong>applicazioni Android</strong> retrocompatibili con Android 2.</li>" +
-        "<li>Sviluppo di frontend web utilizzando <strong>Bootstrap</strong></li>" +
+        "<li>Analisi dei requisiti da parte dei clienti</li>" +
+        "<li>Progettazione, sviluppo e pubblicazione (su Heroku o VPS) di applicazioni Ruby on Rails</li>" +
       "</ul>",
   },
 
@@ -232,12 +234,9 @@ var dict = {
       "</ul>",
     it: 
       "<ul class='text-align-left'>" +
-        "<li>Sviluppo di <strong>applicazioni Android</strong> retrocompatibili con Android 2.</li>" +
-        "<li>Sviluppo di frontend web utilizzando <strong>Bootstrap</strong></li>" +
-        "<li>Implementazione di <strong>REST API</strong> versionate in Ruby on Rails</li>" +
-        "<li>Implementazione di <strong>Unit e UI test</strong> utilizzando Rspec, Capybara, Selenium and Cucumber.</li>" +
-        "<li>Stesura della <strong>documentation</strong> del codice per API e struttura dei progetti.</li>" +
-        "<li>Utilizzo di <strong>git</strong> come strumento per il versionamento del codice." +
+        "<li>Sviluppo di <strong>applicazioni Android</strong> per ridurre lo spreco alimentare</li>" +
+        "<li>Implementazione di <strong>RESTful API</strong> versionate</li>" +
+        "<li>Sviluppo organizzato seguendo la metodologia Agile con il framework <strong>Scrum</strong></li>" +
       "</ul>",
   },
 
