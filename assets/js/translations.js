@@ -58,23 +58,23 @@ var dict = {
 
   // Timeline ******************************************************************
   "timeline.description": {
-    en: 
-      "Hello! I'm <strong>Lorenzo</strong>, nice to meet you!<br/>" + 
-      "I'm a <strong>mobile and web developer</strong> with 4 years of experience.<br/>" + 
+    en:
+      "Hello! I'm <strong>Lorenzo</strong>, nice to meet you!<br/>" +
+      "I'm a <strong>mobile and web developer</strong> with 4 years of experience.<br/>" +
       "Strong knowledge on <strong>Android</strong> framework.<br/>" +
-      "Clean code and <strong>software architectures</strong> lover.<br/>" + 
-      "Simple and clear <strong>User Interface</strong> amazed.<br/><br/>" +  
+      "Clean code and <strong>software architectures</strong> lover.<br/>" +
+      "Simple and clear <strong>User Interface</strong> amazed.<br/><br/>" +
       "🚵‍ I'm also a Stelvio Pass <strong>climber</strong> with my old bicycle<br/>" +
       "🏍 Motorbike <strong>explorer</strong> of beautiful mountain landscapes<br/>" +
       "🌅 Sunset and sky-on-fire <strong>searcher</strong><br/>" +
       "🎸 Acoustic guitar <strong>strummer</strong>, especially in front of a bonfire<br/>" +
       "🥂 Simle and joke with friends, tasting pizza <strong>lover</strong><br/>",
-    
-    it: 
-      "Ciao! Mi chiamo <strong>Lorenzo</strong>, piacere di conoscerti!<br/>" + 
-      "Sono uno <strong>sviluppatore mobile e web</strong> con 4 anni di esperienza.<br/>" + 
-      "Grande conoscienza del framework <strong>Android</strong>.<br/>" + 
-      "Amante del <strong>codice pulito</strong> e delle <strong>architetture software</strong>.<br/>" + 
+
+    it:
+      "Ciao! Mi chiamo <strong>Lorenzo</strong>, piacere di conoscerti!<br/>" +
+      "Sono uno <strong>sviluppatore mobile e web</strong> con 4 anni di esperienza.<br/>" +
+      "Grande conoscienza del framework <strong>Android</strong>.<br/>" +
+      "Amante del <strong>codice pulito</strong> e delle <strong>architetture software</strong>.<br/>" +
       "Affascinato da <strong>interfacce utente</strong> semplici e chiare.<br/><br/>" +
       "🚵‍ Oltre a ciò sono un <strong>corridore</strong> sul Passo dello Stelvio con la mia vecchia bicicletta<br/>" +
       "🏍 Appassionato <strong>esploratore</strong> con la moto, in particolare di paesaggi di montagna<br/>" +
@@ -83,33 +83,34 @@ var dict = {
       "🥂 <strong>Amante</strong> dello stare in compagnia, mangiando una pizza<br/>"
   },
 
+
   // Previnet
   "timeline.previnet.title" : {
-    en: "Android & iOS Developer",
-    it: "Sviluppatore Android & iOS"
+    en: "Android Engineer",
+    it: "Sviluppatore Android"
   },
   "timeline.previnet.period" : {
     en: "Nov 2016 - Present",
     it: "Nov 2016 - Presente"
   },
   "timeline.previnet.description" : {
-    en: 
+    en:
       "<ul class='text-align-left'>" +
         "<li>Design Android application <strong>Architecture</strong> using interfaces and dependency injection</li>" +
         "<li>Usage of the <strong>MVP pattern</strong> to write structured and testable code</li>" +
-        "<li>Automated <strong>Unit, Integration and End-to-End tests</strong> implementation" + 
+        "<li>Automated <strong>Unit, Integration and End-to-End</strong> tests implementation</li>" +
         "<li>Internal <strong>Android Library</strong> implementation of atomic custom views to be re-used within the application</li>" +
         "<li>Implementation of <strong>Accessibility</strong> using Talk-Back API</li>" +
-        "<li>Written <strong>Code Documentation</strong> of Android Library and for custom core components of the application</li>" +
+        "<li>Written code <strong>Documentation</strong> of Android Library and for custom core components of the application</li>" +
       "</ul>",
     it:
       "<ul class='text-align-left'>" +
-        "<li>Design e sviluppo dell'<strong>architettura</strong> di un'applicazione Android uzilizzando interfacce e dependency injection</li>" +
-        "<li>Costruzione dell'<strong>architettura</strong> dell'applicazione, separando ogni componente utilizzando interfacce." + 
-        "<li>Utilizzo di <strong>Dagger 2</strong> come framework per dependency injection e dei pattern <strong>MVP / MVVM</strong>.</li>" +
-        "<li>Implementazione di <strong>Unit e Integration test</strong> utilizzando Espresso e Mockito.</li>" +
-        "<li>Implementazione dell'<strong>Accessibilità</strong> utilizzando gli strumenti: Voiceover di iOS e Talkback di Android.</li>" +
-        "<li>Utilizzo della metodologia <strong>Scrum</strong> per l'organizzazione del lavoro nel team.</li>" +
+        "<li>Progettazione dell'<strong>Architettura</strong> di un'applicazione Android utilizzando interfacce e dependency injection</li>" +
+        "<li>Utilizzo del pattern <strong>MVP</strong> per scrivere codice strutturato e testabile</li>" +
+        "<li>Implementazione di <strong>Unit, Integration e End-to-End</strong> test</li>" +
+        "<li>Implementazione di una <strong>Libreria Android</strong> interna di view atomiche per ri-utilizzarle all'interno dell'applicazione</li>" +
+        "<li>Implementazione dell'<strong>Accessibilità</strong> utilizzando le Talkback API</li>" +
+        "<li>Scrittura della <strong>Documentazione</strong> del codice della libreria interna e dei componenti core dell'applicazione</li>" +
       "</ul>"
   },
 
@@ -123,19 +124,21 @@ var dict = {
     it: "Ago 2017 - Set 2018"
   },
   "timeline.foodracers.description" : {
-    en: 
+    en:
       "<ul class='text-align-left'>" +
-        "<li>Development of a <strong>Design System</strong> of React JS components using <strong>Storybook</strong> and following <strong>BEM</strong> methodology to organize CSS code.</li>" +
-        "<li>Code structured following the <strong>Redux</strong> pattern.</li>" +
-        "<li>Usage of <strong>Redux Saga</strong> to manage asynchronous calls and UI events.</li>" +
-        "<li>Usage of <strong>Turbolinks Android & iOS</strong> to embed the react components into an application.</li>" +
+        "<li><strong>Design system</strong> implementation of atomic React JS components using the Storybook library</li>" +
+        "<li>JS code structured following the <strong>Redux</strong> pattern</li>" +
+        "<li>CSS code structured following the <strong>BEM</strong> methodology</li>" +
+        "<li>React JS pages implementation deployed on a Ruby on Rails front-end application</li>" +
+        "<li>Development of both <strong>Android and iOS</strong> applications to embed the front-end’s React JS pages</li>"+
       "</ul>",
-    it: 
+    it:
       "<ul class='text-align-left'>" +
-        "<li>Sviluppo di un <strong>Design System</strong> di componenti in React JS utilizzando lo <strong>Storybook</strong> di React seguendo la metodologia <strong>BEM</strong> per organizzare il codice CSS.</li>" +
-        "<li>Codice strutturato seguendo il pattern <strong>Redux</strong>.</li>" +
-        "<li>Utilizzo di <strong>Redux Saga</strong> per gestire chiamate asincrone ed eventi dalla UI.</li>" +
-        "<li>Utilizzo di <strong>Turbolinks Android & iOS</strong> per incorporare i componenti react in un'app.</li>" +
+        "<li>Sviluppo di un <strong>Design System</strong> di componenti in React JS utilizzando lo <strong>Storybook</strong></li>" +
+        "<li>Codice JS strutturato seguendo il pattern <strong>Redux</strong></li>" +
+        "<li>Codice CSS strutturato seguendo la metodologia <strong>BEM</strong></li>" +
+        "<li>Implementazione di pagine React JS deployate su un'applicazione Ruby on Rails di front-end</li>" +
+        "<li>Sviluppo di entrambe le applicazioni <strong>Android e iOS</strong> che embeddano le pagine React JS esposte dal front-end Rails</li>" +
       "</ul>"
   },
 
@@ -149,13 +152,15 @@ var dict = {
     it: "Apr - Ott 2016"
   },
   "timeline.reply.description" : {
-    en: 
+    en:
       "<ul class='text-align-left'>" +
-        "<li>Development of the Direct Line's responsive web portal using <strong>Bootstrap, jQuery</strong> and <strong>Liferay</strong>.</li>" +
+        "<li>Development of a web application composed by several Liferay's portlets</li>" +
+        "<li>Automated End-to-End tests implementation</li>" +
       "</ul>",
-    it: 
+    it:
       "<ul class='text-align-left'>" +
-        "<li>Sviluppo del portale web responsive per Direct Line's utilizzando <strong>Bootstrap, jQuery</strong> e <strong>Liferay</strong>.</li>" +
+        "<li>Sviluppo di un'applicazione web composta da diverse portlet in Liferay</li>" +
+        "<li>Sviluppo di test automatici End-to-End</li>" +
       "</ul>",
   },
 
@@ -169,51 +174,69 @@ var dict = {
     it: "Set 2015 - Mar 2016"
   },
   "timeline.belka.description" : {
-    en: 
+    en:
       "<ul class='text-align-left'>" +
-        "<li>Implementation of Android interface following <strong>Material Design</strong> rules." +
-        "<li>Android integration with electronic chips using NFC.</li>" +
-        "<li>Implementation of UI tests using <strong>Roboelectric</strong>.</li>" +
-        "<li>Implementation of <strong>Toggle Switch Button</strong> library.</li>" +
-        "<li>Usage of <strong>Jira</strong> and <strong>Kanban board</strong> to organize tasks within the team.</li>" +
+        "<li>Design and development of two Android applications</li>" +
+        "<li>Embedded chips integration through <strong>NFC</strong></li>" +
+        "<li>Design <strong>Responsive UI</strong> following Material Design guidelines</li>" +
+        "<li>Open-Source <strong>Android Library</strong> implementation (Android Toggle Switch)</li>" +
+        "<li>Automated Integration and <strong>End-to-End</strong> tests implementation</li>" +
       "</ul>",
-    it: 
+    it:
       "<ul class='text-align-left'>" +
-        "<li>Implementazione di un'interfaccia Android seguendo <strong>Material Design</strong>" +
-        "<li>Integrazione di Android con dei chip elettronici usando NFC.</li>" +
-        "<li>Implementazione di test della UI utilizzando <strong>Roboelectric</strong>.</li>" +
-        "<li>Implementazione della libreria <strong>Toggle Switch Button</strong>.</li>" +
-        "<li>Utilizzo di <strong>Jira</strong> e della <strong>Kanban board</strong> per organizzare il lavoro nel team.</li>" +
+        "<li>Progettazione e sviluppo di due applicazioni Android</strong>" +
+        "<li>Integrazione con chips attraverso <strong>NFC</strong></li>" +
+        "<li>Progettazione di una interfaccia grafica <strong>Responsive</strong> seguendo le linee guida del Material Design</li>" +
+        "<li>Implementazione della libreria open-source <strong>Android Toggle Switch</strong>.</li>" +
+        "<li>Implementazione di test di integrazione e End-to-End</li>" +
       "</ul>"
   },
 
+
+  // ROR Developer Freelnace
+  "timeline.freelance_ror.title": {
+    en: "Ruby on Rails developer",
+    it: "Sviluppatore Ruby on Rails"
+  },
+  "timeline.freelance_ror.period": {
+    en: "Apr 2013 - Mar 2015",
+    it: "Apr 2013 - Mar 2015"
+  },
+  "timeline.freelance_ror.description" : {
+    en:
+      "<ul class='text-align-left'>" +
+        "<li>Analysis of customer’s requirements</li>" +
+        "<li>Design, development and deployment (on Heroku or VPS) of Ruby on Rails applications</li>" +
+      "</ul>",
+    it:
+      "<ul class='text-align-left'>" +
+        "<li>Analisi dei requisiti da parte dei clienti</li>" +
+        "<li>Progettazione, sviluppo e pubblicazione (su Heroku o VPS) di applicazioni Ruby on Rails</li>" +
+      "</ul>",
+  },
+
+
   // FBK
   "timeline.fbk.title" : {
-    en: "Internship and assistant Ruby on Rails & Android Developer",
-    it: "Tirocinante ed assistente Sviluppatore Ruby on Rails & Android"
+    en: "Internship Android and Ruby on Rails developer",
+    it: "Tirocinante Sviluppatore Android e Ruby on Rails"
   },
   "timeline.fbk.period" : {
     en: "Dec 2011 - Sep 2015",
     it: "Dic 2011 - Set 2015"
   },
   "timeline.fbk.description" : {
-    en: 
+    en:
       "<ul class='text-align-left'>" +
-        "<li>Development of <strong>Android applications</strong> with backward compatibility with Android 2.</li>" +
-        "<li>Development of the frontend web using <strong>Bootstrap</strong></li>" +
-        "<li>Implementation of versioned <strong>REST API</strong> on Ruby on Rails</li>" +
-        "<li>Implementation of <strong>Unit and UI tests</strong> using Rspec, Capybara, Selenium and Cucumber.</li>" +
-        "<li>Written code <strong>documentation</strong> for API and project structure.</li>" +
-        "<li>Usage of <strong>git</strong> as version control." +
+        "<li>Development of <strong>Android applications</strong> to reduce food wastage</li>" +
+        "<li>Versioned <strong>RESTful API</strong> implementation</li>" +
+        "<li>Development organization following the Agile methodology with <strong>Scrum</strong> framework</li>" +
       "</ul>",
-    it: 
+    it:
       "<ul class='text-align-left'>" +
-        "<li>Sviluppo di <strong>applicazioni Android</strong> retrocompatibili con Android 2.</li>" +
-        "<li>Sviluppo di frontend web utilizzando <strong>Bootstrap</strong></li>" +
-        "<li>Implementazione di <strong>REST API</strong> versionate in Ruby on Rails</li>" +
-        "<li>Implementazione di <strong>Unit e UI test</strong> utilizzando Rspec, Capybara, Selenium and Cucumber.</li>" +
-        "<li>Stesura della <strong>documentation</strong> del codice per API e struttura dei progetti.</li>" +
-        "<li>Utilizzo di <strong>git</strong> come strumento per il versionamento del codice." +
+        "<li>Sviluppo di <strong>applicazioni Android</strong> per ridurre lo spreco alimentare</li>" +
+        "<li>Implementazione di <strong>RESTful API</strong> versionate</li>" +
+        "<li>Sviluppo organizzato seguendo la metodologia Agile con il framework <strong>Scrum</strong></li>" +
       "</ul>",
   },
 
@@ -231,13 +254,13 @@ var dict = {
     it: "110 e Lode"
   },
   "timeline.unitn.msc.description" : {
-    en: 
+    en:
       "<ul class='text-align-left'>" +
         "<li>Thesis: '<strong>Quanto Spreco?</strong>'. An application to monitor and reduce the domestic food waste</li>" +
         "<li>Development of an update for the OpenFWWF firmware in <strong>Assembly</strong> to allow the access point and its clients to change channel together. " +
         "Also, development of a <strong>Python</strong> controller to gather metrics information and decide which is the best channel.</li>" +
       "</ul>",
-    it: 
+    it:
       "<ul class='text-align-left'>" +
         "<li>Thesis: '<strong>Quanto Spreco?</strong>'. Un'applicazione per monitorare e ridurre lo spreco alimentare domestico.</li>" +
         "<li>Sviluppo di un aggiornamento del firmware OpenFWWF in <strong>Assembly</strong> per permettere all'access point, ed ai client collegati, di cambiare canale. " +
@@ -260,7 +283,7 @@ var dict = {
         "<li>Thesis: '<strong>Bring the *'</strong>. An extension to the Bring the Food application to support any kind of donation.</li>" +
         "<li>Discovered interest on <strong>networking</strong>.</li>" +
       "</ul>",
-    it: 
+    it:
       "<ul class='text-align-left'>" +
         "<li>Thesis: '<strong>Bring the *'</strong>. An extension to the Bring the Food application to support any kind of donation.</li>" +
         "<li>Scoperto un interesse nel funzionamento delle <strong>reti di computer</strong>.</li>" +
@@ -292,19 +315,19 @@ var dict = {
   },
 
   "references.belka" : {
-    en: 
+    en:
       "Lorenzo is a capable and independent developer." +
       "In my experience he accomplished his job autonomously, " +
       "providing also some improvements on the user interface.",
 
-    it: 
+    it:
       "Lorenzo è uno sviluppatore abile ed indipendente." +
       "Nella mia esperienza è riuscito a compiere i lavori assegnati in autonomia," +
       "fornendo anche alcuni miglioramenti anche all'interfaccia utente."
   },
 
   "references.wrb" : {
-    en: 
+    en:
       "We have known Lorenzo since he was sixteen years old, when he came to ask suggestions in order to increase the speed of his motorbike.<br/>" +
       "In 2012 he was attending the computer science course at the university, so we asked Lorenzo to develop our new company's website.<br/>" +
       "He started immediately with this new project and then he also suggested me new features that we had never thought about.<br/>" +
@@ -313,7 +336,7 @@ var dict = {
       "Thank you very much Lorenzo, for everything you did for us.<br/>" +
       "We wish you the best. You deserve it!<br/>",
 
-    it: 
+    it:
       "Lorenzo lo conosciamo da quando sedicenne veniva a chiedere consigli per elaborare la sua moto.<br/>" +
       "Quando abbiamo avuto bisogno del nostro nuovo sito aziendale, ci siamo rivolti a lui che ha 2 grandi passioni, i motori e l’informatica.<br/>" +
       "Da subito, si è coinvolto nel nuovo progetto proponendo idee che a noi non erano nemmeno venute in mente.<br/>" +
@@ -324,12 +347,12 @@ var dict = {
   },
 
   "references.foodracers" : {
-    en: 
+    en:
       "Lorenzo is a capable developer.<br/>" +
       "He is able to learn quickly new technologies and to develop autonomously a complex and complete project.<br/>" +
       "It was a pleasure to work with him and for this reason he is absolutely recommended.<br/>",
 
-    it: 
+    it:
       "Lorenzo è una persona capace e indipendente.<br/>" +
       "Riesce ad imparare velocemente nuove tecnologie e sviluppare in totale autonomia un progetto completo e complesso.<br/>" +
       "È stato un piacere lavorare con lui per questo è assolutamente raccomandato.<br/>"
