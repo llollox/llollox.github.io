@@ -60,10 +60,10 @@ var dict = {
   "timeline.description": {
     en: 
       "Hello! I'm <strong>Lorenzo</strong>, nice to meet you!<br/>" + 
-      "I'm a 28-years-old <strong>mobile and web developer</strong> with 5 years of experience.<br/>" + 
+      "I'm a <strong>mobile and web developer</strong> with 4 years of experience.<br/>" + 
       "Strong knowledge on <strong>Android</strong> framework.<br/>" +
       "Clean code and <strong>software architectures</strong> lover.<br/>" + 
-      "Simple and clear <strong>UI</strong> amazed.<br/><br/>" +  
+      "Simple and clear <strong>User Interface</strong> amazed.<br/><br/>" +  
       "🚵‍ I'm also a Stelvio Pass <strong>climber</strong> with my old bicycle<br/>" +
       "🏍 Motorbike <strong>explorer</strong> of beautiful mountain landscapes<br/>" +
       "🌅 Sunset and sky-on-fire <strong>searcher</strong><br/>" +
@@ -72,7 +72,7 @@ var dict = {
     
     it: 
       "Ciao! Mi chiamo <strong>Lorenzo</strong>, piacere di conoscerti!<br/>" + 
-      "Ho 28 anni e sono uno <strong>sviluppatore mobile e web</strong> con 5 anni di esperienza.<br/>" + 
+      "Sono uno <strong>sviluppatore mobile e web</strong> con 4 anni di esperienza.<br/>" + 
       "Grande conoscienza del framework <strong>Android</strong>.<br/>" + 
       "Amante del <strong>codice pulito</strong> e delle <strong>architetture software</strong>.<br/>" + 
       "Affascinato da <strong>interfacce utente</strong> semplici e chiare.<br/><br/>" +
@@ -95,16 +95,16 @@ var dict = {
   "timeline.previnet.description" : {
     en: 
       "<ul class='text-align-left'>" +
-        "<li>Development of <strong>XME Salute</strong> application for Intesa Sanpaolo Bank on Android and iOS.</li>" +
-        "<li>Structure <strong>app architecture</strong>, separating each component using interfaces." + 
-        "<li>Usage of <strong>Dagger 2</strong> as dependency injection framework and <strong>MVP / MVVM</strong> patterns.</li>" +
-        "<li>Written <strong>Unit and Integration tests</strong> using Espresso and Mockito.</li>" +
-        "<li>Implementation of <strong>Accessibility</strong> using the iOS Voiceover and Android Talkback.</li>" +
-        "<li>Usage of <strong>Scrum</strong> methodology to organize the tasks within the team.</li>" +
+        "<li>Design Android application <strong>Architecture</strong> using interfaces and dependency injection</li>" +
+        "<li>Usage of the <strong>MVP pattern</strong> to write structured and testable code</li>" +
+        "<li>Automated <strong>Unit, Integration and End-to-End tests</strong> implementation" + 
+        "<li>Internal <strong>Android Library</strong> implementation of atomic custom views to be re-used within the application</li>" +
+        "<li>Implementation of <strong>Accessibility</strong> using Talk-Back API</li>" +
+        "<li>Written <strong>Code Documentation</strong> of Android Library and for custom core components of the application</li>" +
       "</ul>",
     it:
       "<ul class='text-align-left'>" +
-        "<li>Sviluppo dell'applicazione <strong>XME Salute</strong> per Banca Intesa Sanpaolo in Android e iOS.</li>" +
+        "<li>Design e sviluppo dell'<strong>architettura</strong> di un'applicazione Android uzilizzando interfacce e dependency injection</li>" +
         "<li>Costruzione dell'<strong>architettura</strong> dell'applicazione, separando ogni componente utilizzando interfacce." + 
         "<li>Utilizzo di <strong>Dagger 2</strong> come framework per dependency injection e dei pattern <strong>MVP / MVVM</strong>.</li>" +
         "<li>Implementazione di <strong>Unit e Integration test</strong> utilizzando Espresso e Mockito.</li>" +
