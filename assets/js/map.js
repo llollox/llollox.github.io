@@ -174,6 +174,18 @@ $(document).ready(function () {
               latitude: 45.4648837,
               longitude: 9.1844683
             }
+          },
+          {
+              name: 'Zürich',
+              description: {
+                  en: "",
+                  it: ""
+              },
+              photo_file: '',
+              position: {
+                latitude: 47.375858,
+                longitude: 8.531972
+              }
           }      
     ];
 

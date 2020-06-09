@@ -6,8 +6,8 @@ var dict = {
     it: "Lorenzo Rigato"
   },
   "banner.subtitle": {
-    en: "Web, Android & iOS Developer",
-    it: "Sviluppatore Web, Android & iOS"
+    en: "Android Software Engineer (and more...)",
+    it: "Sviluppatore Android (e non solo...)"
   },
 
 
@@ -84,14 +84,40 @@ var dict = {
   },
 
 
+  // Numbrs
+  "timeline.numbrs.title" : {
+    en: "Android Software Engineer",
+    it: "Sviluppatore Android"
+  },
+  "timeline.numbrs.period" : {
+    en: "Feb 2020 - Present",
+    it: "Feb 2020 - Presente"
+  },
+  "timeline.numbrs.description" : {
+    en:
+      "<ul class='text-align-left'>" +
+        "<li>Development of new features following a <strong>reactive</strong> approach</li>" +
+        "<li>Usage of the <strong>MVVM</strong> architectural pattern to structure code</li>" +
+        "<li>Development JIRA integration and automatic App Bundle publication for Jenkins <strong>Android CI</strong></li>" +
+        "<li>Improvement code quality writing unit and integration <strong>tests</strong></li>" +
+      "</ul>",
+    it:
+      "<ul class='text-align-left'>" +
+        "<li>Sviluppo di nuove funzionalità seguendo un approccio <strong>reactive</strong></li>" +
+        "<li>Utilizzo del pattern architetturale <strong>MVVM</strong> per strutturare il codice</li>" +
+        "<li>Sviluppo integrazioni con JIRA e Google Play per la <strong>Android CI</strong></li>" +
+        "<li>Miglioramento della qualitá del codice con nuovi unit ed integration <strong>test</strong></li>" +
+      "</ul>"
+  },
+
   // Previnet
   "timeline.previnet.title" : {
-    en: "Android Engineer",
+    en: "Android Software Engineer",
     it: "Sviluppatore Android"
   },
   "timeline.previnet.period" : {
-    en: "Nov 2016 - Present",
-    it: "Nov 2016 - Presente"
+    en: "Nov 2016 - Oct 2019",
+    it: "Nov 2016 - Ott 2019"
   },
   "timeline.previnet.description" : {
     en:
@@ -116,7 +142,7 @@ var dict = {
 
   // Foodracers
   "timeline.foodracers.title" : {
-    en: "React JS Developer",
+    en: "React JS Engineer",
     it: "Sviluppatore React JS"
   },
   "timeline.foodracers.period" : {
@@ -144,8 +170,8 @@ var dict = {
 
   // Reply
   "timeline.reply.title" : {
-    en: "Web Developer",
-    it: "Sviluppatore Web"
+    en: "Lifray Engineer",
+    it: "Sviluppatore Liferay"
   },
   "timeline.reply.period" : {
     en: "Apr - Oct 2016",
@@ -166,7 +192,7 @@ var dict = {
 
   // Belka
   "timeline.belka.title" : {
-    en: "Android Developer",
+    en: "Android Software Engineer",
     it: "Sviluppatore Android",
   },
   "timeline.belka.period" : {
@@ -195,7 +221,7 @@ var dict = {
 
   // ROR Developer Freelnace
   "timeline.freelance_ror.title": {
-    en: "Ruby on Rails developer",
+    en: "Ruby on Rails Engineer",
     it: "Sviluppatore Ruby on Rails"
   },
   "timeline.freelance_ror.period": {
@@ -218,7 +244,7 @@ var dict = {
 
   // FBK
   "timeline.fbk.title" : {
-    en: "Internship Android and Ruby on Rails developer",
+    en: "Internship Android and Ruby on Rails Engineer",
     it: "Tirocinante Sviluppatore Android e Ruby on Rails"
   },
   "timeline.fbk.period" : {
