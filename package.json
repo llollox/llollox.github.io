@@ -6,7 +6,7 @@
   "dependencies": {
     "bootstrap-styl": "^5.0.8",
     "bootstrap-stylus": "^0.2.2",
-    "browser-sync": "^2.18.12",
+    "browser-sync": "^2.27.10",
     "event-stream": "^3.3.4",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
